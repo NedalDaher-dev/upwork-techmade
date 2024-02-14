@@ -1,7 +1,7 @@
-import styles from './page.module.css';
+import styles from './home.scss';
 
 const Home = () => (
-  <main className={styles.main}>
+  <main className="home-container">
     <h1>Home page</h1>
   </main>
 );
