@@ -1,0 +1,42 @@
+.bgDark {
+  background-color: #16161d;
+}
+.bgLight {
+  background-color: white;
+}
+.navWrapper {
+  width: 100%;
+}
+.nav {
+  padding: 54px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1184px;
+  margin: auto;
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 61px;
+
+    p {
+      font-size: 16px;
+      font-weight: 500;
+    }
+  }
+  .buttonWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    .button {
+      background-color: transparent;
+      color: white;
+      border: solid 2px white;
+      outline: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
+}
