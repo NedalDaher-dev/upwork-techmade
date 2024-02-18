@@ -1,0 +1,37 @@
+.tagline-wrapper {
+  margin: auto;
+  max-width: 1184px;
+  margin-top: 160px;
+  display: flex;
+  flex-direction: column;
+  gap: 71px;
+  align-items: center;
+  p {
+    color: #16161d;
+    text-align: center;
+    font-size: 62px;
+    font-weight: 600;
+    line-height: 66px;
+    letter-spacing: -2.48px;
+    overflow: hidden;
+
+    span {
+      color: #725ad0;
+    }
+  }
+  .buttonWrapper {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+    .button {
+      background-color: transparent;
+      color: #16161d;
+      border: solid 2px #16161d;
+      outline: none;
+      padding: 10px 15px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+  }
+}
