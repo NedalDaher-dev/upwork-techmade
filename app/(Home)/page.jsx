@@ -1,8 +1,11 @@
-import styles from './home.scss';
+import OurProcess from './_components/OurProcess';
+import UpcomingEvents from './_components/UpcomingEvents';
+import './home.scss';
 
 const Home = () => (
-  <main className="home-container">
-    <h1>Home page</h1>
-  </main>
+  <div className="home__container">
+    <OurProcess />
+    <UpcomingEvents />
+  </div>
 );
 export default Home;

@@ -1,0 +1,52 @@
+.ourProcess__container {
+  margin-bottom: 230px;
+  margin-top: 83px;
+  .ourProcess__cards {
+    display: flex;
+    flex-wrap: wrap;
+    .card__parent {
+      display: flex;
+      margin-top: 147px;
+
+      .card1 {
+        display: flex;
+        flex-direction: column;
+        max-width: 380px;
+        .card__image {
+          min-height: 453px;
+        }
+        .header {
+          display: flex;
+          justify-content: space-between;
+          margin-top: 27px;
+          margin-bottom: 67px;
+          min-height: 78px;
+          .heading {
+            max-width: 236px;
+            color: #111;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+            font-family: 'Montserrat', sans-serif;
+          }
+        }
+        .card__info {
+          color: #212121;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 26px;
+          max-width: 317px;
+          min-height: 130px;
+        }
+      }
+      .border {
+        width: 1px;
+        height: 100%;
+        background-color: #c7bfbf;
+        margin: 0 10px;
+      }
+    }
+  }
+}

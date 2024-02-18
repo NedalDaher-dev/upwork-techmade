@@ -1,0 +1,25 @@
+.upcoming__container {
+  display: flex;
+  gap: 20px;
+  .upcoming__left {
+    display: flex;
+    flex-direction: column;
+    max-width: 334px;
+    .spiral {
+      display: flex;
+      justify-content: flex-end;
+    }
+    .info {
+      margin-top: 76px;
+      margin-bottom: 32px;
+      color: #1e1e1e;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+    }
+  }
+  .event__cycle {
+    width: 100%;
+  }
+}
