@@ -1,0 +1,74 @@
+.about-us-achievements-wrapper {
+  background-color: #16161d;
+  padding: 180px 0px;
+
+  margin-top: 180px;
+  .container {
+    max-width: 1184px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    .container-left {
+      display: flex;
+      flex-direction: column;
+      max-width: 670px;
+      gap: 96px;
+      color: white;
+      h1 {
+        color: #fff;
+        font-size: 62px;
+        font-weight: 600;
+        line-height: 66px;
+        letter-spacing: -2.48px;
+        overflow: hidden;
+      }
+      .stats-container {
+        display: flex;
+        gap: 80px;
+        h2 {
+          color: #fff;
+          font-size: 42px;
+          font-weight: 500;
+          line-height: 44px; /* 104.762% */
+          letter-spacing: -0.529px;
+          text-transform: uppercase;
+          overflow: hidden;
+        }
+        p {
+          color: #fff;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 24px;
+          letter-spacing: -0.202px;
+        }
+      }
+    }
+    .container-right {
+      color: white;
+      display: flex;
+      flex-direction: column;
+      max-width: 390px;
+      gap: 50px;
+      .info-container {
+        display: flex;
+        flex-direction: column;
+        gap: 31px;
+        h2 {
+          color: #fff;
+          overflow: hidden;
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 34px;
+          letter-spacing: -0.96px;
+        }
+        p {
+          color: #fff;
+          font-size: 22px;
+          font-weight: 400;
+          line-height: 32px;
+          letter-spacing: -0.96px;
+        }
+      }
+    }
+  }
+}

@@ -15,7 +15,10 @@ module.exports = {
   },
   rules: {
     // 'import/prefer-default-export': ['off', { target: 'single' }]
+    'import/no-extraneous-dependencies': 'off',
+    'jsx-a11y/no-static-element-interactions': 'off',
     'linebreak-style': 0,
+    'react/no-array-index-key': 'off',
     'jsx-a11y/label-has-associated-control': 'off',
     'react/jsx-wrap-multilines': 'off',
     'function-paren-newline': 'off',
