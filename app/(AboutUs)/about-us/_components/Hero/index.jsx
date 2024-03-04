@@ -8,11 +8,11 @@ const Hero = () => (
   <div className="about-us-hero-wrapper">
     <div className="about-us-hero-container">
       <h1 className="heading">
-        TECH MADE, <span>Where Internet</span> Expertise Meets User{' '}
+        TECHMADE, <span>Where Internet</span> Expertise Meets User{' '}
         <span>Understanding</span>
       </h1>
       <p className="description">
-        At Tech Made, we uniquely fuse profound internet insights with an innate
+        At TechMade, we uniquely fuse profound internet insights with an innate
         understanding of people. As avid online participants, we decode what
         captivates users — crafting strategies that resonate. Elevate your
         digital presence with our tailored approach, ensuring engagement and
