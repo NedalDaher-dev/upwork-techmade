@@ -6,6 +6,9 @@
 }
 .navWrapper {
   width: 100%;
+  transition: background-color 0.3s ease;
+  transition: all 1s ease; // هذا سيضمن التحول السلس للخصائص
+
 }
 .nav {
   padding: 49px 0px 17px 0px;
@@ -39,4 +42,22 @@
       cursor: pointer;
     }
   }
+  .nav {
+    transition: transform 0.3s ease;
+
+    &.fixed {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 10;
+      transform: translateY(0);
+    }
+  }
+}
+.navEffect{
+  position: fixed;
+  width: 100%;
+  background-color: #16161d;
+  z-index: 100;
+  box-shadow: 2px 2px 5px 5px  rgba($color: #000000, $alpha: 0.1);
 }
