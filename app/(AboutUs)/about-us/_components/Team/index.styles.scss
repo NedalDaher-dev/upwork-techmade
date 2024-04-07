@@ -1,4 +1,6 @@
+@import "@/styles/index.scss";
 .about_us_team_wrapper {
+  background-color: #f9f9f9;
   width: 100%;
   .container {
     padding: 150px 0px;
@@ -52,7 +54,7 @@
           flex-direction: column;
           text-align: center;
           h3 {
-            font-size: 22px;
+            font-size: 20px;
             font-weight: 600;
           }
           p {
@@ -63,99 +65,90 @@
       }
     }
     .modal-wrapper {
-      min-width: 605px;
+      min-width: 484px; 
       position: fixed;
       display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 24px;
-      top: 50%;
-      text-align: center;
-      left: 50%;
-      transform: translate(-50%, -50%) !important;
-      z-index: 9999999;
-      padding: 70px 77px;
+      gap: 19.2px;
+      top: 0%;
+      left: 35%;
+      transform: translate(-50%, -50%) scale(0.8);
+      z-index: 100;
+      padding: 26px 61.6px; 
       background-color: white;
-      border-radius: 20px;
+      border-radius: 16px; 
       overflow: hidden;
+    
       .image-modal {
-        width: 380px;
-        height: 380px;
+        width:60%; 
+        height:60%; 
         img {
           width: 100%;
+          height: auto;
         }
       }
+    
       .modal-header {
         width: 100%;
         display: flex;
         align-items: center;
         justify-content: space-between;
-        button {
-          background-color: transparent;
-          color: black;
-          border: solid 2px black;
-          outline: none;
-          padding: 3px 15px;
-          border-radius: 30px;
-          font-weight: 500;
-          font-size: 16px;
-          cursor: pointer;
-        }
+
         .flex {
           display: flex;
           align-items: center;
-          gap: 12px;
+          gap: 9.6px; 
         }
-        .flex-button {
-          display: flex;
-          align-items: center;
-          gap: 2px;
-          cursor: pointer;
-        }
+
       }
+    
       .desc-wrapper {
-        margin-top: 24px;
+        margin-top: 19.2px; 
         display: flex;
         flex-direction: column;
-        gap: 32px;
+        gap: 25.6px; 
         .flex-desc {
           display: flex;
           align-items: center;
-          gap: 10px;
+          gap: 8px; 
           .text-desc {
-            font-size: 22px;
+            font-size: 17.6px; 
             font-weight: 400;
-            line-height: 28px;
+            line-height: 22.4px; 
             overflow: hidden;
           }
         }
       }
-      .motto-wrapper {
-        margin: auto;
-        margin-top: 30px;
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        gap: 12px;
-        color: #16161d;
-
-        text-align: center;
-        font-size: 18px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 28px; /* 155.556% */
-        letter-spacing: -0.22px;
-        .motto-flex {
-          display: flex;
-          gap: 6px;
-          align-items: center;
-          font-weight: 500;
-        }
-        .motto-desc {
-          width: 280px;
-        }
-      }
+    
+      // .motto-wrapper {
+      //   margin: auto;
+      //   margin-top: 24px;
+      //   display: flex;
+      //   align-items: center;
+      //   flex-direction: column;
+      //   gap: 9.6px; 
+      //   color: #16161d;
+    
+      //   text-align: center;
+      //   font-size: 14.4px; 
+      //   font-style: normal;
+      //   font-weight: 400;
+      //   line-height: 22.4px; 
+      //   letter-spacing: -0.176px; 
+      //   .motto-flex {
+      //     display: flex;
+      //     gap: 4.8px; 
+      //     align-items: center;
+      //     font-weight: 500;
+      //   }
+      //   .motto-desc {
+      //     width: 224px;
+      //   }
+      // }
     }
+    
+  
     .modal-underlay {
       position: fixed;
       top: 0;
@@ -166,4 +159,20 @@
       z-index: 999999;
     }
   }
+  @media screen and (max-width: 768px) {
+    .container{
+      .team-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .modal-wrapper{
+        min-width: 384px; 
+
+        top: 20%;
+        left: 0;
+      }
+    }
+  }
+  
 }
+
+

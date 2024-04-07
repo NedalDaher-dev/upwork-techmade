@@ -1,3 +1,4 @@
+"use client";
 import React from 'react';
 import Hero from './_components/Hero';
 import './page.scss';
@@ -5,17 +6,36 @@ import Tagline from './_components/Tagline';
 import Achievements from './_components/Achievements';
 import Team from './_components/Team';
 import Features from './_components/Feature';
+import { useTheme } from '@/contexts/ThemeContext';
 
-const page = () => (
-  <section className="about-us-wrapper">
-    <div className="about-us-container">
-      <Hero />
-      <Tagline />
-      <Features />
-      <Achievements />
-      <Team />
-    </div>
-  </section>
-);
+const Page = () => {
+  const { theme, phoneScreenWidth, screenWidth, toggleTheme } = useTheme();
 
-export default page;
+  return (
+    <section className="about-us-wrapper">
+      {
+        phoneScreenWidth >= screenWidth ? (
+          <div className="about-us-container">
+            <div className="Footnotes">
+              <Hero />
+              <Achievements />
+            </div>
+            <Team />
+
+          </div>
+        ) : (
+          <div className="about-us-container">
+            <Hero />
+            <Tagline />
+            <Features />
+            <Achievements />
+            <Team />
+          </div>
+        )
+      }
+
+    </section>
+  );
+};
+
+export default Page;

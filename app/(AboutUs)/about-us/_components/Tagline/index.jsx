@@ -1,6 +1,7 @@
 import React from 'react';
 import './index.styles.scss';
 import ArrowPurple from '@/assets/Icons/ArrowPurple';
+import '@/styles/index.scss'
 
 const Tagline = () => (
   <div className="tagline-wrapper">

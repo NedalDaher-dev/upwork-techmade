@@ -1,22 +1,85 @@
+// Background Colors
+$BackgroudnColor: #16161d;
+$textColor: #725AD0;
 .bgDark {
-  background-color: #16161d;
+  background-color: $BackgroudnColor;
 }
+
 .bgLight {
   background-color: white;
 }
-.navWrapper {
-  width: 100%;
-  transition: background-color 0.3s ease;
-  transition: all 1s ease; // هذا سيضمن التحول السلس للخصائص
+// Journal_icon.module.scss
+
+.nav-icon {
+  fill: white;
+  transition: color 0.5s ease; // Add transition effect for color change
 
 }
-.nav {
-  padding: 49px 0px 17px 0px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1184px;
-  margin: auto;
+
+// Navigation Styles
+.navWrapper {
+  width: 100%;
+
+  .nav {
+    padding: 49px 0px 17px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1184px;
+    margin: auto;
+    transition: transform 0.3s ease;
+
+
+  }
+
+  .container-nav {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+
+  .navEffect {
+    position: fixed;
+    width: 100%;
+    background-color: $BackgroudnColor;
+    z-index: 100;
+    box-shadow: 2px 2px 5px 5px rgba($color: #000000, $alpha: 0.1);
+  }
+
+  .effectTextNavBar {
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    position: relative;
+
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: width 0.5s ease;
+    }
+
+    &:hover::after {
+      width: 100%;
+    }
+
+    &:hover {
+      transition: color 0.5s ease;
+    }
+  }
+
+  .logo-text {
+    color: white;
+    font-size: 30px;
+  }
+
+
   .nav-links {
     display: flex;
     align-items: center;
@@ -27,37 +90,111 @@
       font-weight: 500;
     }
   }
-  .buttonWrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    cursor: pointer;
-    .button {
-      background-color: transparent;
-      color: white;
-      border: solid 2px white;
-      outline: none;
-      padding: 10px 15px;
-      border-radius: 30px;
-      cursor: pointer;
-    }
-  }
-  .nav {
-    transition: transform 0.3s ease;
+}
+  @media (max-width: 768px) {
+    .navWrapper {
+      position: relative; // This creates the context for absolute positioning
+      overflow: visible; // Ensure it's not hidden or scroll
 
-    &.fixed {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      z-index: 10;
-      transform: translateY(0);
+      .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 1;
+        right: 0;
+        top: 1;
+        gap: 60px;
+        min-width: 40%;
+        max-width: 50%;
+        margin-top: -1px;
+        box-shadow: 2px 2px 5px 5px rgba(#000000, 0.1);
+        background-color: $BackgroudnColor;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+      
+        p {
+          font-size: 16px;
+          font-weight: 500;
+          color: white;
+          transition: color 0.5s ease; // Add transition effect for color change
+        }
+      
+        .nav-link-item {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 100%;
+          gap: 15px;
+          a{
+            text-decoration: none;
+            color: white;
+            text-transform: uppercase;
+            font-weight: 600;
+          
+          }
+      
+          &:hover {
+            .hover_effect_box {
+              opacity: 1;
+              transform: scaleX(1);
+            }
+      
+            a {
+              color: $textColor; // Change text color to purple on hover
+            }
+            .nav-icon{
+              fill: $textColor;
+            }
+          }
+      
+          &:not(:hover) {
+            .hover_effect_box {
+              transition-delay: 0.1s;
+            }
+          }
+      
+          .hover_effect_box {
+            width: 8px;
+            height: 36px;
+            top: 58px;
+            left: 150px;
+            border-radius: 6px 0px 0px 6px;
+            background-color: $textColor;
+            opacity: 0;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+            transform: scaleX(0);
+          }
+        }
+      }
+      
+      .effectTextNavBar {
+        color: white; // Default text color
+        text-transform: uppercase; // Uppercase all letters
+        position: relative; // Position relative to allow absolute positioning of pseudo-elements
+      
+        // Create a pseudo-element for the underline effect
+        &::after {
+          content: '';
+          position: absolute; // Absolute position to place it directly under the text
+          left: 0;
+          bottom: 0;
+          width: 0; // Start with a width of 0 to make it invisible initially
+          height: 2px; // Height of the underline
+          background: white; // Color of the underline
+          transition: width 0.5s ease; // Transition for the width to create the effect
+        }
+      
+        // On hover, expand the underline to the full width of the element
+        &:hover::after {
+          width: 100%; // Full width to make the underline visible
+        }
+      
+        // On hover, change the color of the text
+        &:hover {
+          transition: color 0.5s ease; // Transition for the color change
+        }
+      }
     }
   }
-}
-.navEffect{
-  position: fixed;
-  width: 100%;
-  background-color: #16161d;
-  z-index: 100;
-  box-shadow: 2px 2px 5px 5px  rgba($color: #000000, $alpha: 0.1);
-}

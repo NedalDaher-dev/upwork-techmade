@@ -10,8 +10,5 @@ export const features = [
   },
   {
     title: 'Digital Frontier Navigators',
-  },
-  {
-    title: 'Mobile Mastery Maestros',
-  },
+  }
 ];

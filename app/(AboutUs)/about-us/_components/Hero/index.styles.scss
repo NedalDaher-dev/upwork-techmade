@@ -53,3 +53,23 @@
     }
   }
 }
+
+
+@media screen and (max-width: 768px) {
+
+  .about-us-hero-wrapper {
+    border-radius: 0;
+    .about-us-hero-container {
+      height : auto;
+      margin-right: 0px;
+      .heading {
+        font-size: 35px;
+        line-height: 40px;
+      }
+      .description{
+        margin-left: 0;
+      }
+    }
+  }
+  
+}

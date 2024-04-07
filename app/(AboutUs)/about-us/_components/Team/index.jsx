@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
+import '@/styles/index.scss'
 import './index.styles.scss';
 import { motion } from 'framer-motion';
 import Location from '@/assets/Icons/Location';
@@ -8,12 +9,17 @@ import ClosePurple from '@/assets/Icons/ClosePurple';
 import ExperienceIcon from '@/assets/Icons/ExperienceIcon';
 import Heart from '@/assets/Icons/Heart';
 import Dislike from '@/assets/Icons/Dislike';
-import MottoIcon from '@/assets/Icons/MottoIcon';
 import { team } from './constants';
 
 const Team = () => {
   const [isOpen, setIsOpen] = useState(null);
-
+  const fadeIn = {
+    initial: { opacity: 0 },
+    animate: { opacity: 1 },
+    exit: { opacity: 0 },
+    transition: { duration: 1 },
+  }
+  
   return (
     <section className="about_us_team_wrapper">
       <div className="container">
@@ -30,6 +36,7 @@ const Team = () => {
               layoutId={idx + 1}
               className="team-item-container"
               onClick={() => setIsOpen(idx + 1)}
+              key={idx}
             >
               <motion.div className="image">
                 <img src={item.img} alt={`${item.name}`} />
@@ -49,10 +56,10 @@ const Team = () => {
                   <Location />
                   <p>San Francisco</p>
                 </div>
-                <div className="flex-button" onClick={() => setIsOpen(null)}>
-                  <button type="button">Close</button>
+                <motion.div className="flex-button" {...fadeIn}> 
+              
                   <ClosePurple />
-                </div>
+                </motion.div>
               </div>
               <motion.div className="image-modal">
                 {' '}
@@ -79,15 +86,6 @@ const Team = () => {
                 <div className="flex-desc">
                   <Dislike />
                   <p className="text-desc">Snow</p>
-                </div>
-              </div>
-              <div className="motto-wrapper">
-                <div className="motto-flex">
-                  <MottoIcon />
-                  <p>Motto</p>
-                </div>
-                <div className="motto-desc">
-                  Embrace a positive outlook even in challenging situations.
                 </div>
               </div>
             </motion.div>

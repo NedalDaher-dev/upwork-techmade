@@ -6,7 +6,7 @@ const Features = () => (
   <div className="about-us-features-wrapper">
     <div className="about-us-features-container">
       {features.map((item) => (
-        <div className="feature-card-container">
+        <div key={item.title} className="feature-card-container">
           <h2>{item.title}</h2>
         </div>
       ))}

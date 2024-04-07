@@ -3,17 +3,20 @@
   padding: 180px 0px;
 
   margin-top: 180px;
+
   .container {
     max-width: 1184px;
     margin: auto;
     display: flex;
     justify-content: space-between;
+
     .container-left {
       display: flex;
       flex-direction: column;
       max-width: 670px;
       gap: 96px;
       color: white;
+
       h1 {
         color: #fff;
         font-size: 62px;
@@ -22,18 +25,22 @@
         letter-spacing: -2.48px;
         overflow: hidden;
       }
+
       .stats-container {
         display: flex;
         gap: 80px;
+
         h2 {
           color: #fff;
           font-size: 42px;
           font-weight: 500;
-          line-height: 44px; /* 104.762% */
+          line-height: 44px;
+          /* 104.762% */
           letter-spacing: -0.529px;
           text-transform: uppercase;
           overflow: hidden;
         }
+
         p {
           color: #fff;
           font-size: 16px;
@@ -43,16 +50,19 @@
         }
       }
     }
+
     .container-right {
       color: white;
       display: flex;
       flex-direction: column;
       max-width: 390px;
       gap: 50px;
+
       .info-container {
         display: flex;
         flex-direction: column;
         gap: 31px;
+
         h2 {
           color: #fff;
           overflow: hidden;
@@ -61,6 +71,7 @@
           line-height: 34px;
           letter-spacing: -0.96px;
         }
+
         p {
           color: #fff;
           font-size: 22px;
@@ -71,4 +82,112 @@
       }
     }
   }
+
+}
+
+@media screen and (max-width: 768px) {
+  .about-us-achievements-wrapper {
+    margin: 0;
+
+    .container {
+      flex-direction: column;
+      gap: 40px;
+
+      .container-left {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-width: 100%;
+
+
+        h1 {
+          font-size: 35px;
+          line-height: 44px;
+        }
+
+        .stats-container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-evenly;
+          p {
+            font-size: 13px;
+            gap: 100px;
+          }
+
+          h2 {
+
+            font-size: 22px;
+          }
+        }
+      }
+
+      .container-right {
+        gap: 150px;
+        max-width: 100%;
+
+        .underline {
+          border-bottom: 3px solid white;
+          /* الخط الأحمر تحت النص */
+          padding-bottom: 2px;
+          /* لضبط المسافة بين النص والخط */
+          width: 80%;
+          /* تعديل اللون إذا كنت ترغب في ذلك */
+        }
+        .info-container {
+          h2 {
+            line-height: 30px;
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+
+        .We-develop-container {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+
+          h2 {
+            display: inline;
+            /* أو block حسب تفضيلك وحاجتك لتنسيق العنوان */
+            color: white;
+            /* اللون الأسود للنص */
+            /* أي أنماط أخرى للعنوان تحتاجها */
+          }
+
+        }
+
+        .info-container-ui-ux {
+          
+          margin-right: 10px;
+
+          h2 {
+            line-height: 30px;
+            font-size: 18px;
+            font-weight: 400;
+          }
+        }
+
+        .We-desing-container {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          margin-right: 10px;
+
+          h2 {
+            display: inline;
+            /* أو block حسب تفضيلك وحاجتك لتنسيق العنوان */
+            color: white;
+            /* اللون الأسود للنص */
+            /* أي أنماط أخرى للعنوان تحتاجها */
+          }
+          p{
+            max-width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+
+
 }
