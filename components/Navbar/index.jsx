@@ -50,7 +50,7 @@ const Navbar = ({ type }) => {
     >
       <nav className="nav container-nav">
         <div className="logo-wrapper">
-          {phoneScreenWidth >= screenWidth ? (
+          {tabletScreenWidth >= screenWidth ? (
             <p className="logo-text">TM</p>
           ) : (
             <Logo />

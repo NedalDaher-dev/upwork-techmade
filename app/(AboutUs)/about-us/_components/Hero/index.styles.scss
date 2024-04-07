@@ -3,6 +3,7 @@
 
   background-color: #16161d;
   border-radius: 0px 0px 120px 120px;
+
   .about-us-hero-container {
     height: 984px;
     margin-right: auto;
@@ -10,6 +11,8 @@
     max-width: 1184px;
     margin: auto;
     position: relative;
+    padding: 20px;
+    overflow: hidden;
 
     .heading {
       max-width: 1110px;
@@ -20,10 +23,12 @@
       line-height: 80px;
       text-transform: uppercase;
       overflow: hidden;
+
       span {
         color: #828083;
       }
     }
+
     .description {
       max-width: 711px;
       margin-left: auto;
@@ -35,18 +40,21 @@
       letter-spacing: -0.22px;
       overflow: hidden;
     }
+
     .rocket-icon-container {
       position: absolute;
       top: 551px;
       left: -50px;
       width: fit-content;
     }
+
     .brush-icon-container {
       position: absolute;
       bottom: 25px;
       left: 50%;
       transform: translateX(-50%);
     }
+
     .code-icon-container {
       position: absolute;
       right: 70px;
@@ -54,22 +62,46 @@
   }
 }
 
-
-@media screen and (max-width: 768px) {
-
+@media  (max-width: 1024px) {
   .about-us-hero-wrapper {
-    border-radius: 0;
     .about-us-hero-container {
-      height : auto;
+      .rocket-icon-container {
+        position: absolute;
+        left: 0;
+        top: 760px;
+      }
+      .brush-icon-container {
+        position: absolute;
+        left: 100%;
+        bottom: 60%;
+        transform: translateX(-50%);
+      }
+    }
+
+  }
+}
+
+@media (max-width: 768px) {
+  .about-us-hero-wrapper {
+
+    border-radius: 0;
+
+    .about-us-hero-container {
+      height: auto;
       margin-right: 0px;
+
       .heading {
         font-size: 35px;
         line-height: 40px;
       }
-      .description{
+
+      .description {
         margin-left: 0;
+      }
+      .rocket-icon-container{
+        top: 0;
       }
     }
   }
-  
+
 }
