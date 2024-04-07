@@ -39,9 +39,9 @@ const footer = () => {
                             ))}
                         </div>
                     </div>
-                    <p className="copyright">
+                    {/* <p className="copyright">
                         © 2024 Techmade. All rights reserved.
-                    </p>
+                    </p> */}
                 </div>
             </section>
         </>
