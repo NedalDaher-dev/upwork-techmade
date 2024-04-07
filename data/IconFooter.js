@@ -1,4 +1,4 @@
-import Discord from "@/assets/Icons/Social Media/discoed";
+import Discord from "@/assets/Icons/Social Media/Discoed";
 import Instagram from "@/assets/Icons/Social Media/Instagram";
 import Twitter from "@/assets/Icons/Social Media/Twitter";
 
