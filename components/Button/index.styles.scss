@@ -63,3 +63,35 @@
 
 
 }
+
+
+// Tablet devices (between 768px and 1024px)
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+  .button-wrapper {
+    padding: 1.15em; // Adjust padding relative to new font size
+    gap: 11.5px; // Adjust gap size
+    
+    .button {
+      padding: 11.5px 23px; // Adjust button padding
+      border-radius: 57.5px; // Adjust border-radius
+      font-size: 13px;
+      // ... other styles ...
+    }
+  }
+
+  .arrow-circle {
+    width: 60px; // Adjust circle size
+    height:60px; // Adjust circle size
+  }
+
+  .text {
+    padding: 11.5px;
+    height: 51.75px; 
+    border-radius: 23px; 
+    p{
+      font-size: 18px;
+    }
+  }
+}

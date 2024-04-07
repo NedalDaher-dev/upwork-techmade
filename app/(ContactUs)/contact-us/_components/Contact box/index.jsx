@@ -53,15 +53,15 @@ const ContactUs = () => {
                 </div>
                 <div className="contact-box-textarea" data-aos="fade-up" data-aos-delay="800">
                     <label htmlFor="message">Your Message</label>
-                    <textarea id="message" rows="10" name="message" placeholder="Type your message here..."></textarea>
+                    <textarea id="message" rows="10" name="message" placeholder="Type your message here..." />
                 </div>
                 <div className='contact-box-button' data-aos="fade-up" data-aos-delay="900">
                     <div className='buttonWrapper'>
-                        <button className="button">
+                        <button type="button" className="button">
                             SEND US A MESSAGE
                         </button>
                         <div className="arrow-circle">
-                            <ArrowStraight className={"arrow"} color="white" />
+                            <ArrowStraight className='arrow' color="white" />
                         </div>
                     </div>
                 </div>

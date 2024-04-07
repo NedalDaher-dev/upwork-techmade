@@ -15,7 +15,6 @@ const Hero = () => {
     }, []);
 
     // To ensure AOS animations are triggered after page load, you can set a timeout
-    // This can be handled by a useEffect that will refresh AOS to apply animations
     useEffect(() => {
         const handleLoad = () => {
             // Timeout to reinitialize AOS after page load
@@ -34,7 +33,7 @@ const Hero = () => {
             <div className="hero-container">
                 <div 
                     className="hero-text" 
-                    data-aos="fade-up" // Animation type
+                    data-aos="fade-up" // Animation type 
                     data-aos-delay="500" // Additional delay for the animation
                 >
                     <p>REACH OUT</p>
@@ -45,8 +44,8 @@ const Hero = () => {
                     data-aos="fade-up" 
                     data-aos-delay="750" // Stagger the button animation slightly more
                 >
-                    <Button description={'techmadeagency@techmade.com'}>EMAIL US</Button>
-                    <Button description={'Book a call with our experts.'}>START YOUR PROJECT</Button>
+                    <Button description="techmadeagency@techmade.com">EMAIL US</Button>
+                    <Button description="Book a call with our experts.">START YOUR PROJECT</Button>
                 </div>
             </div>
         </div>

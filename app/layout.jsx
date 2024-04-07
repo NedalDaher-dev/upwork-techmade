@@ -1,11 +1,12 @@
-"use client"
+'use client';
+
 import React, { Suspense, lazy, useEffect, useState } from 'react';
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
 import './globals.css';
-import Navbar from '@/components/Navbar';
 import { ThemeProvider } from '@/contexts/ThemeContext';
-// استخدام React.lazy لتحميل مكون Footer بشكل كسول
+
+// Use React.lazy for lazy loading the Footer component
 const LazyNavbar = lazy(() => import('@/components/Navbar'));
 const LazyFooter = lazy(() => import('@/components/Footer'));
 const inter = Inter({ subsets: ['latin'] });
@@ -17,8 +18,8 @@ const RootLayout = ({ children }) => {
     setIsClient(true);
   }, []);
 
-  return(
-    <html>
+  return ( // Added a space after "return"
+    <html lang="en"> {/* Added the lang attribute */}
       <ThemeProvider>
         <Head>
           <title>Create Next App</title>

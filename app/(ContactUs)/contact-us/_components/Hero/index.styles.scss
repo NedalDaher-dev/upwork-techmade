@@ -55,34 +55,51 @@
 }
 
 
-@media (max-width: 1024px) {
-    .hero-wrapper {
-        // background-color: red;
-    }
-    
+/* Tablet devices (between 769px and 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+
     .hero-wrapper .hero-container {
         height: 100vh;
     }
 
     .hero-wrapper .hero-container .hero-text h1 {
-        font-size: 35px;
+        font-size: 60px;
+        max-width: 100%;
+    }
+
+    .hero-wrapper .hero-container .hero-text p {
+        font-size: 30px;
         max-width: 100%;
     }
 
     .hero-wrapper .hero-container .button-Wrapper {
-        max-width: 100%;
+        max-width: 90%;
         width: 100%;
-        flex-direction: column;
+        flex-direction: row;
         gap: 40px;
     }
 }
 
 /* Mobile devices (max-width: 768px) */
-@media(max-width: 768px) {
-    /* Mobile specific styles if needed. */
-    .hero-wrapper .hero-container .hero-text h1 {
-        font-size: 25px; /* Example mobile override for font size */
+@media (max-width: 767px) {
+    .hero-wrapper {
+        .hero-container {
+            height: 100vh;
+
+            .hero-text {
+                h1 {
+                    font-size: 35px;
+                    max-width: 100%;
+
+                }
+            }
+
+            .button-Wrapper {
+                max-width: 100%;
+                width: 100%;
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
     }
-    
-    /* Other mobile specific styles can go here. */
 }
