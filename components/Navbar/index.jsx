@@ -1,12 +1,12 @@
-// Navbar.jsx
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Logo from '@/assets/Icons/Logo'; // تأكد من أن المسار صحيح
-import ArrowYellow from '@/assets/Icons/ArrowYellow'; // تأكد من أن المسار صحيح
-import NavLinks from '@/components/Navbar/NavLinks'; // تأكد من أن المسار صحيح
+import Logo from '@/assets/Icons/Logo'; // Ensure the path is correct
+import ArrowYellow from '@/assets/Icons/ArrowYellow'; // Ensure the path is correct
+import NavLinks from '@/components/Navbar/NavLinks'; // Ensure the path is correct
+import Link from 'next/link';
 import { useTheme } from '@/contexts/ThemeContext';
-import './index.styles.scss'; // تأكد من أن المسار صحيح
-import '@/styles/index.scss'
+import './index.styles.scss'; // Ensure the path is correct
+import '@/styles/index.scss';
 
 const Navbar = ({ type }) => {
   const [scrollY, setScrollY] = useState(0);
@@ -19,7 +19,6 @@ const Navbar = ({ type }) => {
     };
 
     window.addEventListener('scroll', handleScroll);
-
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
@@ -40,7 +39,7 @@ const Navbar = ({ type }) => {
     setIsMenuOpen(!isMenuOpen);
   };
 
-  const menuButtonText = isMenuOpen ? 'close' : 'menu'; // تغيير نص الزر بناءً على حالة isMenuOpen
+  const menuButtonText = isMenuOpen ? 'Close' : 'Menu'; // Change button text based on isMenuOpen state
 
   return (
     <motion.div
@@ -59,9 +58,17 @@ const Navbar = ({ type }) => {
         </div>
         {phoneScreenWidth < screenWidth && <NavLinks type={type} />}
         <div className="buttonWrapper">
-          <button type="button" className="button" onClick={toggleMenu}>
-            {phoneScreenWidth >= screenWidth ? menuButtonText : 'Contact us'}
-          </button>
+          {phoneScreenWidth >= screenWidth ? (
+            // Use the <a> tag with your desired URL here
+            <button type="button" className="button" onClick={toggleMenu}>
+              {menuButtonText}
+            </button>
+
+          ) : (
+              <Link href="/contact-us" className="button"  >
+                Contact Us
+              </Link>
+          )}
           <ArrowYellow />
         </div>
       </nav>

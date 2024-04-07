@@ -1,44 +1,56 @@
 .buttonWrapper {
-    display: flex;
-    align-items: center;
-    gap: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
 
-    .button {
-      background-color: transparent;
-      color: white;
-      border: 2px solid white;
-      padding: 10px 15px;
+  .button {
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    padding: 10px 15px;
+    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: color 0.4s ease;
+    z-index: 2;
+    font-weight: bold;
+    text-decoration: none;
+    cursor: pointer;
+
+    a {
+      text-decoration: none;
+      color: red;
+      transition: color 0.4s ease; /* Add transition for the color of the link */
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: white;
+      transform: translateY(100%);
+      transition: transform 0.4s ease;
       border-radius: 30px;
-      position: relative;
-      overflow: hidden;
-      transition: color 0.4s ease;
-      z-index: 2;
-      font-weight: bold;
-      cursor: pointer;
+      z-index: -1;
+    }
 
-      &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-color: white;
-        transform: translateY(100%);
-        transition: transform 0.4s ease;
-        border-radius: 30px;
-        z-index: -1;
-      }
+    &:hover {
+      color: black;
 
-      &:hover {
-        color: black;
-      }
-
-      &:hover::after {
-        transform: translateY(0);
+      a {
+        color: black; /* Change color of the link to black on hover */
       }
     }
+
+    &:hover::after {
+      transform: translateY(0);
+    }
+  }
 }
+
 .effectTextNavBar {
   flex-direction: none;
   color: white; // Default text color
@@ -67,3 +79,4 @@
     transition: color 0.5s ease; // Transition for the color change
   }
 }
+

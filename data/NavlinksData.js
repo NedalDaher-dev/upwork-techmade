@@ -1,11 +1,11 @@
 export const navLinks = [
     {
-      title: 'Work',
-      url: '/work',
+      title: 'Home',
+      url: '/',
     },
     {
-      title: 'Services',
-      url: '/services',
+      title: 'Work',
+      url: '/work',
     },
     {
       title: 'Journal',
@@ -15,5 +15,6 @@ export const navLinks = [
       title: 'About Us',
       url: '/about-us',
     },
+    
   ];
   

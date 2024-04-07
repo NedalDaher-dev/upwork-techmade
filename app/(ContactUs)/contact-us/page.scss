@@ -1,0 +1,17 @@
+.contact-us-wrapper{
+    background-color: #f9f9f9;
+    .contact-us-container{
+        width: 100%;
+        margin: auto;
+    }
+
+}
+.Footnotes{
+    padding: 5px;
+  }
+
+
+@media screen and (max-width: 768px) {
+    .contact-us-wrapper{
+    }
+}
