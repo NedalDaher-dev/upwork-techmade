@@ -85,6 +85,23 @@
 
 }
 
+@media screen and (max-width: 1024px) {
+  .about-us-achievements-wrapper {
+    margin: 0;
+
+    .container {
+      padding: 30px;
+        .container-left{
+          h1{
+            font-size: 35px;
+          }
+        }
+    }
+  }
+
+
+
+}
 @media screen and (max-width: 768px) {
   .about-us-achievements-wrapper {
     margin: 0;
