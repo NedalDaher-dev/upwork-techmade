@@ -1,17 +1,14 @@
-  "use client";
-  import OurProcess from './_components/OurProcess';
-  import UpcomingEvents from './_components/UpcomingEvents';
-  import './home.scss';
-  import { useSelector, useDispatch } from 'react-redux';
-  const Home = () => {
+'use client';
 
+import OurProcess from './_components/OurProcess';
+import UpcomingEvents from './_components/UpcomingEvents';
+import './home.scss';
 
-    return (
-      <div className="home__container">
-        <OurProcess />
-        <UpcomingEvents />
-      </div>
-    )
-  }
+const Home = () => (
+  <div className="home__container">
+    <OurProcess />
+    <UpcomingEvents />
+  </div>
+);
 
-  export default Home
+export default Home

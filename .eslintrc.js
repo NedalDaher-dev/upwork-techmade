@@ -41,7 +41,7 @@ module.exports = {
     'import/named': 'off',
     'import/prefer-default-export': 'off',
     'prefer-const': 'warn',
-    'no-unused-vars': 'warn',
+    'no-unused-vars': 'off',
     'prefer-arrow-callback': 'warn',
     'no-undef': 'error',
     'no-use-before-define': 'error',
@@ -49,6 +49,10 @@ module.exports = {
     'no-new-object': 'warn',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/no-noninteractive-element-interactions': 'off',
+    'no-trailing-spaces': 'off',
+    'jsx-quotes':'off',
+    "react/jsx-indent": "off",
+    "semi": "off",
 
     'react/function-component-definition': [
       'warn',

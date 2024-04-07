@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import React from 'react';
 import './index.styles.scss';
 import Rocket from '@/assets/Icons/Rocket';
@@ -43,7 +44,7 @@ const Hero = () => {
 
       </div>
     </div>
-  )
+  );
 };
 
 export default Hero;

@@ -7,6 +7,7 @@ import NavLinks from '@/components/Navbar/NavLinks'; // تأكد من أن ال�
 import { useTheme } from '@/contexts/ThemeContext';
 import './index.styles.scss'; // تأكد من أن المسار صحيح
 import '@/styles/index.scss'
+
 const Navbar = ({ type }) => {
   const [scrollY, setScrollY] = useState(0);
   const [isMenuOpen, setIsMenuOpen] = useState(false);

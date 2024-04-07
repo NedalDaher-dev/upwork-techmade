@@ -1,9 +1,10 @@
 import React from 'react';
-import './index.styles.scss';
 import { useTheme } from '@/contexts/ThemeContext';
-import { featuresRight, numbers } from './_constants';
-import Code_small from '@/assets/Icons/Code-small';
 import Design from '@/assets/Icons/Design';
+import CodeSmall from '@/assets/Icons/Code-small';
+import { featuresRight, numbers } from './_constants';
+import './index.styles.scss';
+
 const Achievements = () => {
   const { theme, phoneScreenWidth, screenWidth, toggleTheme } = useTheme();
 
@@ -33,10 +34,10 @@ const Achievements = () => {
                   </div>
                 </div>
                 <div className='We-develop-container'>
-                  <Code_small />
+                  <CodeSmall />
                   <div>
                     <h2>We Develop</h2>
-                    <div className="underline"></div>
+                    <div className="underline" />
                     <p>Turning Ideas into Impact.</p>
                   </div>
                 </div>
@@ -52,7 +53,7 @@ const Achievements = () => {
                   <Design />
                   <div>
                     <h2>We Design</h2>
-                    <div className="underline"></div>
+                    <div className="underline" />
                     <p>We offer a full spectrum of web services tailored to elevate your brand</p>
                   </div>
                 </div>
@@ -73,7 +74,6 @@ const Achievements = () => {
         </div>
       </div>
     </div>
-  )
-}
-
+  );
+};
 export default Achievements;

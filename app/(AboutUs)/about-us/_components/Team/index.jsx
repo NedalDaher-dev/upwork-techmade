@@ -19,7 +19,7 @@ const Team = () => {
     exit: { opacity: 0 },
     transition: { duration: 1 },
   }
-  
+
   return (
     <section className="about_us_team_wrapper">
       <div className="container">
@@ -50,13 +50,13 @@ const Team = () => {
         </div>
         {isOpen && (
           <div className="modal-container">
-             <motion.div layoutId={isOpen} className="modal-wrapper">
+            <motion.div layoutId={isOpen} className="modal-wrapper">
               <div className="modal-header">
                 <div className="flex">
                   <Location />
                   <p>San Francisco</p>
                 </div>
-                <motion.div onClick={() => setIsOpen(false)} className="flex-button" {...fadeIn}> 
+                <motion.div onClick={() => setIsOpen(false)} className="flex-button" {...fadeIn}>
                   <ClosePurple />
                 </motion.div>
               </div>
