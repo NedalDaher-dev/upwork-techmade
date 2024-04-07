@@ -49,15 +49,14 @@ const Team = () => {
           ))}
         </div>
         {isOpen && (
-          <>
-            <motion.div layoutId={isOpen} className="modal-wrapper">
+          <div className="modal-container">
+             <motion.div layoutId={isOpen} className="modal-wrapper">
               <div className="modal-header">
                 <div className="flex">
                   <Location />
                   <p>San Francisco</p>
                 </div>
-                <motion.div className="flex-button" {...fadeIn}> 
-              
+                <motion.div onClick={() => setIsOpen(false)} className="flex-button" {...fadeIn}> 
                   <ClosePurple />
                 </motion.div>
               </div>
@@ -89,8 +88,8 @@ const Team = () => {
                 </div>
               </div>
             </motion.div>
-            <div className="modal-underlay" onClick={() => setIsOpen(false)} />
-          </>
+            {/* <div className="modal-underlay"  /> */}
+          </div>
         )}
       </div>
     </section>

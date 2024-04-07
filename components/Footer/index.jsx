@@ -9,7 +9,7 @@ import Instagram from "@/assets/Icons/Social Media/Instagram";
 const footer = () => {
 
     return (
-        <>
+        <div>
             <section className="footer-wrapper">
                 <div className='footer-container'>
                     <h2>
@@ -44,7 +44,7 @@ const footer = () => {
                     </p> */}
                 </div>
             </section>
-        </>
+        </div>
     )
 }
 

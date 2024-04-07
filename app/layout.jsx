@@ -19,9 +19,7 @@ const RootLayout = ({ children }) => (
       <Navbar type="dark" />
       {children}
     </body>
-    <footer>
-        <Footer/>
-    </footer>
+    <Footer/>
   </ThemeProvider>
   </html>
 );

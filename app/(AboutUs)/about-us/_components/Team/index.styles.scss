@@ -71,9 +71,6 @@
       flex-direction: column;
       align-items: center;
       gap: 19.2px;
-      top: 0%;
-      left: 35%;
-      transform: translate(-50%, -50%) scale(0.8);
       z-index: 100;
       padding: 26px 61.6px; 
       background-color: white;
@@ -148,7 +145,18 @@
       // }
     }
     
-  
+    .modal-container{
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: rgba(0, 0, 0, 0.1);
+      height: 100vh;
+      width: 100vw;
+      z-index: 999999;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
     .modal-underlay {
       position: fixed;
       top: 0;
