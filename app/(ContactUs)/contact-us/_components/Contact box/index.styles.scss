@@ -6,10 +6,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+
 
     .contact-box-container {
         background-color: transparent;
-
+    overflow: hidden;
+        
         .contact-box-inputs,
         .contact-box-select {
             margin-bottom: 30px;

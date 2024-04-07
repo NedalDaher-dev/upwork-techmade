@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import ArrowStraight from '@/assets/Icons/ArrowStraight';
 import './index.styles.scss';
 
-const Button = ({ children, description }) => {
+const Buttun = ({ children, description }) => {
   // Define parent animation variants
   return (
     <div className="button-container">
@@ -22,4 +22,4 @@ const Button = ({ children, description }) => {
   );
 };
 
-export default Button;
+export default Buttun;

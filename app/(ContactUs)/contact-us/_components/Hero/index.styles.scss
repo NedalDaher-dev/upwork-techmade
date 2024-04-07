@@ -1,9 +1,11 @@
+
 .hero-wrapper {
     width: 100%;
     background-color: transparent;
     text-align: center;
     display: flex;
     justify-content: center;
+    overflow: hidden; // Add this line
 
     .hero-container {
         height: 984px;
@@ -14,6 +16,7 @@
         justify-content: center;
         align-items: center;
         gap: 50px;
+        
 
         .hero-text {
             display: flex;
@@ -51,27 +54,35 @@
     }
 }
 
-/* Media Queries مجمعة في مكان واحد */
 
-@media screen and (max-width: 768px) {
+@media (max-width: 1024px) {
     .hero-wrapper {
-        .hero-container {
-            height: 100vh;
-
-            .hero-text {
-                h1 {
-                    font-size: 35px;
-                    max-width: 100%;
-
-                }
-            }
-
-            .button-Wrapper {
-                max-width: 100%;
-                width: 100%;
-                flex-direction: column;
-                gap: 40px;
-            }
-        }
+        // background-color: red;
     }
+    
+    .hero-wrapper .hero-container {
+        height: 100vh;
+    }
+
+    .hero-wrapper .hero-container .hero-text h1 {
+        font-size: 35px;
+        max-width: 100%;
+    }
+
+    .hero-wrapper .hero-container .button-Wrapper {
+        max-width: 100%;
+        width: 100%;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
+
+/* Mobile devices (max-width: 768px) */
+@media(max-width: 768px) {
+    /* Mobile specific styles if needed. */
+    .hero-wrapper .hero-container .hero-text h1 {
+        font-size: 25px; /* Example mobile override for font size */
+    }
+    
+    /* Other mobile specific styles can go here. */
 }
