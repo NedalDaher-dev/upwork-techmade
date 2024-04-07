@@ -1,4 +1,5 @@
-"use client";
+'use client';
+
 import React from 'react';
 import Hero from './_components/Hero';
 import './page.scss';

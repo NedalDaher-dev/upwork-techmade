@@ -1,22 +1,31 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
+// تعريف القيم الافتراضية لأحجام الشاشات
+const phoneScreenWidth = 768;
+const tabletScreenWidth = 1024;
+const desktopScreenWidth = 1440;
+
 const ThemeContext = createContext({
-  theme: 'light', // القيمة الافتراضية
-  toggleTheme: () => {},
-  phoneScreenWidth: 768, // قيمة افتراضية لعرض الهاتف
-  tabletScreenWidth: 1024, // قيمة افتراضية لعرض الجهاز اللوحي
-  desktopScreenWidth: 1440, // قيمة افتراضية لعرض سطح المكتب
+  theme: 'light', // القيمة الافتراضية للثيم
+  toggleTheme: () => {}, // وظيفة تغيير الثيم
+  screenWidth: null, // القيمة الابتدائية لعرض الشاشة
+  phoneScreenWidth, // عرض الهاتف
+  tabletScreenWidth, // عرض الجهاز اللوحي
+  desktopScreenWidth, // عرض سطح المكتب
 });
 
 export const useTheme = () => useContext(ThemeContext);
 
 export const ThemeProvider = ({ children }) => {
   const [theme, setTheme] = useState('light');
-  const [screenWidth, setScreenWidth] = useState(window.innerWidth); // حالة لتخزين عرض الشاشة
+  const [screenWidth, setScreenWidth] = useState(null); // تهيئة بقيمة null
 
   useEffect(() => {
+    // تحديث عرض الشاشة بعد تحميل الصفحة
+    setScreenWidth(window.innerWidth);
+
     const handleResize = () => {
-      setScreenWidth(window.innerWidth); // تحديث حالة عرض الشاشة عند تغيير حجم النافذة
+      setScreenWidth(window.innerWidth); // تحديث عرض الشاشة عند تغيير حجم النافذة
     };
 
     window.addEventListener('resize', handleResize); // استماع لحدث تغيير حجم النافذة
@@ -24,18 +33,21 @@ export const ThemeProvider = ({ children }) => {
     return () => {
       window.removeEventListener('resize', handleResize); // تنظيف الحدث عند تغيير المكون
     };
-  }, []); // للتأكد من تثبيت وإزالة المستمع مرة واحدة فقط
-
-  // تحديد قيم الشاشة بناءً على عرض النافذة الحالي
-  const phoneScreenWidth = 768;
-  const tabletScreenWidth = 1024;
+  }, []); // فارغة لضمان التنفيذ مرة واحدة فقط
 
   const toggleTheme = () => {
-    setTheme(theme => (theme === 'light' ? 'dark' : 'light'));
+    setTheme(currentTheme => (currentTheme === 'light' ? 'dark' : 'light'));
   };
 
   return (
-    <ThemeContext.Provider value={{ theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme }}>
+    <ThemeContext.Provider value={{
+      theme, 
+      screenWidth, 
+      toggleTheme, 
+      phoneScreenWidth, 
+      tabletScreenWidth, 
+      desktopScreenWidth
+    }}>
       {children}
     </ThemeContext.Provider>
   );
