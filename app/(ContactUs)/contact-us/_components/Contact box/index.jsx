@@ -6,28 +6,11 @@ import { InputContact } from '@/data/InputData';
 import { SelectOption } from '@/data/SelectOptionData';
 import ArrowStraight from '@/assets/Icons/ArrowStraight';
 import '@/styles/index.scss';
+import useAos from '@/hooks/useAos';
 
 const ContactUs = () => {
     // Initialize AOS
-    useEffect(() => {
-        const AOSInit = () => {
-            AOS.init({
-                delay: 500, // Delay can be changed per your requirement
-                duration: 1200,
-                once: false, // Set to true if animation should happen only once
-            });
-        };
-
-        // If AOS needs to be initialized after page load
-        if (document.readyState === 'complete') {
-            AOSInit();
-        } else {
-            window.addEventListener('load', AOSInit);
-        }
-
-        // Clean up the event listener
-        return () => window.removeEventListener('load', AOSInit);
-    }, []);
+    useAos();
 
     return (
         <div className="contact-box-wrapper" >

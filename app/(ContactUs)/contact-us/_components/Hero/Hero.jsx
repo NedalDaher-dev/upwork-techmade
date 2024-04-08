@@ -3,31 +3,11 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './index.styles.scss';
 import Button from '@/components/Button/index';
+import useAos from '@/hooks/useAos';
 
 const Hero = () => {
     // Initialize AOS on component mount
-    useEffect(() => {
-        AOS.init({
-            delay: 500, // Delay start of animation by half a second
-            duration: 1200, // Duration of animation
-            once: false, // Specify whether animation should fire more than once
-        });
-    }, []);
-
-    // To ensure AOS animations are triggered after page load, you can set a timeout
-    useEffect(() => {
-        const handleLoad = () => {
-            // Timeout to reinitialize AOS after page load
-            setTimeout(() => {
-                AOS.refresh();
-            }, 500); // Wait for half a second after page load
-        };
-
-        window.addEventListener('load', handleLoad);
-
-        return () => window.removeEventListener('load', handleLoad);
-    }, []);
-
+    useAos();
     return (
         <div className="hero-wrapper">
             <div className="hero-container">
