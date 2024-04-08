@@ -1,13 +1,7 @@
 // Background Colors
 $BackgroudnColor: #16161d;
 $textColor: #725AD0;
-.bgDark {
-  background-color: $BackgroudnColor;
-}
 
-.bgLight {
-  background-color: white;
-}
 // Journal_icon.module.scss
 
 .nav-icon {
@@ -91,7 +85,7 @@ $textColor: #725AD0;
     }
   }
 }
-  @media (max-width: 768px) {
+@media (max-width: 768px) {
     .navWrapper {
       position: relative; // This creates the context for absolute positioning
       overflow: visible; // Ensure it's not hidden or scroll
@@ -197,4 +191,4 @@ $textColor: #725AD0;
         }
       }
     }
-  }
+}

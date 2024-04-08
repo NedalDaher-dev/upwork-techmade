@@ -7,6 +7,7 @@ import Link from 'next/link';
 import { useTheme } from '@/contexts/ThemeContext';
 import './index.styles.scss'; // Ensure the path is correct
 import '@/styles/index.scss';
+import '@/styles/responsive.scss'
 
 const Navbar = ({ type }) => {
   const [scrollY, setScrollY] = useState(0);
@@ -43,7 +44,7 @@ const Navbar = ({ type }) => {
 
   return (
     <motion.div
-      className={`${type === 'dark' ? 'bgDark' : 'bgLight'} navWrapper`}
+      className={`${theme === 'light' ? 'bgLight' : 'bgDark'} navWrapper`}
       initial="initial"
       animate="scrolled"
       style={{ position: 'fixed', width: '100%', top: 0, left: 0, zIndex: 100 }}
@@ -53,19 +54,19 @@ const Navbar = ({ type }) => {
           {tabletScreenWidth >= screenWidth ? (
             <p className="logo-text">TM</p>
           ) : (
-            <Logo />
+            <Logo theme={theme} />
           )}
         </div>
         {phoneScreenWidth < screenWidth && <NavLinks type={type} />}
         <div className="buttonWrapper">
           {phoneScreenWidth >= screenWidth ? (
             // Use the <a> tag with your desired URL here
-            <button type="button" className="button" onClick={toggleMenu}>
+            <button type="button" className={`${theme === 'light' ? 'button-light ' : 'button-dark '}`} onClick={toggleMenu}>
               {menuButtonText}
             </button>
 
           ) : (
-              <Link href="/contact-us" className="button"  >
+              <Link href="/contact-us" className={`${theme === 'light' ? 'button-light ' : 'button-dark '}`}  >
                 Contact Us
               </Link>
           )}

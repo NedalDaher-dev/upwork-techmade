@@ -4,6 +4,7 @@ import { useTheme } from '@/contexts/ThemeContext';
 import iconMapping from '@/data/IconsNavBar';
 import Link from 'next/link';
 import '../index.styles.scss';
+import '@/styles/responsive.scss';
 
 const NavLinks = ({ type }) => {
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
@@ -33,8 +34,7 @@ const NavLinks = ({ type }) => {
         return (
           <Link
             href={item.url}
-            className="cursor effectTextNavBar"
-            style={{ color: type === 'dark' ? 'white' : 'black' }}
+            className={`cursor  ${theme === 'light' ? 'effectTextNavBar-light' : 'effectTextNavBar-dark'}`}
             key={item.title}
           >
             {item.title}

@@ -51,11 +51,13 @@
   }
 }
 
-.effectTextNavBar {
+.effectTextNavBar-dark {
   flex-direction: none;
   color: white; // Default text color
   text-transform: uppercase; // Uppercase all letters
   position: relative; // Position relative to allow absolute positioning of pseudo-elements
+  font-weight: 600;
+  
 
   // Create a pseudo-element for the underline effect
   &::after {
@@ -66,6 +68,35 @@
     width: 0; // Start with a width of 0 to make it invisible initially
     height: 2px; // Height of the underline
     background: white; // Color of the underline
+    transition: width 0.5s ease; // Transition for the width to create the effect
+  }
+
+  // On hover, expand the underline to the full width of the element
+  &:hover::after {
+    width: 100%; // Full width to make the underline visible
+  }
+
+  // On hover, change the color of the text
+  &:hover {
+    transition: color 0.5s ease; // Transition for the color change
+  }
+}
+.effectTextNavBar-light {
+  color: black; // Default text color
+  text-transform: uppercase; // Uppercase all letters
+  position: relative; // Position relative to allow absolute positioning of pseudo-elements
+  font-weight: 600;
+  text-decoration: none;
+
+  // Create a pseudo-element for the underline effect
+  &::after {
+    content: '';
+    position: absolute; // Absolute position to place it directly under the text
+    left: 0;
+    bottom: 0;
+    width: 0; // Start with a width of 0 to make it invisible initially
+    height: 2px; // Height of the underline
+    background: #BBE903; // Color of the underline
     transition: width 0.5s ease; // Transition for the width to create the effect
   }
 
