@@ -1,0 +1,27 @@
+.hero__container {
+    width: 100%;
+    height: 200vh;
+    background-image: url("../../../../assets/images/WorkPage/MainImage.svg");
+    background-repeat: no-repeat;
+    // background-size: cover;
+    background-position: right;
+    padding-top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    justify-content: center;
+    padding-left: 5%;
+
+    .hero_main {
+        flex: 1; // This will make sure it takes up the full space of the flex container
+        h1 {
+      
+            font-size: 70px;
+            font-weight: bold; // Assuming you want the font to be bold
+            font-style: normal;
+            color: black;
+            max-width: 70%; // You can adjust this to suit the text wrapping you need
+            margin-top: 20vw;        }
+    }
+}
