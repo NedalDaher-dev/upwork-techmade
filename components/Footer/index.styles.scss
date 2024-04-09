@@ -37,50 +37,7 @@
     }
 }
 
-.calendly-overlay {
-    z-index: 9999 !important;
-    /* استخدام !important للتأكد من تطبيق الأسلوب */
-    position: fixed !important;
-    top: 0px !important;
-    left: 0 !important;
-    right: 0 !important;
-    bottom: 0 !important;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    overflow: hidden;
 
-    .calendly-popup {
-        z-index: 100 !important;
-        overflow: hidden;
-        width: 75%;
-        height: 75%;
-
-        .calendly-popup-content {
-            z-index: 100 !important;
-            height: 100vh;
-            overflow: hidden;
-
-        }
-    }
-
-    .calendly-close-overlay {
-        z-index: 999999 !important; /* قيمة أعلى من الـ z-index للعناصر الأخرى */
-        /* استخدام !important للتأكد من تطبيق الأسلوب */
-        position: absolute !important;
-        top: 20px !important;
-        right: 20px !important;
-        width: 64px !important;
-        height: 64px !important;
-        cursor: pointer !important;
-        background-image: url('../../assets/images/footer/close.svg') !important;
-        background-repeat: no-repeat !important;
-        background-position: center !important;
-        background-size: contain !important;
-
-    }
-}
 
 
 /* Responsive Styles */

@@ -66,6 +66,8 @@ module.exports = {
     'no-return-assign' : 'off',
     'no-undef': 'off',
     'arrow-body-style' : 'off',
+    'prefer-destructuring' : 'off',
+    'no-multiple-empty-lines': 'off',
     'react/function-component-definition': [
       'warn',
       {

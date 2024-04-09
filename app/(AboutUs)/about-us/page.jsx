@@ -11,6 +11,7 @@ import Features from './_components/Feature';
 
 const Page = () => {
   const { theme, phoneScreenWidth, screenWidth, toggleTheme } = useTheme();
+
   return (
     <section id="about-us" className="about-us-wrapper">
       {

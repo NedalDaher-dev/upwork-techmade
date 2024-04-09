@@ -6,50 +6,13 @@ import Link from 'next/link';
 import { navLinks } from '@/data/NavlinksData';
 import { footerLinksIcon } from '@/data/IconFooter';
 import Instagram from '@/assets/Icons/Social Media/Instagram'; // تأكد من صحة المسار
+import useCalendlyPopup from '@/hooks/useCalendlyPopup'; // استيراد الهوك من ملفه
 
 const Footer = () => {
-  useEffect(() => {
-    const script = document.createElement('script');
-    script.src = 'https://assets.calendly.com/assets/external/widget.js';
-    script.async = true;
 
-    const adjustZIndex = () => {
-      const calendlyPopup = document.querySelector('.calendly-popup-content');
-      if (calendlyPopup) {
-        calendlyPopup.style.zIndex = '9999';
-        createCloseButton(calendlyPopup); // إضافة زر الإغلاق هنا
-      }
-    };
 
-    const createCloseButton = (popup) => {
-      const closeButton = document.createElement('button');
-      closeButton.innerText = 'Close';
-      closeButton.style.position = 'absolute';
-      closeButton.style.top = '10px';
-      closeButton.style.right = '10px';
-      closeButton.onclick = () => popup.style.display = 'none';
+  const handleScheduleClick = useCalendlyPopup('https://calendly.com/umer-techmade/chat-with-umer-techmade');
 
-      popup.appendChild(closeButton);
-    };
-
-    script.onload = () => {
-      adjustZIndex();
-      script.addEventListener('Calendly.event_scheduled', adjustZIndex);
-    };
-
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  const handleScheduleClick = () => {
-    document.querySelector('.footer-wrapper').style.zIndex = 0;
-    document.querySelector('.footer-bottom').style.zIndex = 0;
-    Calendly.initPopupWidget({ url: 'https://calendly.com/umer-techmade/chat-with-umer-techmade' });
-    return false;
-  };
 
   return (
     <div>

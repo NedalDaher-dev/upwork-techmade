@@ -6,7 +6,7 @@ import Link from 'next/link';
 import '../index.styles.scss';
 import '@/styles/responsive.scss';
 
-const NavLinks = ({ type }) => {
+const NavLinks = ({ type, onClick }) => {
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
   const ActiveDiv = () => { }
 
@@ -14,7 +14,6 @@ const NavLinks = ({ type }) => {
     <div className="nav-links">
       {navLinks.map((item) => {
         const IconComponent = iconMapping[item.title];
-
         if (phoneScreenWidth >= screenWidth) {
           return (
             <div
@@ -22,20 +21,22 @@ const NavLinks = ({ type }) => {
               className="nav-link-item"
               key={item.title}
             >
-              <Link href={item.url} className="nav_text">
+              <Link href={item.url} onClick={(e) => onClick(e, item.url)} className="nav_text">
                 {item.title}
               </Link>
+
               {IconComponent && <IconComponent className="nav-icon" style={{ color: type === 'dark' ? 'white' : 'black' }} />}
               <div className='hover_effect_box' />
             </div>
           );
         }
-        
+
         return (
           <Link
             href={item.url}
             className={`cursor  ${theme === 'light' ? 'effectTextNavBar-light' : 'effectTextNavBar-dark'}`}
             key={item.title}
+            onClick={(e) => onClick(e, item.url)}
           >
             {item.title}
           </Link>
