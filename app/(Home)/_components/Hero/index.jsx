@@ -1,7 +1,6 @@
 import './index.style.scss'
 import useAos from '@/hooks/useAos'
 import Button from '../Button/index'
-import Truncate from 'react-truncate';
 import Textfill from '@/hooks/text/TextFill';
 import Image from 'next/image'
 import MainImage from '@/assets/images/WorkPage/MainImage.svg'
