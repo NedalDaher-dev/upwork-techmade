@@ -21,7 +21,7 @@ const Team = () => {
   }
 
   return (
-    <section className="about_us_team_wrapper">
+    <section id='Meet-the-team' className="about_us_team_wrapper">
       <div className="container">
         <div className="heading-container">
           <h1>Meet The Team</h1>

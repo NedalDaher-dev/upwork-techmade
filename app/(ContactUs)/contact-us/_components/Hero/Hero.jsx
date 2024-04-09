@@ -24,7 +24,7 @@ const Hero = () => {
                     data-aos="fade-up" 
                     data-aos-delay="750" // Stagger the button animation slightly more
                 >
-                    <Button description="techmadeagency@techmade.com">EMAIL US</Button>
+                    <Button description="umer@techmade.co.uk">EMAIL US</Button>
                     <Button description="Book a call with our experts.">START YOUR PROJECT</Button>
                 </div>
             </div>

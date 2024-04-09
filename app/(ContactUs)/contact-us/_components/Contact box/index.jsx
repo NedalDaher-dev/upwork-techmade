@@ -10,12 +10,11 @@ import useAos from '@/hooks/useAos';
 
 const ContactUs = () => {
     // Initialize AOS
-    useAos();
 
     return (
         <div className="contact-box-wrapper" >
             <div className="contact-box-container">
-                <div className="contact-box-inputs" data-aos="fade-right" data-aos-delay="600">
+                <div className="contact-box-inputs" >
                     {InputContact.map((input) => (
                         <div key={input.id} className="input-container">
                             <label htmlFor={input.id}>{input.label}</label>
@@ -23,7 +22,7 @@ const ContactUs = () => {
                         </div>
                     ))}
                 </div>
-                <div className="contact-box-select" data-aos="fade-left" data-aos-delay="700">
+                <div className="contact-box-select" >
                     <h1>Select Subject?</h1>
                     <div className="options">
                         {SelectOption.map((option) => (
@@ -34,11 +33,11 @@ const ContactUs = () => {
                         ))}
                     </div>
                 </div>
-                <div className="contact-box-textarea" data-aos="fade-up" data-aos-delay="800">
+                <div className="contact-box-textarea" >
                     <label htmlFor="message">Your Message</label>
                     <textarea id="message" rows="10" name="message" placeholder="Type your message here..." />
                 </div>
-                <div className='contact-box-button' data-aos="fade-up" data-aos-delay="900">
+                <div className='contact-box-button' >
                     <div className='buttonWrapper'>
                         <button type="button" className="button">
                             SEND US A MESSAGE

@@ -12,7 +12,7 @@ import Features from './_components/Feature';
 const Page = () => {
   const { theme, phoneScreenWidth, screenWidth, toggleTheme } = useTheme();
   return (
-    <section className="about-us-wrapper">
+    <section id="about-us" className="about-us-wrapper">
       {
         phoneScreenWidth >= screenWidth ? (
           <div className="about-us-container">

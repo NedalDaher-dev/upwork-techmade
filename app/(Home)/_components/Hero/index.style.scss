@@ -20,6 +20,20 @@
             font-style: normal;
             color: black;
             max-width: 75%; // You can adjust this to suit the text wrapping you need
-            margin-top: 20vw;        }
+            margin-top: 20vw;        
+        }
     }
 }
+@media screen and (max-width: 768px) {
+    .hero__container {
+        height: 100vh;
+        background-position: center;
+        .hero_main {
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+    
+}
+

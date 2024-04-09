@@ -62,6 +62,10 @@ module.exports = {
     'react/jsx-curly-brace-presence': ['error', 'never'], // or 'ignore' or 'always'
     'no-multi-spaces': 'off',
     'react/jsx-indent-props': 'off',
+    'no-use-before-define': 'off',
+    'no-return-assign' : 'off',
+    'no-undef': 'off',
+    'arrow-body-style' : 'off',
     'react/function-component-definition': [
       'warn',
       {
