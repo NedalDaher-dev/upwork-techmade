@@ -53,7 +53,7 @@ module.exports = {
     'jsx-quotes':'off',
     "react/jsx-indent": "off",
     "semi": "off",
-    'quotes': ['error', 'single', { 'allowTemplateLiterals': true, 'avoidEscape': true }],
+    'quotes': "off",
     'lines-around-directive': 'off',
     'eol-last': 'off',
     'padded-blocks': 'off',
@@ -68,6 +68,12 @@ module.exports = {
     'arrow-body-style' : 'off',
     'prefer-destructuring' : 'off',
     'no-multiple-empty-lines': 'off',
+    'import/order': 'off',
+    'react/jsx-curly-brace-presence': 'off',
+    'react/jsx-curly-brace-presence': 'off',
+    'comma-spacing': 'off',
+    'react/jsx-closing-tag-location': 'off',
+    'react/jsx-props-no-multi-spaces': 'off',
     'react/function-component-definition': [
       'warn',
       {

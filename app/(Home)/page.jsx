@@ -21,11 +21,11 @@ const Home = () => (
         {/* Include other components as needed */}
       </ParallaxProvider>
       <Cards />
-      <ExcellenceTwo/>
-
+      <ExcellenceTwo />
+      <OurProcess />
+      <UpcomingEvents />
     </div>
-    <OurProcess />
-    <UpcomingEvents />
+
   </div>
 );
 

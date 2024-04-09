@@ -1,5 +1,6 @@
 import useAos from '@/hooks/useAos'
 import SubMenu from '../SubMenu'
+import TextSplitterComponent from '@/hooks/text/TextFill'
 import './index.styles.scss'
 const Excellence = () => {
     useAos()
@@ -10,7 +11,9 @@ const Excellence = () => {
             </div>
 
             <div data-aos="fade-left" data-aos-duration="200" className='element-left'>
-                <h1>WE EXCEL IN BOTH  ONLINE AND <span>HUMAN</span> LANDSCAPES</h1>
+                <TextSplitterComponent tagType='h1' specialWords={["HUMAN"]} specialWordsClass={"specialWords"} wordsPerLineArray={[4, 3, 1]}  >
+                    WE EXCEL IN BOTH ONLINE AND HUMAN LANDSCAPES
+                </TextSplitterComponent>
             </div>
         </div>
     )

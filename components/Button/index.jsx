@@ -3,9 +3,9 @@ import { motion } from 'framer-motion';
 import ArrowStraight from '@/assets/Icons/ArrowStraight';
 import './index.styles.scss';
 
-const Buttun = ({ children, description }) => (
+const Buttun = ({ children, description ,onClick }) => (
   <div className="button-container">
-    <div className='button-wrapper'>
+    <div onClick={onClick} className='button-wrapper'>
       <button type="button" className="button"> {/* Added type attribute and removed braces */}
         {children}
       </button>

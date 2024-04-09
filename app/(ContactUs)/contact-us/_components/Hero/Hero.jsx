@@ -4,9 +4,13 @@ import 'aos/dist/aos.css';
 import './index.styles.scss';
 import Button from '@/components/Button/index';
 import useAos from '@/hooks/useAos';
+import useCalendlyPopup from '@/hooks/useCalendlyPopup'; // استيراد الهوك من ملفه
 
 const Hero = () => {
+    
+    
     // Initialize AOS on component mount
+    const handleCalendlyPopup = useCalendlyPopup('https://calendly.com/umer-techmade/chat-with-umer-techmade');
     useAos();
     return (
         <div className="hero-wrapper">
@@ -25,7 +29,7 @@ const Hero = () => {
                     data-aos-delay="750" // Stagger the button animation slightly more
                 >
                     <Button description="umer@techmade.co.uk">EMAIL US</Button>
-                    <Button description="Book a call with our experts.">START YOUR PROJECT</Button>
+                    <Button onClick={handleCalendlyPopup} description="Book a call with our experts." >SCHEDULE A CALL</Button>
                 </div>
             </div>
         </div>

@@ -4,6 +4,7 @@
   .ourProcess__cards {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     .card__parent {
       display: flex;
       margin-top: 147px;

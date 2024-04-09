@@ -1,12 +1,6 @@
-export default {
-    async redirects() {
-      return [
-        {
-          source: '/',
-          destination: '/about-us',
-          permanent: true, // set to false if the redirect is temporary
-        },
-      ];
-    },
-  };
-  
+/** @type {import('next').NextConfig} */
+const nextConfig = {
+  // هنا يمكنك وضع خيارات التكوين الأخرى لـ Next.js
+}
+
+export default nextConfig;

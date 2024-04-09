@@ -1,6 +1,6 @@
 .excellenceTwo__container{
     width: 100%;
-    height: 50vw;
+    height: fit-content;
     margin: 100px auto;
     display: grid;
     grid-template-columns: 2fr 2fr; /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
@@ -11,8 +11,9 @@
         grid-row: 1 ; /* يوضع في الصف الأول */
         max-width: 100%;
         h1{
-            font-weight: 400;
-            line-height: 35px;
+            font-weight: 600;
+            font-size:40px;
+            line-height: 50px;
             overflow: hidden;
             span{
                 color: #BBE903;
@@ -27,6 +28,20 @@
         grid-column: 1; /* يضع startProj__right في العمود الأول */
         grid-row: 5 ;/* يمتد على طول الأربعة صفوف */
         max-width: 410px;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .excellenceTwo__container {
+        /* يمكنك تعديل الخصائص هنا لتناسب الشاشات الكبيرة جدًا */
+        .element-left {
+            grid-row: 1 ; /* يوضع في الصف الأول */
+            height: 500px;
+            h1{
+                font-size: 50px;
+            }
+
+        }
     }
 }
 

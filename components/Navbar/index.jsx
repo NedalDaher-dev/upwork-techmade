@@ -48,16 +48,20 @@ const Navbar = ({ type }) => {
     e.preventDefault();
     const currentPath = path;
     const isAboutUsPage = currentPath === '/about-us';
+    const isRootPath = url === '/';
     const hasHash = url.includes('#');
-  
-    if (isAboutUsPage && hasHash) {
-      window.location.hash = url.split('#')[1];
+
+    if (isRootPath) {
+        router.push('/');
+    } else if (isAboutUsPage && hasHash) {
+        window.location.hash = url.split('#')[1];
     } else if (!isAboutUsPage && hasHash) {
-      router.push(`/about-us${url}`);
+        router.push(`/about-us${url}`);
     } else if (!isAboutUsPage) {
-      router.push(`/about-us`);
+        router.push(`/about-us`);
     }
-  };
+};
+
   
   const menuButtonText = isMenuOpen ? 'Close' : 'Menu';
 

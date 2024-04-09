@@ -1,6 +1,7 @@
 .cards__container {
     width: 100%;
-    height: 120vw;
+    
+    height: fit-content;
     margin: 100px auto;
     display: grid;
     grid-template-columns: 40% 1fr; /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
@@ -47,6 +48,7 @@
     justify-self: auto;
     background-color: #0E0E0E;
     border-radius: 51px;
+    width:fit-content;
     padding: 20px;
     overflow: visible; /* This will allow the inner content to overflow outside the .element-plus */
 
