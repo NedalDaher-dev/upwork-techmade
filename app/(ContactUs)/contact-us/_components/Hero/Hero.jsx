@@ -8,6 +8,8 @@ import useCalendlyPopup from '@/hooks/useCalendlyPopup'; // استيراد ال�
 
 const Hero = () => {
     
+
+    
     
     // Initialize AOS on component mount
     const handleCalendlyPopup = useCalendlyPopup('https://calendly.com/umer-techmade/chat-with-umer-techmade');
