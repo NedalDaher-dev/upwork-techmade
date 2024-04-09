@@ -4,16 +4,15 @@ export const navLinks = [
     url: '/about-us',
   },
   {
-    title: 'Meet the team',
-    url: '#Meet-the-team',
+    title: 'About us',
+    url: '#about-us',
   },
   {
     title: 'Services',
     url: '#Services',
   },
   {
-    title: 'About us',
-    url: '#about-us',
-  }
-
+    title: 'Meet the team',
+    url: '#Meet-the-team',
+  },
 ];
