@@ -1,8 +1,8 @@
-import SubMenu from '../SubMenu'
 import useAos from '@/hooks/useAos'
+import SubMenu from '../SubMenu'
 import './index.styles.scss'
 const Excellence = () => {
-    useAos
+    useAos()
     return (
         <div className='excellence__container'>
             <div data-aos="fade-right" data-aos-duration="200" className='element-right'>
