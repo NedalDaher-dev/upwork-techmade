@@ -1,0 +1,70 @@
+.cards__container {
+    width: 100%;
+    height: 120vw;
+    margin: 100px auto;
+    display: grid;
+    grid-template-columns: 40% 1fr; /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
+    grid-template-rows: auto auto auto auto; /* يحدد أربعة صفوف بارتفاع تلقائي */
+    gap: 20px; /* المسافة بين الأعمدة والصفوف */
+}
+
+.startProj__right, .startProj__left {
+    /* يمكنك إضافة أي تنسيقات خاصة بـ startProj__right و startProj__left هنا */
+}
+
+/* تعديلات إضافية حسب الحاجة لتحديد كيفية توزيع العناصر داخل الشبكة */
+.element-right {
+    grid-column: 1; /* يضع startProj__right في العمود الأول */
+    grid-row: 1 / span 4; /* يمتد على طول الأربعة صفوف */
+}
+
+.element-left {
+    grid-column: 2; /* يضع startProj__left في العمود الثاني */
+    grid-row: 5 ; /* يوضع في الصف الأول */
+    .card-info{
+        border: 1px solid black;
+        border-radius: 60px;
+        width: 70%;
+        height: 300px;
+        padding: 20px;
+        background-color: transparent;
+        margin: 20px auto;
+        h1{
+            max-width: 60%;
+        }
+        p{
+            font-size: 12PX;
+            max-width: 80%;
+        }
+    }
+}   
+
+.element-plus{
+    grid-column: 1; /* يضع startProj__left في العمود الثاني */
+    grid-row: 5 ; /* يوضع في الصف الأول */
+    min-height: 500px;
+    align-self: center;
+    justify-self: auto;
+    background-color: #0E0E0E;
+    border-radius: 51px;
+    padding: 20px;
+    overflow: visible; /* This will allow the inner content to overflow outside the .element-plus */
+
+    p{
+        color: white;
+        font-size: 25px;
+    }
+    .box{
+        position: absolute;
+        z-index: 100;
+        background-color: #BBE903;
+        border-radius: 21px;
+        padding: 8px;
+        left: 350px;
+        z-index: 200;
+        p{
+            color: black;
+        }
+    }
+}
+

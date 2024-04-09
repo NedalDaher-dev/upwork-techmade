@@ -4,17 +4,13 @@ export const navLinks = [
       url: '/',
     },
     {
-      title: 'Work',
-      url: '/work',
-    },
-    {
-      title: 'Journal',
-      url: '/journal',
-    },
-    {
       title: 'About Us',
       url: '/about-us',
     },
+    {
+      title: 'Contact Us',
+      url: '/contact-us',
+    }
     
   ];
   

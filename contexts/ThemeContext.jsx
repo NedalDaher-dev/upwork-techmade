@@ -16,10 +16,9 @@ const ThemeContext = createContext({
 
 export const useTheme = () => useContext(ThemeContext);
 
-export const ThemeProvider = ({ children }) => {
-  const [theme, setTheme] = useState('light');
+export const ThemeProvider = ({ children ,theme }) => {
   const [screenWidth, setScreenWidth] = useState(null); // تهيئة بقيمة null
-
+ 
   useEffect(() => {
     // تحديث عرض الشاشة بعد تحميل الصفحة
     setScreenWidth(window.innerWidth);
@@ -35,15 +34,12 @@ export const ThemeProvider = ({ children }) => {
     };
   }, []); // فارغة لضمان التنفيذ مرة واحدة فقط
 
-  const toggleTheme = () => {
-    setTheme(currentTheme => (currentTheme === 'light' ? 'dark' : 'light'));
-  };
+
 
   return (
     <ThemeContext.Provider value={{
       theme, 
       screenWidth, 
-      toggleTheme, 
       phoneScreenWidth, 
       tabletScreenWidth, 
       desktopScreenWidth

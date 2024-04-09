@@ -1,0 +1,91 @@
+.SubMenu-container {
+    width: 350px;
+    height: 230px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    background-color: #fff;
+
+    .SubMenu-icon-container {
+        display: grid;
+        grid-template-columns: auto 2fr;
+        align-content: start;
+        justify-content: start;
+        gap: 30px;
+        cursor: pointer;
+
+        .SubMenu-icon {
+            margin-top: 25px;
+            transition: width 0.3s ease, height 0.3s ease, background-color 0.3s ease, transform 0.3s ease, border-radius 0.5s ease;
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            &.active, &:hover {
+                padding: 5px;
+                width: 50px;
+                height: 50px;
+                background-color: #16161D;
+                border-radius: 15px;
+                stroke: #BBE903;
+
+                svg {
+                    stroke: #BBE903;
+                }
+
+                // تأثيرات الـ hover لـ .SubMenu-text
+                + .SubMenu-text {
+                    opacity: 1;
+                    visibility: visible;
+                    max-height: 100px;
+                }
+            }
+
+            &:not(:hover) {
+                transition: width 0.5s ease, height 0.5s ease, background-color 0.5s ease, transform 0.5s ease, border-radius 0.5s ease;
+                border-radius: 15px; // عودة إلى القيمة الابتدائية
+            }
+
+            svg {
+                transition: stroke 0.3s ease;
+            }
+        }
+
+        .SubMenu-text {
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            transition: opacity 0.3s ease, visibility 0.3s ease, max-height 0.3s ease;
+            opacity: 0;
+            visibility: hidden;
+            overflow: hidden;
+            max-height: 0;
+
+            .Main-text {
+                font-size: 15px;
+                font-weight: 500;
+            }
+
+            .underline {
+                height: 2px;
+                width: 60%;
+                background-color: black;
+                margin-bottom: 2px;
+            }
+
+            .Sub-text {
+                font-size: 13px;
+                max-width: 75%;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.svg-icon {
+    stroke: #292D32; // اللون الافتراضي للأيقونات
+}
+    
