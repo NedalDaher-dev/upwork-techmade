@@ -8,6 +8,7 @@ import Excellence from './_components/Excellence';
 import ExcellenceTwo from './_components/ExcellenceTwo';
 import StartProj from './_components/StartProj';
 import Cards from './_components/Cards';
+
 import './home.scss';
 
 const Home = () => (
