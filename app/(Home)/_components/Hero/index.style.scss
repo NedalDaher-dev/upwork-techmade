@@ -8,9 +8,12 @@
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+        height: 500px;
     
         img {
-            object-fit: cover;
+            position: absolute;
+            right: 10vw;
         }
     
         h1 {
@@ -21,46 +24,75 @@
         }
     }
 }    
-@media screen and (max-width: 768px) {
-    .hero__container {
-        height: 100vh;
-        .hero_main {
-            h1 {
-                font-size: 35px;
-            }
-        }
-    }
+
+.hero__container {
+    width: 100%;
+    height: fit-content;
+    padding-top: 10%;
+
+    .hero_main {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
     
+        img {
+            object-fit: cover;
+        }
+    
+        h1 {
+            font-size: 48px;
+            font-weight: bold;
+            color: black;
+        }
+    }
 }
 
-@media screen and (max-width: 768px) {
+/* للشاشات التي يقل عرضها عن 767px */
+@media screen and (max-width: 767px) {
     .hero__container {
         height: 100vh;
         .hero_main {
             h1 {
                 font-size: 35px;
             }
-
         }
     }
 }
 
-/* خصائص CSS للشاشات الكبيرة جدًا (أكبر من 1440px) */
+/* للشاشات بين 768px و 1024px */
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .hero__container {
+        padding-top: 5%;
+        .hero_main {
+            h1 {
+                font-size: 50px; /* تعديل حجم الخط للشاشات المتوسطة */
+            }
+            img {
+                width: 50%;
+                height: auto;
+            }
+        }
+    }
+}
+
+/* للشاشات التي تزيد عن 1440px */
 @media screen and (min-width: 1440px) {
     .hero__container {
-        /* يمكنك تعديل الخصائص هنا لتناسب الشاشات الكبيرة جدًا */
         padding-top: 5%;
         .hero_main {
             h1 {
                 font-size: 70px; /* زيادة حجم الخط للشاشات الكبيرة */
-                /* إضافة أية خصائص أخرى تريدها */
             }
-            img{
+            img {
                 width: 40%;
                 height: 60%;
             }
         }
     }
-
-
 }
+
+
+/* خصائص CSS للشاشات الكبيرة جدًا (أكبر من 1440px) */
+
+
