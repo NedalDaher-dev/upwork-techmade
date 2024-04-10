@@ -4,7 +4,7 @@
   .ourProcess__cards {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: space-around;
     .card__parent {
       display: flex;
       margin-top: 147px;
@@ -12,9 +12,9 @@
       .card1 {
         display: flex;
         flex-direction: column;
-        max-width: 380px;
+        max-width: 300px; /* تم تعديل هذه القيمة */
         .card__image {
-          min-height: 453px;
+          min-height: 339.75px; /* تم تعديل هذه القيمة */
         }
         .header {
           display: flex;

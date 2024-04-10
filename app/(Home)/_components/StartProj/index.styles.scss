@@ -66,27 +66,86 @@
     }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media  (min-width: 650px) and (max-width: 1024px) {
     .startProj__container {
+        display: grid;
+        grid-template-columns: 40% 1fr;
+        grid-template-rows: auto auto auto auto;
         width: 100%;
         height: fit-content;
         margin: 100px auto;
-        background-color: red;
+        background-color: #060607;
+        border-radius: 50px;
+        padding: 50px;
 
-
-        /* المسافة بين الأعمدة والصفوف */
         .startProj__box__tablet {
-            grid-column: 1 /span 2;
-            /* يضع startProj__right في العمود الأول */
-            grid-row: 1 /span 3;
-            /* يمتد على طول الأربعة صفوف */
-
-
+                grid-row: 1;
+                grid-column: 1 / span 2;
+            h1{
+                color: #BBE903;
+                font-size: 70px;
+                font-weight: 500;
+            }
+            .button__container  {
+                padding: 50px;
+                button{
+                    padding: 30px;
+                    font-size: 25px;
+                }
+            }
             p {
                 font-size: 20px;
                 font-weight: 600;
             }
         }
+
+        
+        .startProj__subMenu{
+            grid-row: 5;
+            grid-column: 2 ;
+            .SubMenu-icon-container{
+                .SubMenu-icon{
+                    &.active, &:hover {
+    
+                        background-color:#BBE903 ;
+                        stroke: #16161D;
+        
+                        svg {
+                            stroke: #16161D;
+                        }
+        
+                        // تأثيرات الـ hover لـ .SubMenu-text
+    
+                    }
+                }
+                .SubMenu-text{
+                    color: white;
+                    .Main-text{
+                        font-size: 30px;
+                    }
+                    .underline {
+                        height: 2px;
+                        width: 60%;
+                        background-color: white;
+                        margin-bottom: 2px;
+                    }
+                }
+            }
+        }
+        .startProj__text{
+            grid-row: 5;
+            grid-column: 1 ;
+            align-self: center;
+            h1{
+                color: #BBE903;
+                font-size: 20px;
+            }
+            p{
+                color: white;
+                font-size: 16px;
+            }
+        }
+
 
 
 
