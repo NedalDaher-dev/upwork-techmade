@@ -11,9 +11,13 @@
 
     /* المسافة بين الأعمدة والصفوف */
     .startProj__right {
+        display: flex;
+        flex-direction: column;
         grid-column: 1;
         /* يضع startProj__right في العمود الأول */
         grid-row: 1 / span 5;
+        gap: 30px;
+        
         /* يمتد على طول الأربعة صفوف */
     }
 
@@ -23,19 +27,22 @@
         grid-row: 5;
         /* يوضع في الصف الأول */
         background-color: black;
-        padding: 30px;
+        padding: 30px 30px 30px 100px; /* الأعلى، اليمين، الأسفل، اليسار */
         width: 100%;
         height: 400px;
-        border-radius: 20px;
+        border-radius: 90px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: start;
-        gap: 20px;
+        gap: 100px;
 
         h1 {
             color: #BBE903;
-            font-size: 50px;
+            font-size: 40px;
+            font-weight: 500;
+            line-height: 55px;
+            overflow: hidden;
         }
     }
 }

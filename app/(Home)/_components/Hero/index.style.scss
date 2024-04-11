@@ -13,7 +13,9 @@
     
         img {
             position: absolute;
-            right: 10vw;
+            right: 0;
+            min-width: 800px;
+            min-height: 500px;
         }
     
         h1 {

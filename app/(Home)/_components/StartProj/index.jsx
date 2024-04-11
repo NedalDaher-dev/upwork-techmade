@@ -61,7 +61,7 @@ const StartProj = () => {
             <div className="startProj__container">
               <Parallax className="startProj__left" scale={[0.7, 1]}>
                 <TextSplitterComponent tagType='h1' wordsPerLineArray={[3, 3, 2]} >
-                  Stand Out Online Elevate Your Brand with Us
+                  STAND OUT ONLINE ELEVATE YOUR BRAND WITH US
                 </TextSplitterComponent>
                 <Button className='button_style_light' text="START YOUR PROJECT" />
               </Parallax>

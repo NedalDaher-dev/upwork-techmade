@@ -31,18 +31,23 @@ const Home = () => {
             </div>
           </>
         ) : (
-          <div className='Footnotes'>
-            <Hero />
-            <Excellence />
-            <ParallaxProvider>
-              <StartProj />
-              {/* Include other components as needed */}
-            </ParallaxProvider>
-            <Cards />
-            <ExcellenceTwo />
-            <OurProcess />
-            <UpcomingEvents />
-          </div>
+          <>
+            <div className='Footnotes-hero'>
+              <Hero />
+
+            </div>
+            <div className='Footnotes'>
+              <Excellence />
+              <ParallaxProvider>
+                <StartProj />
+                {/* Include other components as needed */}
+              </ParallaxProvider>
+              <Cards />
+              <ExcellenceTwo />
+              <OurProcess />
+              <UpcomingEvents />
+            </div>
+          </>
         )
       }
     </div>
