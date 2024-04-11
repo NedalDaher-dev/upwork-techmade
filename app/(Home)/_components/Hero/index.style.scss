@@ -51,10 +51,10 @@
 /* للشاشات التي يقل عرضها عن 767px */
 @media screen and (max-width: 767px) {
     .hero__container {
-        height: 100vh;
+        height:auto;
         .hero_main {
             h1 {
-                font-size: 35px;
+                font-size: 25px;
             }
         }
     }

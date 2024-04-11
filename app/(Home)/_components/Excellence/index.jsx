@@ -7,11 +7,13 @@ import Button from '../Button/index';
 import './index.styles.scss'
 const Excellence = () => {
     const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
+    const isPhoneScreen = screenWidth <= 767;
+    const isTabletScreen = screenWidth > 767 && screenWidth <= tabletScreenWidth;
     useAos()
     return (
         <div className='excellence__container'>
             {
-                tabletScreenWidth >= screenWidth ? (
+                isTabletScreen ? (
                     <>
                         <div data-aos="fade-right" data-aos-duration="200" className='element-right'>
                             <TextSplitterComponent tagType='p' wordsPerLineArray={[8, 7, 6, 5, 4, 6, 5]}  >
@@ -20,11 +22,20 @@ const Excellence = () => {
                         </div>
 
                         <div data-aos="fade-left" data-aos-duration="200" className='element-left'>
-                            <TextSplitterComponent tagType='p' wordsPerLineArray={[7, 5, 5, 5, 5, 7]}  >
+                            <TextSplitterComponent tagType='p' wordsPerLineArray={[7, 5, 4, 4, 3, 6,5]}  >
                                 We offer a full spectrum of web services tailored to elevate your brand. From innovative web design and development to strategic digital marketing solutions, we bring your vision to life in the digital realm.
                             </TextSplitterComponent>
                             <Button className='' text="START YOUR PROJECT" />
 
+                        </div>
+                    </>
+                ) : isPhoneScreen ? (
+                    <>
+                        <div data-aos="fade-right" data-aos-duration="200" className='element-left'>
+                            <TextSplitterComponent tagType='p' wordsPerLineArray={[7,5,4,4,3,6,5]}  >
+                                We offer a full spectrum of web services tailored to elevate your brand. From innovative web design and development to strategic digital marketing solutions, we bring your vision to life in the digital realm.
+                            </TextSplitterComponent>
+                            <Button className='' text="START YOUR PROJECT" />
                         </div>
                     </>
                 ) : (

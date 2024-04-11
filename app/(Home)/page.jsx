@@ -27,7 +27,7 @@ const Home = () => {
             <StartProj />
             <div className='Footnotes'>
               <OurProcess />
-              <UpcomingEvents />
+              {/* <UpcomingEvents /> */}
             </div>
           </>
         ) : (

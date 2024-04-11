@@ -74,6 +74,8 @@ module.exports = {
     'comma-spacing': 'off',
     'react/jsx-closing-tag-location': 'off',
     'react/jsx-props-no-multi-spaces': 'off',
+    'react/jsx-no-useless-fragment': 'off',
+    'space-infix-ops': 'off',
     'react/function-component-definition': [
       'warn',
       {
