@@ -1,20 +1,31 @@
 .ourProcess__container {
   margin-bottom: 230px;
   margin-top: 83px;
+
   .ourProcess__cards {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); // عمود للشاشات العريضة
+    grid-gap: 20px;
     justify-content: space-around;
+
+    @media (max-width: 768px) { // للتابلت
+      grid-template-columns: repeat(2, 1fr); // عمودين للتابلت
+    }
+
+    @media (max-width: 480px) { // للهواتف
+      grid-template-columns: repeat(1, 1fr); // عمود واحد للهواتف
+    }
+
     .card__parent {
-      display: flex;
       margin-top: 147px;
+      display: flex;
 
       .card1 {
         display: flex;
         flex-direction: column;
-        max-width: 300px; /* تم تعديل هذه القيمة */
+        max-width: 100%; // تم التعديل لضمان التكيف الكامل مع عرض العمود
         .card__image {
-          min-height: 339.75px; /* تم تعديل هذه القيمة */
+          min-height: 339.75px;
         }
         .header {
           display: flex;

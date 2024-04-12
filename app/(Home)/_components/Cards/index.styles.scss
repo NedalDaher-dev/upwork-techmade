@@ -14,9 +14,9 @@
 
 /* تعديلات إضافية حسب الحاجة لتحديد كيفية توزيع العناصر داخل الشبكة */
 .element-right {
-        display: flex;
-        flex-direction: column;
-        gap: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
     grid-column: 1; /* يضع startProj__right في العمود الأول */
     grid-row: 1 / span 4; /* يمتد على طول الأربعة صفوف */
 

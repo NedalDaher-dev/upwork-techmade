@@ -19,9 +19,9 @@ const OurProcess = () => (
             </div>
             <div className="card__info">{data.info}</div>
           </div>
-          {index === 0 || index === 1 || index === 3 || index === 4 ? (
+          {/* {index === 0 || index === 1 || index === 3 || index === 4 ? (
             <div className="border" />
-          ) : null}
+          ) : null} */}
         </div>
       ))}
     </div>

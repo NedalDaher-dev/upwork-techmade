@@ -57,7 +57,10 @@
                 font-weight: 600;
             }
         }
-        .element-left{       
+        .element-left{
+            display: flex;
+            flex-direction: column;
+            gap: 30px;       
             justify-self: end;     
             grid-column:2; /* يضع startProj__left في العمود الثاني */
             grid-row: 10   ; /* يوضع في الصف الأول */

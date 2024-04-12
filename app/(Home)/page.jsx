@@ -33,7 +33,7 @@ const Home = () => {
         ) : (
           <>
             <div className='Footnotes'>
-            <Hero />
+              <Hero />
               <Excellence />
               <ParallaxProvider>
                 <StartProj />
@@ -41,8 +41,13 @@ const Home = () => {
               </ParallaxProvider>
               <Cards />
               <ExcellenceTwo />
-              <OurProcess />
+            <OurProcess />
+
+            </div>
+
+            <div className='Footnotes'>
               <UpcomingEvents />
+
             </div>
           </>
         )
