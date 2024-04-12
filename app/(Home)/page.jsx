@@ -32,11 +32,8 @@ const Home = () => {
           </>
         ) : (
           <>
-            <div className='Footnotes-hero'>
-              <Hero />
-
-            </div>
             <div className='Footnotes'>
+            <Hero />
               <Excellence />
               <ParallaxProvider>
                 <StartProj />

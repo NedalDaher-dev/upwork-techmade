@@ -1,6 +1,6 @@
 .hero__container {
     width: 100%;
-    height: fit-content;
+    height: max-content;
     padding-top: 10%;
 
     .hero_main {
@@ -27,28 +27,7 @@
     }
 }    
 
-.hero__container {
-    width: 100%;
-    height: fit-content;
-    padding-top: 10%;
 
-    .hero_main {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    
-        img {
-            object-fit: cover;
-        }
-    
-        h1 {
-            font-size: 48px;
-            font-weight: bold;
-            color: black;
-        }
-    }
-}
 
 /* للشاشات التي يقل عرضها عن 767px */
 @media screen and (max-width: 767px) {
@@ -81,14 +60,14 @@
 /* للشاشات التي تزيد عن 1440px */
 @media screen and (min-width: 1440px) {
     .hero__container {
+        overflow: hidden;
         padding-top: 5%;
         .hero_main {
             h1 {
                 font-size: 70px; /* زيادة حجم الخط للشاشات الكبيرة */
             }
             img {
-                width: 40%;
-                height: 60%;
+                height: 500px;
             }
         }
     }
