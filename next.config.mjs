@@ -1,6 +1,12 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-  // هنا يمكنك وضع خيارات التكوين الأخرى لـ Next.js
+export default {
+  async headers() {
+    return [
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Cache-Control', value: 'no-store' }
+        ],
+      },
+    ]
+  },
 }
-
-export default nextConfig;
