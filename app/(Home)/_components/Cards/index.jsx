@@ -6,7 +6,7 @@ import TextSplitterComponent from '@/hooks/text/TextFill'
 import useAos from '@/hooks/useAos'
 
 const Cards = () => {
-
+    useAos()
         return(
             <div className="cards__container">
             <div className='element-left'>
