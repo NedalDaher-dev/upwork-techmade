@@ -1,4 +1,5 @@
 .cards__container {
+    
     width: 100%;
     height: fit-content;
     margin: 100px auto;
@@ -26,6 +27,8 @@
 .element-left {
     grid-column: 2; /* يضع startProj__left في العمود الثاني */
     grid-row: 5 ; /* يوضع في الصف الأول */
+    overflow: hidden;
+
     .card-info{
         border: 1px solid black;
         border-radius: 60px;

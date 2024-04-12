@@ -75,7 +75,7 @@ const Navbar = ({ type }) => {
       <nav className="nav container-nav">
         <div className="logo-wrapper" >
           {tabletScreenWidth >= screenWidth ? (
-            <p className="logo-text">TM</p>
+            <p className="logo-text" style={{ color: theme === 'light' ? 'black' : 'white' }}>TM</p>
           ) : (
             <Logo theme={theme} />
           )}
