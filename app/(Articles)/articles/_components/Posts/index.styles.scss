@@ -1,0 +1,41 @@
+.posts-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+
+    .image-article {
+        border-radius: 50px;
+    }
+
+    .posts-container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr); // Creates three columns of equal width
+        gap: 20px; // Adds spacing between the rows and columns
+        width: 100%; // Ensures the container takes full width
+        max-width: 1200px; // Optional: Sets a max-width for the container for better control on large screens
+        color: white;
+
+        a {
+            text-decoration: none;
+            color: white;
+
+        }
+
+        .title-article {
+            display: flex;
+            gap: 20px;
+        }
+    }
+}
+.posts-pagination {
+    .MuiPaginationItem-root {
+      color: white; // هذا يغير لون النص والأيقونات
+    }
+    .MuiPaginationItem-icon {
+      color: white; // هذا قد يكون ضروريًا إذا كانت الأيقونات لا تتغير لونها مع الخاصية العامة
+    }
+  }
+  

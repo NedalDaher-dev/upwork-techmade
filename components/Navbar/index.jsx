@@ -48,19 +48,22 @@ const Navbar = ({ type }) => {
     e.preventDefault();
     const currentPath = path;
     const isAboutUsPage = currentPath === '/about-us';
-    const isRootPath = url === '/';
     const hasHash = url.includes('#');
 
-    if (isRootPath) {
-        router.push('/');
-    } else if (isAboutUsPage && hasHash) {
-        window.location.hash = url.split('#')[1];
-    } else if (!isAboutUsPage && hasHash) {
-        router.push(`/about-us${url}`);
-    } else if (!isAboutUsPage) {
-        router.push(`/about-us`);
+    if (hasHash) {
+        // لاستخدام معالجة العنوان المرساة (hash) للقفز إلى القسم المحدد
+        if (isAboutUsPage) {
+            window.location.hash = url.split('#')[1];
+        } else {
+            // إذا كان العنوان المرساة يخص صفحة 'about-us' ولكننا لسنا عليها حاليًا
+            router.push(`/about-us${url}`);
+        }
+    } else {
+        // التوجيه إلى الـ URL المقدم مباشرةً
+        router.push(url);
     }
 };
+
 
   
   const menuButtonText = isMenuOpen ? 'Close' : 'Menu';

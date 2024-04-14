@@ -1,0 +1,20 @@
+.hero-wrapper{
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: end;
+    h1{
+        font-size: 60px;
+        font-weight: 500;
+        color: white;
+    }
+    p{
+        font-size: 20px;
+        color: white;
+        max-width: 800px ;
+        min-width:800px;
+        padding-top: 100px;
+        padding-left: 100px;
+    }
+}

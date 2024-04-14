@@ -77,6 +77,9 @@ module.exports = {
     'react/jsx-no-useless-fragment': 'off',
     'space-infix-ops': 'off',
     'keyword-spacing': 'off',
+    'space-before-function-paren': 'off',
+    'arrow-parens': 'off',
+    'no-shadow': 'off',
     'react/function-component-definition': [
       'warn',
       {

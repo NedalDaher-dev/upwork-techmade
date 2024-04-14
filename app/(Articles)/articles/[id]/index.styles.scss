@@ -1,0 +1,72 @@
+.article-page{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #16161d;
+    padding: 10%;
+    color: white;
+    h1{
+        font-weight: 500;
+        font-size: 70px;
+    }
+    .article-header-wrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: 100%; /* عرض العنصر كامل الشاشة */
+        padding: 20px; /* يمكنك تعديل هذه القيمة حسب الحاجة */
+      
+        .article-header-container{
+        }
+        .article-info{
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            
+            .article-author{
+                display: flex;
+                flex-direction: column;
+
+
+            }
+
+            .article-logo{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                background-color: #EEEAEA;
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+                color: black;
+                
+            }
+        }
+    }
+    .article-content-wrapper{
+        .article-content-container{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 50px;
+        }
+        img{
+            border-radius: 50px;
+        }
+        .article-content{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            h2{
+                font-weight: 500;
+                font-size: 35px;
+            }
+            min-width: 70%;
+            max-width: 70%;
+        }
+
+    }
+}
