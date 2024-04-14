@@ -42,8 +42,9 @@
     .post-link-3 {
       grid-row: 2;
       grid-column: 3 / span 1;
-      margin-top: 100px;
+      margin-top: 100px;  
 
+      
     }
 
     .post-link-4 {
@@ -54,8 +55,7 @@
         height: 577px;
         width: 456px;
       }
-      justify-self: end;
-      align-self: flex-end;
+      justify-self: start;
       }
 
     .post-link-5 {
