@@ -80,6 +80,7 @@ module.exports = {
     'space-before-function-paren': 'off',
     'arrow-parens': 'off',
     'no-shadow': 'off',
+    'react/jsx-curly-spacing': 'off',
     'react/function-component-definition': [
       'warn',
       {

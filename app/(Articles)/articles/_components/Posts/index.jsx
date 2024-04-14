@@ -8,7 +8,7 @@ import ArrowYellow from '@/assets/Icons/ArrowYellow'; // تأكد من صحة ا
 import Link from 'next/link'; // استيراد المكون Link
 
 const Posts = ({ data }) => {
-    const itemsPerPage = 6  // تعيين قيمة ثابتة لعدد العناصر في كل صفحة
+    const itemsPerPage = 5  // تعيين قيمة ثابتة لعدد العناصر في كل صفحة
     const [currentPage, setCurrentPage] = useState(1);
     const count = Math.ceil(data.length / itemsPerPage);  // حساب عدد الصفحات بناءً على العدد الثابت للعناصر لكل صفحة
 
@@ -25,12 +25,12 @@ const Posts = ({ data }) => {
         <div className="posts-wrapper">
             <div className='posts-container'>
                 {currentData().map((item, index) => (
-                    <Link key={index} href={`/articles/${item.id}`} passHref>
+                    <Link className={`${index < 6 ? `post-link-${index + 1}` : 'post-link'}  ` } key={index} href={`/articles/${item.id}`} passHref>
                         <div className='post-link'>
-                            <Image className='image-article' src={`/${item.image}`} width={377} height={502} alt={item.title} />
+                            <Image className='image-article' src={`/${item.image}`} width={index === 4 ? 689 : index === 5 ? 577 : 377}  height={index === 4 ? 485 : index === 5 ? 400 : 502} alt={item.title} />
                             <div className='title-article'>
                                 <h2>{item.title}</h2>
-                                <ArrowYellow />
+                                <ArrowYellow className='arrow-icon' />
                             </div>
                         </div>
                     </Link>

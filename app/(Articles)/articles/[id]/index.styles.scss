@@ -64,9 +64,22 @@
                 font-weight: 500;
                 font-size: 35px;
             }
-            min-width: 70%;
-            max-width: 70%;
+            max-width: 55vw;
+            min-width: 55vw;
         }
 
     }
+    @media screen and (min-width: 1441px) {
+        .article-content-wrapper{
+            .article-content-container{
+                .article-content{
+                    max-width: 40vw;
+                    min-width: 40vw;
+
+                }
+            }
+        }
+    }
+
 }
+
