@@ -20,19 +20,18 @@ export const ThemeProvider = ({ children ,theme }) => {
   const [screenWidth, setScreenWidth] = useState(null); // تهيئة بقيمة null
  
   useEffect(() => {
-    // تحديث عرض الشاشة بعد تحميل الصفحة
-    setScreenWidth(window.innerWidth);
-
     const handleResize = () => {
-      setScreenWidth(window.innerWidth); // تحديث عرض الشاشة عند تغيير حجم النافذة
+      console.log(window.innerWidth); // يطبع قيمة window.innerWidth بعد تحميل المكون أو تغيير حجم النافذة
+      setScreenWidth(window.innerWidth);
     };
-
+  
+    handleResize(); // نداء الدالة مباشرة لتعيين القيمة الأولية
     window.addEventListener('resize', handleResize); // استماع لحدث تغيير حجم النافذة
-
+  
     return () => {
       window.removeEventListener('resize', handleResize); // تنظيف الحدث عند تغيير المكون
     };
-  }, []); // فارغة لضمان التنفيذ مرة واحدة فقط
+  }, []);
 
 
 

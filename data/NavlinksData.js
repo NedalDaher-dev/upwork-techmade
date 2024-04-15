@@ -15,8 +15,8 @@ export const navLinks = [
     title: 'Services',
     url: '#Services',
   },
-  {
-    title: 'Meet the team',
-    url: '#Meet-the-team',
-  },
+  // {
+  //   title: 'Meet the team',
+  //   url: '#Meet-the-team',
+  // },
 ];

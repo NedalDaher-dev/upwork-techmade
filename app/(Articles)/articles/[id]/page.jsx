@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import './index.styles.scss';
+
 import Suggestion from '../_components/Suggestion/index';
 import { parseMarkdownFiles } from '@/utils/markdownParser';
 

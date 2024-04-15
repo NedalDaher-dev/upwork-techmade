@@ -1,20 +1,44 @@
-"use client"
-import '../Posts/index.styles.scss'
-import './index.styles.scss'
+'use client';
+import React, { useState, useEffect } from 'react';
 import Link from 'next/link'; // استيراد المكون Link
 import ArrowYellow from '@/assets/Icons/ArrowYellow'; // تأكد من صحة المسار
 import Image from 'next/image';
 import Textfill from '@/hooks/text/TextFill';
+import './index.styles.scss';
 
 const Suggestion = ({ data }) => {
+    const [filteredData, setFilteredData] = useState(data);
+
+    useEffect(() => {
+        const resizeHandler = () => {
+            const screenWidth = window.innerWidth;
+            let newData;
+
+            if (screenWidth < 768) { // افتراض أن عرض 768px هو للهاتف
+                newData = data.slice(0, 1); // للهواتف، عرض عنصر واحد
+            } else if (screenWidth >= 768 && screenWidth <= 1024) { // افتراض أن عرض 768px إلى 1024px هو للتابلت
+                newData = data.slice(0, 2); // للتابلت، عرض عنصرين
+            } else {
+                newData = data; // للديسكتوب وأكبر، لا يحذف أي عنصر
+            }
+            setFilteredData(newData);
+        };
+
+        resizeHandler();
+        window.addEventListener('resize', resizeHandler);
+
+        return () => {
+            window.removeEventListener('resize', resizeHandler);
+        };
+    }, [data]);
 
     return (
         <div className='suggestion-wrapper'>
-            <Textfill tagType='h1' wordsPerLineArray={[2, 3]} >
-            More post you might like
+            <Textfill className='suggestion-title' tagType='h2' wordsPerLineArray={[2, 3]}>
+                More posts you might like
             </Textfill>
             <div className='posts-container'>
-                {data.map((item, index) => (
+                {filteredData.map((item, index) => (
                     <Link className='post-card' key={index} href={`/articles/${item.id}`} passHref>
                         <div className='post-link'>
                             <Image className='image-article' src={`/${item.image}`} width={377} height={502} alt={item.title} />
@@ -27,6 +51,7 @@ const Suggestion = ({ data }) => {
                 ))}
             </div>
         </div>
-    )
-}
+    );
+};
+
 export default Suggestion;
