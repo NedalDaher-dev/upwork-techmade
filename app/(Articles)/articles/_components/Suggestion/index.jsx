@@ -1,10 +1,10 @@
 'use client';
+import './index.styles.scss';
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link'; // استيراد المكون Link
 import ArrowYellow from '@/assets/Icons/ArrowYellow'; // تأكد من صحة المسار
 import Image from 'next/image';
 import Textfill from '@/hooks/text/TextFill';
-import './index.styles.scss';
 
 const Suggestion = ({ data }) => {
     const [filteredData, setFilteredData] = useState(data);
@@ -34,9 +34,15 @@ const Suggestion = ({ data }) => {
 
     return (
         <div className='suggestion-wrapper'>
-            <Textfill className='suggestion-title' tagType='h2' wordsPerLineArray={[2, 3]}>
-                More posts you might like
-            </Textfill>
+            <div className='suggestion-header'>
+                <p className='suggestion-text'>
+                    More posts you might like
+                </p>
+                <div className='suggestion-text-sub'>
+                    <p>View all</p>
+                    <ArrowYellow/>
+                </div>
+            </div>
             <div className='posts-container'>
                 {filteredData.map((item, index) => (
                     <Link className='post-card' key={index} href={`/articles/${item.id}`} passHref>

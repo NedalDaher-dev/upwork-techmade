@@ -16,7 +16,6 @@ export default async function ArticlePage({ params }) {
   try {
     const data = await getData();
     const article = Array.isArray(data) ? data.find(article => article.id === params.id) : null;
-
     if (!article) {
       console.error('Article not found or data is invalid');
       return <div>No article found</div>;
@@ -26,7 +25,8 @@ export default async function ArticlePage({ params }) {
     const suggestions = data.filter(item => item.id !== article.id)
       .sort(() => 0.5 - Math.random())
       .slice(0, 3);
-      console.log(suggestions)
+      console.log(suggestions);
+
 
     return (
       <div className="article-page">
