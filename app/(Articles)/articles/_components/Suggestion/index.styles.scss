@@ -70,13 +70,16 @@
 @media screen and (min-width: 1441px) {
     .suggestion-wrapper {
         max-width: 60vw;
+
     }
 
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .suggestion-wrapper {
-        background-color: red;
+        max-width: 90vw;
+        width: 90vw;
+
         .suggestion-header{
             flex-direction: row;
             .suggestion-text {
