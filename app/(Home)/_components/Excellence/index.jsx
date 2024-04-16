@@ -45,9 +45,10 @@ const Excellence = () => {
                         </div>
 
                         <div data-aos="fade-left" data-aos-duration="200" className='element-left'>
-                            <TextSplitterComponent tagType='h1' specialWords={["HUMAN"]} specialWordsClass={"specialWords"} wordsPerLineArray={[4, 3, 1]}  >
+                            <h1>WE EXCEL IN BOTH ONLINE AND <span>HUMAN</span> LANDSCAPES</h1>
+                            {/* <TextSplitterComponent tagType='h1' specialWords={["HUMAN"]} specialWordsClass={"specialWords"} wordsPerLineArray={[4, 3, 1]}  >
                                 WE EXCEL IN BOTH ONLINE AND HUMAN LANDSCAPES
-                            </TextSplitterComponent>
+                            </TextSplitterComponent> */}
                         </div>
                     </>
                 )

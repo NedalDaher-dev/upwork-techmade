@@ -14,7 +14,6 @@ const Hero = () => {
                 <Textfill tagType='h1' specialWordsClass={"specialWords"} specialWords={specialWords}  wordsPerLineArray={[3, 3, 3]} >
                     WE SPEAK THE LANGUAGE OF INTERNET AND PEOPLE ALIKE.
                 </Textfill>
-                <Image src={MainImage} width={500} height={500} />
             </div>
         </div>
     )

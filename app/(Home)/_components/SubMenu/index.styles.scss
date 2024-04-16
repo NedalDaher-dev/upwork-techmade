@@ -65,8 +65,11 @@
             max-height: 0;
 
             .Main-text {
-                font-size: 15px;
+                color: #16161D;
+                font-size: 20px;
+                font-style: normal;
                 font-weight: 500;
+                line-height: normal;
             }
 
             .underline {
@@ -77,9 +80,11 @@
             }
 
             .Sub-text {
-                font-size: 13px;
-                max-width: 75%;
-                width: 100%;
+                color: #16161D;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
             }
         }
     }

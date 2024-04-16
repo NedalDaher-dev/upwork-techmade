@@ -1,7 +1,5 @@
 .hero__container {
-    width: 100%;
-    height: max-content;
-    padding-top: 10%;
+    width: 100vw;
 
     .hero_main {
         display: flex;
@@ -13,16 +11,20 @@
     
         img {
             position: absolute;
-            right: 0;
-            min-width: 800px;
+            min-width: 100vw;
             min-height: 500px;
+            right: 0;
         }
     
         h1 {
-            font-size: 48px;
-            font-weight: bold; // Assuming you want the font to be bold
+            color: var(--color-1, #16161D);
+            font-family: Poppins;
+            font-size: 80px;
             font-style: normal;
-            color: black;
+            font-weight: 600;
+            line-height: 90px; /* 112.5% */
+            text-transform: uppercase;
+            overflow: hidden;
         }
     }
 }    
@@ -64,7 +66,13 @@
         padding-top: 5%;
         .hero_main {
             h1 {
-                font-size: 70px; /* زيادة حجم الخط للشاشات الكبيرة */
+                color: var(--color-1, #16161D);
+                font-family: Poppins;
+                font-size: 90px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 90px; /* 112.5% */
+                text-transform: uppercase;
             }
             img {
                 height: 500px;

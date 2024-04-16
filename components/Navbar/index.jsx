@@ -91,7 +91,7 @@ const Navbar = ({ type }) => {
             </button>
           ) : (
             <Link href="/contact-us" className={`${theme === 'light' ? 'button-light ' : 'button-dark '}`} >
-              Contact Us
+              CONTACT
             </Link>
           )}
           <ArrowYellow />

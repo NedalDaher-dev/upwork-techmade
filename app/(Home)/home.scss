@@ -1,21 +1,49 @@
-.home__container {
-  max-width: 100%;
-  margin: 0 auto;
+.home__wrapper {
   background-color: #eeeaea;
-
+  padding-top: 100px;
+  width: 100%; /* Ensure it's always full width within the max width */
+  .home__container{
+    margin: 0 auto;
+    max-width: 1440px;
+  }
+  .MainImage {
+    position: absolute; /* تغيير من absolute إلى fixed */
+    right: 0; /* ضمان التموضع في أقصى اليمين */
+    width: 700px; /* تغيير العرض إذا لزم الأمر, يمكن استخدام قيمة محددة بدلاً من 100vw */
+    filter: blur(0.1px); /* تطبيق تأثير الضبابية بشكل عام */
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(0,0,0,0.0) 80%),
+                linear-gradient(to right, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 100%);
+    mask-mode: alpha;
+  }
+  
 }
 
-.Footnotes{
+.Footnotes {
   padding-left: 10%;
   padding-right: 10%;
-}
-.Footnotes-hero{
-  padding-left: 10%;
-}
 
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-  .Footnotes{
+  @media screen and (min-width: 768px) and (max-width: 1024px) {
     padding-left: 5%;
     padding-right: 5%;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .home__wrapper{
+    .MainImage {
+      width: 300px;
+      margin: 100px;
+      margin-right: auto;
+      right: 1;
+      filter: blur(8px); /* تطبيق تأثير الضبابية بشكل عام */
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(0,0,0,0.0) 80%),
+                  linear-gradient(to right, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 100%);
+      mask-mode: alpha;
+    }
+    
+  }
+  .Footnotes {
+    padding-left: 2.5%;
+    padding-right: 2.5%;
   }
 }

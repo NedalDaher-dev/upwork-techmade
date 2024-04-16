@@ -33,12 +33,17 @@
       max-width: 711px;
       margin-left: auto;
       margin-top: 100px;
-      color: #fff;
+      overflow: hidden;
+      color: #FFF;
+      font-family: Poppins;
       font-size: 22px;
+      font-style: normal;
       font-weight: 400;
       line-height: 28px;
+      /* 127.273% */
       letter-spacing: -0.22px;
-      overflow: hidden;
+      min-width: 711px ;
+      max-width: 711px ;
     }
 
     .rocket-icon-container {
@@ -62,7 +67,7 @@
   }
 }
 
-@media  (max-width: 1024px) {
+@media (max-width: 1024px) {
   .about-us-hero-wrapper {
     .about-us-hero-container {
       .rocket-icon-container {
@@ -70,6 +75,7 @@
         left: 0;
         top: 760px;
       }
+
       .brush-icon-container {
         position: absolute;
         left: 100%;
@@ -97,8 +103,11 @@
 
       .description {
         margin-left: 0;
+        min-width: 380px ;
+        max-width: 380px ;
       }
-      .rocket-icon-container{
+
+      .rocket-icon-container {
         top: 0;
       }
     }

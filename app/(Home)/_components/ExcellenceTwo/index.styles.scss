@@ -1,51 +1,77 @@
-.excellenceTwo__container{
+.excellenceTwo__container {
     width: 100%;
     height: fit-content;
     margin: 100px auto;
     display: grid;
-    grid-template-columns: 2fr 2fr; /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
-    grid-template-rows: auto auto auto auto; /* يحدد أربعة صفوف بارتفاع تلقائي */
-    gap: 20px; /* المسافة بين الأعمدة والصفوف */
-    .element-left{
+    grid-template-columns: 2fr 2fr;
+    /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
+    grid-template-rows: auto auto auto auto;
+    /* يحدد أربعة صفوف بارتفاع تلقائي */
+    gap: 20px;
 
-        grid-column: 2; /* يضع startProj__left في العمود الثاني */
-        grid-row: 1 ; /* يوضع في الصف الأول */
+    /* المسافة بين الأعمدة والصفوف */
+    .element-left {
+        justify-self: end;
+        align-self: flex-end;
+        grid-column: 2;
+        /* يضع startProj__left في العمود الثاني */
+        grid-row: 1;
+        /* يوضع في الصف الأول */
         max-width: 100%;
-        h1{
+
+        h1 {
             font-weight: 600;
-            font-size:40px;
+            font-size: 40px;
             line-height: 50px;
             overflow: hidden;
-            span{
+
+            span {
                 color: #BBE903;
             }
         }
     }
+
     .element-right {
-        grid-column: 1; /* يضع startProj__right في العمود الأول */
-        grid-row: 1  ;
+        grid-column: 1;
+        /* يضع startProj__right في العمود الأول */
+        grid-row: 1;
     }
-    .element-plus-two{
+
+    .element-plus-two {
         display: flex;
         flex-direction: column;
         gap: 30px;
-        grid-column: 1; /* يضع startProj__right في العمود الأول */
-        grid-row: 5 ;/* يمتد على طول الأربعة صفوف */
-        max-width: 410px;
+        grid-column: 1;
+        /* يضع startProj__right في العمود الأول */
+        grid-row: 5;
+        /* يمتد على طول الأربعة صفوف */
+        max-width: 350px;
+        min-width: 350px;
+
+        p {
+            color: #1E1E1E;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            /* 133.333% */
+        }
     }
 }
 
 @media screen and (min-width: 1440px) {
     .excellenceTwo__container {
+
         /* يمكنك تعديل الخصائص هنا لتناسب الشاشات الكبيرة جدًا */
         .element-left {
-            grid-row: 1 ; /* يوضع في الصف الأول */
+            grid-row: 1;
+            /* يوضع في الصف الأول */
             height: 500px;
-            h1{
+
+            h1 {
                 font-size: 50px;
             }
 
         }
     }
 }
-

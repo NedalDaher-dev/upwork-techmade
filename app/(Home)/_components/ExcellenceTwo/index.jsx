@@ -17,7 +17,7 @@ const Excellence = () => {
                 </TextSplitterComponent>
             </div>
             <div className="element-plus-two">
-                <p>We offer a full spectrum of web services tailored to elevate your brand. From innovative web design and development to strategic digital marketing solutions, we bring your vision to life in the digital realm.</p>
+                <p>We work with you at every stage of the step to bring your idea into reality. Starting off with an initial consultation call to understand your requirements and identify minimum viable product to get your product out in the market quickly.</p>
                 <Button text="START YOUR PROJECT" />
             </div>
         </div>

@@ -5,13 +5,23 @@
     flex-direction: row;
     justify-content:  space-between;
     align-items: center;
+    margin-top: 150px;
+    overflow: hidden;
     .element-left{
-        max-width: 35%;
+        max-width: 100%;
+        margin-top: 80px;
         h1{
+            color: var(--color-1, #16161D);
+            font-family: Poppins;
+            font-size: 56px;
+            font-style: normal;
             font-weight: 500;
-            font-size: 35px;
-            line-height: 45px;
+            line-height: 45px; /* 82.143% */
+            text-transform: uppercase;
             overflow: hidden;
+            max-width: 600px;
+            height: 150px;
+
             span{
                 color: #BBE903;
             }
@@ -27,7 +37,7 @@
         /* يمكنك تعديل الخصائص هنا لتناسب الشاشات الكبيرة جدًا */
         .element-left {
             h1 {
-                font-size: 40px; /* زيادة حجم الخط للشاشات الكبيرة */
+                font-size: 50px; /* زيادة حجم الخط للشاشات الكبيرة */
                 /* إضافة أية خصائص أخرى تريدها */
             }
             img{

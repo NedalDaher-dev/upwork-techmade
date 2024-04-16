@@ -1,7 +1,7 @@
 .startProj__container {
     overflow: hidden;
     width: 100%;
-    height: 100vh;
+    height: 110vh;
     margin: 100px auto;
     display: grid;
     grid-template-columns: 40% 1fr;
@@ -18,19 +18,22 @@
         /* يضع startProj__right في العمود الأول */
         grid-row: 1 / span 5;
         gap: 30px;
-        
+
         /* يمتد على طول الأربعة صفوف */
     }
 
     .startProj__left {
         grid-column: 2;
         /* يضع startProj__left في العمود الثاني */
-        grid-row: 5;
+        grid-row: 5 / span 5;
         /* يوضع في الصف الأول */
         background-color: black;
-        padding: 30px 30px 30px 100px; /* الأعلى، اليمين، الأسفل، اليسار */
-        width: 100%;
-        height: 400px;
+        padding: 30px 30px 30px 71px;
+        /* الأعلى، اليمين، الأسفل، اليسار */
+        width: 567px;
+        height: 431px;
+        max-width: 567px;
+        max-height: 431px;
         border-radius: 90px;
         display: flex;
         flex-direction: column;
@@ -40,9 +43,13 @@
 
         h1 {
             color: #BBE903;
+            font-family: Poppins;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 40px;
+            /* 92.188% */
+            text-transform: uppercase;
             font-size: 40px;
-            font-weight: 500;
-            line-height: 55px;
             overflow: hidden;
         }
     }
@@ -60,6 +67,7 @@
 @media screen and (min-width: 1441px) {
     .startProj__container {
         height: 70vh;
+
         /* يمكنك تعديل الخصائص هنا لتناسب الشاشات الكبيرة جدًا */
         .startProj__left {
             grid-row: 3;
@@ -67,7 +75,14 @@
             height: 500px;
 
             h1 {
-                font-size: 55px;
+                color: #BBE903;
+                font-family: Poppins;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 40px;
+                /* 92.188% */
+                text-transform: uppercase;
+                font-size: 40px;
             }
 
         }
@@ -185,36 +200,38 @@
         border-radius: 50px;
         padding: 50px;
 
+        grid-row: 1;
+        grid-column: 1 / span 2;
+
+        h1 {
+            color: #BBE903;
+            font-size: 25px;
+            font-weight: 500;
+        }
+
+        .startProj__main__text {
             grid-row: 1;
             grid-column: 1 / span 2;
+        }
 
-            h1 {
-                color: #BBE903;
-                font-size: 25px;
-                font-weight: 500;
+        .startProj__button {
+            grid-row: 2;
+            grid-column: 1 / span 2;
+
+        }
+
+        .startProj__text {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+
+
+            p {
+                font-size: 16px;
+                font-weight: 600;
             }
-            .startProj__main__text{
-                grid-row: 1;
-                grid-column: 1 / span 2;
-            }
-            .startProj__button {
-                grid-row: 2;
-                grid-column: 1 / span 2;
+        }
 
-            }
 
-            .startProj__text {
-                grid-column: 1 / span 2;
-                grid-row: 1;
-
-                
-                p {
-                    font-size: 16px;
-                    font-weight: 600;
-                }
-            }
-
-        
 
 
         .startProj__subMenu {

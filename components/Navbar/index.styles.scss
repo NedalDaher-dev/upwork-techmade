@@ -75,8 +75,8 @@ $textColor: #725AD0;
 
 
   .nav-links {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+    align-items: flex-start;
     gap: 61px;
 
     p {
