@@ -92,7 +92,7 @@
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .startProj__container {
         display: grid;
-        grid-template-columns: 40% 1fr;
+        grid-template-columns: 50% 1fr;
         grid-template-rows: auto auto auto auto;
         width: 100%;
         height: fit-content;
@@ -130,40 +130,47 @@
         .startProj__subMenu {
             grid-row: 5;
             grid-column: 2;
-
-            .SubMenu-icon-container {
-                .SubMenu-icon {
-
-                    &.active,
-                    &:hover {
-
-                        background-color: #BBE903;
-                        stroke: #16161D;
-
-                        svg {
+            .SubMenu-container{
+                .SubMenu-icon-container {
+                    .SubMenu-icon {
+    
+                        &.active,
+                        &:hover {
+    
+                            background-color: #BBE903;
                             stroke: #16161D;
+    
+                            svg {
+                                stroke: #16161D;
+                            }
+    
+                            // تأثيرات الـ hover لـ .SubMenu-text
+    
                         }
-
-                        // تأثيرات الـ hover لـ .SubMenu-text
-
+                    }
+    
+                    .SubMenu-text , .Sub-text {
+                        color: white;
+                        max-height: 150px;
+                        min-height: 150px;
+    
+                        .Main-text {
+                            font-size: 30px;
+                        }
+    
+                        .underline {
+                            height: 2px;
+                            width: 60%;
+                            background-color: white;
+                            margin-bottom: 2px;
+                        }
                     }
                 }
-
-                .SubMenu-text {
+                .Main-text{
                     color: white;
-
-                    .Main-text {
-                        font-size: 30px;
-                    }
-
-                    .underline {
-                        height: 2px;
-                        width: 60%;
-                        background-color: white;
-                        margin-bottom: 2px;
-                    }
                 }
             }
+
         }
 
         .startProj__text {

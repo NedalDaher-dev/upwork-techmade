@@ -64,25 +64,34 @@
 }
 
 .element-plus {
-    grid-column: 1;
-    grid-row: 5;
-    /* يوضع في الصف الأول */
+    grid-column:1 / span 2;
+    grid-row:5;
     align-self: end;
     justify-self: auto;
-    background-color: #0E0E0E;
-    border-radius: 51px;
-    width: fit-content;
-    padding: 20px;
-    overflow: visible;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    padding-left: 30px;
     position: relative;
-    width: 480px;
-    height: 628px;
-    margin-bottom: 70px;
-    /* This will allow the inner content to overflow outside the .element-plus */
 
+    /* This will allow the inner content to overflow outside the .element-plus */
+    .box-container{
+        background-color: #0E0E0E;
+        border-radius: 51px;
+        width: fit-content;
+        padding: 20px;
+        overflow: visible;
+        position: relative;
+        width: 480px;
+        height: 628px;
+        max-width: 480px;
+        max-height: 628px;
+        margin-left: 60px;
+        
+
+    }
     p {
         color: white;
-        font-size: 25px;
+        font-size: 32px;
     }
 
     .box {
@@ -114,6 +123,17 @@
             line-height: normal;
         }
     }
+    .background-image-box{
+        position: absolute;
+        left: 25%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        width: 700px;
+        height: 790px;
+    }
+    
+
+    
 }
 
 

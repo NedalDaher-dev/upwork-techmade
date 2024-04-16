@@ -10,22 +10,28 @@ const OurProcess = () => (
   <div className="ourProcess__container">
     <div className="ourProcess__cards">
       {arr.map((data, index) => (
-        <div className="card__parent">
-          <div key={data.title} className="card1">
-            <Image src={data.image} alt="" className="card__image" />
-            <div className="header">
-              <div className="heading">{data.title}</div>
-              <ArrowWhite className="cursor" />
+        <React.Fragment key={data.title}>
+          <div className="card__parent">
+            <div className="card1">
+              <Image src={data.image} alt="" className="card__image" />
+              <div className="header">
+                <div className="heading">{data.title}</div>
+                <ArrowWhite className="cursor" />
+              </div>
+              <div className="card__info">{data.info}</div>
             </div>
-            <div className="card__info">{data.info}</div>
-          </div>
-          {/* {index === 0 || index === 1 || index === 3 || index === 4 ? (
+            {index === 0 || index === 1 || index === 3 || index === 4 ? (
             <div className="border" />
-          ) : null} */}
-        </div>
+          ) : null}
+          </div>
+
+        </React.Fragment>
       ))}
     </div>
   </div>
 );
+
+
+
 
 export default OurProcess;

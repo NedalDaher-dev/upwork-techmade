@@ -1,6 +1,6 @@
 .SubMenu-container {
     width: 350px;
-    height: 230px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -62,7 +62,7 @@
             opacity: 0;
             visibility: hidden;
             overflow: hidden;
-            max-height: 0;
+            max-height: 200px;
 
             .Main-text {
                 color: #16161D;
@@ -85,6 +85,7 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
+                
             }
         }
     }

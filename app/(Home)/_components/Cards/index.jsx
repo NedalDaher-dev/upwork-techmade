@@ -4,11 +4,12 @@ import Star from '@/assets/Icons/Star'
 import Button from '../Button/index'
 import TextSplitterComponent from '@/hooks/text/TextFill'
 import useAos from '@/hooks/useAos'
+import BackgroundBox from '@/assets/images/WorkPage/BackgroundBox'
 
 const Cards = () => {
     useAos()
-        return(
-            <div className="cards__container">
+    return (
+        <div className="cards__container">
             <div className='element-left'>
                 {CardsData.map((card, index) => (
                     <div data-aos="fade-up" key={index} className='card-info'>
@@ -19,7 +20,7 @@ const Cards = () => {
                         <TextSplitterComponent tagType='p' wordsPerLineArray={card.splitText} >
                             {card.description}
                         </TextSplitterComponent>
-    
+
                     </div>
                 ))}
             </div>
@@ -30,16 +31,20 @@ const Cards = () => {
                 <Button text="START YOUR PROJECT" />
             </div>
             <div className='element-plus'>
-                <div className='box'>
-                    <p>SaaS Solutions Expert</p>
+                <BackgroundBox className={'background-image-box'} />
+                <div className='box-container'>
+                    <div className='box'>
+                        <p>SaaS Solutions Expert</p>
+                    </div>
+                    <Star />
+                    <TextSplitterComponent tagType='p' wordsPerLineArray={[3, 2, 4, 5, 2, 4, 2, 3]} >
+                        As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
+                    </TextSplitterComponent>
                 </div>
-                <Star />
-                <TextSplitterComponent tagType='p' wordsPerLineArray={[3, 2, 4, 5, 2, 4, 2, 3]} >
-                    As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.            </TextSplitterComponent>
             </div>
         </div>
-        )
+    )
 }
-  
+
 
 export default Cards;

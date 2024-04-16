@@ -18,13 +18,15 @@
         grid-row: 1;
         /* يوضع في الصف الأول */
         max-width: 100%;
+        margin-top: 150px;
 
         h1 {
-            font-weight: 600;
-            font-size: 40px;
-            line-height: 50px;
+            font-size: 45px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 43px; /* 86% */
+            text-transform: uppercase;
             overflow: hidden;
-
             span {
                 color: #BBE903;
             }
