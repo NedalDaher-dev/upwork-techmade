@@ -6,7 +6,7 @@ import './index.style.scss';
 const Button = ({ text, className ,onClick }) => (
   <div onClick={onClick} className={` ${className} button__container`}> {/* Use the className prop */}
     <button type="button">{text}</button>
-    <ArrowYellow />
+    <ArrowYellow className="arrow-icon-button" />
   </div>
 );
 

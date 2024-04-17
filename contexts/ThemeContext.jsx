@@ -12,7 +12,7 @@ const ThemeContext = createContext({
   phoneScreenWidth, // عرض الهاتف
   tabletScreenWidth, // عرض الجهاز اللوحي
   desktopScreenWidth, // عرض سطح المكتب
-});
+});``
 
 export const useTheme = () => useContext(ThemeContext);
 

@@ -8,7 +8,7 @@
         justify-content: space-between;
         position: relative;
         height: 500px;
-    
+
         img {
             position: absolute;
             min-width: 100vw;
@@ -24,6 +24,7 @@
             font-weight: 600;
             line-height: 90px; /* 112.5% */
             text-transform: uppercase;
+            
             overflow: hidden;
         }
     }
@@ -49,8 +50,13 @@
         padding-top: 5%;
         .hero_main {
             h1 {
-                font-size: 50px; /* تعديل حجم الخط للشاشات المتوسطة */
-            }
+                font-family: Poppins;
+                font-size: 50px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 60px; /* 120% */
+                text-transform: uppercase;
+                }
             img {
                 width: 50%;
                 height: 200px;
