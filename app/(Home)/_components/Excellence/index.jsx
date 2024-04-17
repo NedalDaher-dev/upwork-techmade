@@ -22,7 +22,7 @@ const Excellence = () => {
                         </div>
 
                         <div data-aos="fade-left" data-aos-duration="200" className='element-left'>
-                            <TextSplitterComponent tagType='p' wordsPerLineArray={[7, 5, 4, 4, 3, 6,5]}  >
+                            <TextSplitterComponent tagType='p' wordsPerLineArray={[7, 5, 4, 4, 3, 6, 5]}  >
                                 We offer a full spectrum of web services tailored to elevate your brand. From innovative web design and development to strategic digital marketing solutions, we bring your vision to life in the digital realm.
                             </TextSplitterComponent>
                             <Button className='' text="START YOUR PROJECT" />
@@ -32,10 +32,10 @@ const Excellence = () => {
                 ) : isPhoneScreen ? (
                     <>
                         <div data-aos="fade-right" data-aos-duration="200" className='element-left'>
-                            <TextSplitterComponent tagType='p' wordsPerLineArray={[7,5,4,4,3,6,5]}  >
+                            <p>
                                 We offer a full spectrum of web services tailored to elevate your brand. From innovative web design and development to strategic digital marketing solutions, we bring your vision to life in the digital realm.
-                            </TextSplitterComponent>
-                            <Button className='' text="START YOUR PROJECT" />
+                            </p>
+                            <Button className='' text="About Us" />
                         </div>
                     </>
                 ) : (

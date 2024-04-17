@@ -8,6 +8,8 @@
         justify-content: space-between;
         position: relative;
         height: 500px;
+        min-width:995px ;
+        max-width: 995px;
 
         img {
             position: absolute;
@@ -15,30 +17,43 @@
             min-height: 500px;
             right: 0;
         }
-    
+
         h1 {
             color: var(--color-1, #16161D);
             font-family: Poppins;
             font-size: 80px;
             font-style: normal;
             font-weight: 600;
-            line-height: 90px; /* 112.5% */
+            line-height: 90px;
+            /* 112.5% */
             text-transform: uppercase;
-            
+
             overflow: hidden;
         }
     }
-}    
+}
 
 
 
 /* للشاشات التي يقل عرضها عن 767px */
 @media screen and (max-width: 767px) {
     .hero__container {
-        height:auto;
+        height: 400px;
+        overflow: hidden;
+
         .hero_main {
             h1 {
-                font-size: 25px;
+                color: var(--color-1, #16161D);
+                font-family: Poppins;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 35px;
+                /* 116.667% */
+                text-transform: uppercase;
+                max-width: 351px;
+                min-width: 351px;
+                overflow: hidden;
             }
         }
     }
@@ -47,20 +62,22 @@
 /* للشاشات بين 768px و 1024px */
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .hero__container {
+
         padding-top: 5%;
+
         .hero_main {
             h1 {
                 font-family: Poppins;
                 font-size: 50px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 60px; /* 120% */
+                line-height: 60px;
+                /* 120% */
                 text-transform: uppercase;
-                }
-            img {
-                width: 50%;
-                height: 200px;
+                max-width: 602px;
+                min-width: 602px;
             }
+
         }
     }
 }
@@ -70,6 +87,7 @@
     .hero__container {
         overflow: hidden;
         padding-top: 5%;
+
         .hero_main {
             h1 {
                 color: var(--color-1, #16161D);
@@ -77,9 +95,11 @@
                 font-size: 90px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 90px; /* 112.5% */
+                line-height: 90px;
+                /* 112.5% */
                 text-transform: uppercase;
             }
+
             img {
                 height: 500px;
             }
@@ -89,5 +109,3 @@
 
 
 /* خصائص CSS للشاشات الكبيرة جدًا (أكبر من 1440px) */
-
-

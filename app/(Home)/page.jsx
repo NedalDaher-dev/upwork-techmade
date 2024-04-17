@@ -21,8 +21,7 @@ const Home = () => {
         tabletScreenWidth >= screenWidth ? (
           <>
             <div className='Footnotes'>
-            <MainImage className='MainImage'/>
-
+             <MainImage className='MainImage'/>
               <Hero />
               <Excellence />
             </div>

@@ -11,9 +11,11 @@ const Hero = () => {
     return (
         <div className='hero__container'>
             <div data-aos="fade-right" data-aos-duration="1000" className='hero_main'>
-                <Textfill tagType='h1' specialWordsClass={"specialWords"} specialWords={specialWords}  wordsPerLineArray={[3, 3, 3]} >
+                <h1>
                     WE SPEAK THE LANGUAGE OF INTERNET AND PEOPLE ALIKE.
-                </Textfill>
+
+                </h1>
+
             </div>
         </div>
     )

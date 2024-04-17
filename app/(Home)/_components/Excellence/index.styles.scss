@@ -63,8 +63,11 @@
  
             
             p{
-                font-size: 20px;
-                font-weight: 600;
+                color: #16161D;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; /* 133.333% */
             }
         }
         .element-left{
@@ -75,9 +78,13 @@
             grid-column:2; /* يضع startProj__left في العمود الثاني */
             grid-row: 10   ; /* يوضع في الصف الأول */
             max-width: 100%;
+
             p{
-                font-size: 21px;
-                font-weight: 600;
+                color: #16161D;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px; /* 133.333% */
             }
         }
 
@@ -85,7 +92,9 @@
 }
 @media screen and (max-width: 767px) {
     .excellence__container {
-        height:auto;
+        margin-top: 0;
+        width: 280px;
+        margin: 50px auto;
         .hero_main {
             h1 {
                 font-size: 25px;
@@ -94,11 +103,17 @@
         .element-left{
             display: flex;
             flex-direction: column;
-            margin-top: 100px;
-            max-width: 100%;
+            justify-content: start;
+            padding-top: 20px;
             gap: 30px;
             p{
-                font-size: 17px;
+                color:  #16161D;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 18px; /* 87.5% */
+            overflow: hidden;
+
             }
         }
 

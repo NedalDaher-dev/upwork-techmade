@@ -1,18 +1,17 @@
 .button__container {
   display: flex;
   align-items: center;
-  gap: 17px;
+  gap: 5px;
   cursor: pointer;
 
   button {
-    padding: 10px 15px;
+    padding: 3px 10px;
     border-radius: 30px;
-    border: 2px solid #000;
+    border: 3px solid #000;
     outline: none;
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 10px;
     color: #262626;
     font-size: 16px;
     font-weight: 500;

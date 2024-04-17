@@ -27,15 +27,28 @@
     padding-right: 5%;
   }
 }
-
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .home__wrapper{
+    .MainImage {
+      width: 350px;
+      margin: 100px;
+      margin-right: 50px;
+      right: 1;
+      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(0,0,0,0.0) 80%),
+                  linear-gradient(to right, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 100%);
+      mask-mode: alpha;
+      overflow: hidden;
+    }
+  }
+}
 @media screen and (max-width: 767px) {
   .home__wrapper{
     .MainImage {
-      width: 300px;
+      width: 250px;
+      transform: scale(1); /* مثال لتكبير الصورة بنسبة 150% */
       margin: 100px;
       margin-right: auto;
       right: 1;
-      filter: blur(8px); /* تطبيق تأثير الضبابية بشكل عام */
       mask-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(0,0,0,0.0) 80%),
                   linear-gradient(to right, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 100%);
       mask-mode: alpha;

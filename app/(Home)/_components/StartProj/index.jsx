@@ -19,20 +19,28 @@ const StartProj = () => {
     <>
       {
         isPhoneScreen ? (
-          <div className="startProj__container">
+          <div className='startProj__container'>
+        
+        <div className="startProj__box__phone">
             <div className='startProj__main__text'>
-              <TextSplitterComponent tagType='h1' wordsPerLineArray={[3, 3, 2]} >
-                Stand Out Online Elevate Your Brand with Us
-              </TextSplitterComponent>
+              <h1>Stand Out Online Elevate Your Brand with Us</h1>
             </div>
             <div className='startProj__button'>
-              <Button className={`button_style_${theme}`} text="START YOUR PROJECT" />
-            </div>
+                  <Button className={`button_style_${theme}`} text="START YOUR PROJECT" />
+                  <p>TM</p>
+                </div>
             <div className="startProj__text">
-              <h1>SaaS Solutions Expert</h1>
+              <Star className='star'/>
+              <h3>SaaS Solutions Expert</h3>
               <TextSplitterComponent tagType='p' wordsPerLineArray={[5, 5, 5, 4, 4, 2]} >
                 As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
               </TextSplitterComponent>
+            </div>
+          </div>
+          <div className='startProj__subMenu'>
+                <SubMenu sectionNumber={0} isActive={0} />
+                <SubMenu dir='rtl' sectionNumber={1} isActive={1} />
+                <SubMenu sectionNumber={2} isActive={2} />
             </div>
           </div>
         ) : isTabletScreen ? (
@@ -53,7 +61,7 @@ const StartProj = () => {
                 <SubMenu sectionNumber={2} isActive={2} />
               </div>
               <div className="startProj__text">
-                <Star className='star'/>
+                <Star className='star' />
                 <h1>SaaS Solutions Expert</h1>
                 <TextSplitterComponent tagType='p' wordsPerLineArray={[5, 5, 5, 4, 4, 2]} >
                   As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
