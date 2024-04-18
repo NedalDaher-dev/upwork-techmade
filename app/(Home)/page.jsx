@@ -21,7 +21,6 @@ const Home = () => {
         tabletScreenWidth >= screenWidth ? (
           <>
             <div className='Footnotes'>
-             <MainImage className='MainImage'/>
               <Hero />
               <Excellence />
             </div>
@@ -33,7 +32,6 @@ const Home = () => {
         ) : (
           <>
             <div className='Footnotes'>
-              <MainImage className='MainImage'/>
               <Hero />
               <Excellence />
               <ParallaxProvider>

@@ -12,7 +12,7 @@ const Hero = () => {
         <div className='hero__container'>
             <div data-aos="fade-right" data-aos-duration="1000" className='hero_main'>
                 <h1>
-                    WE SPEAK THE LANGUAGE OF INTERNET AND PEOPLE ALIKE.
+                    We speak the language of internet and people alike.
 
                 </h1>
 

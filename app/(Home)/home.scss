@@ -6,15 +6,7 @@
     margin: 0 auto;
     max-width: 1440px;
   }
-  .MainImage {
-    position: absolute; /* تغيير من absolute إلى fixed */
-    right: 0; /* ضمان التموضع في أقصى اليمين */
-    width: 700px; /* تغيير العرض إذا لزم الأمر, يمكن استخدام قيمة محددة بدلاً من 100vw */
-    filter: blur(0.1px); /* تطبيق تأثير الضبابية بشكل عام */
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(0,0,0,0.0) 80%),
-                linear-gradient(to right, rgba(0,0,0,0.0) 20%, rgba(0,0,0,1) 100%);
-    mask-mode: alpha;
-  }
+
   
 }
 
