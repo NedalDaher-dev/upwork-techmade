@@ -1,4 +1,3 @@
-/* Main footer styles */
 .footer-wrapper {
     height: 80vh;
     background-color: #16161D;
@@ -7,95 +6,63 @@
     background-size: cover;
     background-position: center;
 
+
     .footer-container {
         height: 100%;
         width: 100%;
-        max-width: 50%;
-        margin-left: 30%;
+        max-width: 100%;
+        margin-left: 25%;
         padding-left: 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         color: white;
+        max-width: 850px;
+        position: relative;
 
         h2 {
-            margin: 0 0 20px 0;
-            font-size: 40px;
-            position: relative;
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 55px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 70px;
+            /* 106.452% */
+            letter-spacing: -2.48px;
+            overflow: hidden;
 
-            .buttonWrapper {
-                position: absolute;
-                top: 130px;
-                left: 30vh;
 
-                .button {
-                    /* Add your button styles here */
-                }
+        }
+
+        .buttonWrapper {
+            position: absolute;
+            transform: translateX(-50%) translateY(-50%) translateZ(0);
+            left: 65%;
+            top: 63%;
+
+            .button {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 18px;
+                /* 112.5% */
+                text-transform: uppercase;
+                padding: 5px;
             }
         }
     }
 }
 
-
-
-
-/* Responsive Styles */
-@media (max-width: 1024px) {
-    .footer-wrapper {
-        height: 40vh;
-        padding: 40px 20px;
-
-        .footer-container {
-            max-width: 50%;
-            margin-left: 30%;
-            padding-left: 20px;
-
-            h2 {
-                font-size: 24px;
-                margin-bottom: 10px;
-
-            }
-
-            .buttonWrapper {
-                position: static;
-                margin-top: 20px;
-            }
-        }
-    }
-}
-
-@media (max-width: 768px) {
-    .footer-wrapper {
-        height: 50vh;
-        padding: 40px 20px;
-
-        .footer-container {
-            max-width: 100%;
-            margin-left: 0;
-            padding-left: 20px;
-
-            h2 {
-                font-size: 24px;
-                margin-bottom: 10px;
-            }
-
-            .buttonWrapper {
-                position: static;
-                margin-top: 20px;
-            }
-        }
-    }
-}
-
-/* Footer bottom styles */
 .footer-bottom {
     height: 30vh;
     background-color: #16161D;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
+    gap: 100px;
 
     .footer-bottom-container {
         display: flex;
@@ -151,7 +118,7 @@
         }
     }
 
-    @media (max-width: 1024px) {
+    @media screen and (min-width: 768px) and (max-width: 1024px) {
         flex-direction: column;
 
         .footer-bottom-container {
@@ -168,7 +135,7 @@
         }
     }
 
-    @media (max-width: 768px) {
+    @media screen and (min:360px) and (max-width: 768px) {
         flex-direction: column;
 
         .footer-bottom-container {
@@ -189,3 +156,183 @@
         }
     }
 }
+
+
+/* Responsive Styles */
+
+@media screen and (min-width: 1441px) {
+    .footer-wrapper {
+        .footer-container {
+
+            .buttonWrapper {
+                top: 59%;
+
+
+            }
+        }
+    }
+
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    .footer-wrapper {
+        height: 40vh;
+        padding: 40px 20px;
+
+        .footer-container {
+            max-width: 700px;
+            margin-left: 30%;
+            padding-left: 20px;
+            position: relative;
+
+            h2 {
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 34px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 33px;
+                /* 97.059% */
+                letter-spacing: -1.436px;
+
+            }
+
+            .buttonWrapper {
+                position: absolute;
+                transform: translateX(-50%);
+                left: 50%;
+                top: 55%;
+
+                .button {
+                    color: #EEEAEA;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 18px;
+                    /* 112.5% */
+                    text-transform: uppercase;
+                }
+            }
+        }
+    }
+
+    .copyright {
+        color: #FFF;
+        text-align: center;
+        font-family: Poppins;
+        font-size: 10px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 10.425px;
+        /* 104.25% */
+        text-align: center;
+        background-color: #16161D;
+    }
+
+}
+
+@media screen and (min-width: 360px) and (max-width: 767px) {
+    .footer-wrapper {
+        height: 50vh;
+        width: 100%;
+
+        .footer-container {
+            max-width: 400px;
+            max-height: 300px;
+            color: white;
+            margin: 0 auto;
+
+            h2 {
+                color: #FFF;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 22px;
+                /* 110% */
+                letter-spacing: -0.737px;
+
+
+            }
+
+            .buttonWrapper {
+                margin-top: 20px;
+                position: relative;
+                transform: translateX(0) translateY(0) translateZ(0);
+                left: 0;
+                top: 0;
+            }
+        }
+
+        .footer-bottom-container {
+            .footer-nav {
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                gap: 10px;
+
+
+                .footer-logo {
+                    display: flex;
+                    gap: 10px;
+
+                    p {
+                        color: #FFF;
+                        font-family: "Danube", "sans-serif";
+                        font-size: 11px;
+                        font-style: normal;
+                        font-weight: 400;
+                    }
+
+                    span {
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 400;
+                        color: white;
+                    }
+                }
+
+
+                .footer-nav-item {
+                    justify-content: center;
+                    flex-wrap: wrap;
+                }
+
+                .social-icons {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: center;
+                    gap: 10px;
+
+                    .social-icon-wrapper {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        width: 32px;
+                        height: 32px;
+                        border-radius: 25px;
+                        transition: background-color 0.3s ease; // تأثير سلس لتغيير الخلفية
+                        background-color: transparent; // الخلفية شفافة بشكل افتراضي
+
+                        .social-icon {
+                            fill: white;
+                            transition: fill 0.3s ease; // تأثير سلس لتغيير لون الأيقونة
+                        }
+
+                        &:hover {
+                            background-color: white; // تغيير الخلفية إلى اللون الأبيض عند تمرير الماوس
+
+                            .social-icon {
+                                fill: black; // تغيير لون الأيقونة إلى الأسود
+                            }
+                        }
+                    }
+                }
+
+            }
+        }
+
+    }
+
+}
+
+/* Footer bottom styles */

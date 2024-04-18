@@ -5,10 +5,10 @@ import ServicesIcon from '@/assets/Icons/navbar/services-icon';
 import WorkIcon from '@/assets/Icons/navbar/work-icon';
 
 const iconMapping = {
-  'Home': AboutUsIcon,
-  'Work': WorkIcon,
+  'Work': AboutUsIcon,
+  'Services': WorkIcon,
   'Journal': JournalIcon,
-  'About Us': ServicesIcon
+  'About us': ServicesIcon
   // يمكنك إضافة المزيد هنا إذا لزم الأمر
 };
 

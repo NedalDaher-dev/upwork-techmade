@@ -81,6 +81,7 @@ module.exports = {
     'arrow-parens': 'off',
     'no-shadow': 'off',
     'react/jsx-curly-spacing': 'off',
+    'space-in-parens': 'off',
     'react/function-component-definition': [
       'warn',
       {

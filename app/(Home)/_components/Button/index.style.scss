@@ -20,6 +20,7 @@
     background: linear-gradient(to top, #BBE903, #BBE903) no-repeat;
     background-size: 100% 0;
     transition: background-size 0.5s, border-color 0.5s;
+    cursor: pointer;
 
     &:hover {
       background-size: 100% 100%;

@@ -20,28 +20,31 @@ const StartProj = () => {
       {
         isPhoneScreen ? (
           <div className='startProj__container'>
-        
-        <div className="startProj__box__phone">
-            <div className='startProj__main__text'>
-              <h1>Stand Out Online Elevate Your Brand with Us</h1>
+            <div className="startProj__box__phone">
+              <div className='startProj__main__text'>
+                <h1>Stand Out Online Elevate Your Brand with Us</h1>
+              </div>
+              <div className='startProj__button'>
+                <Button className={`button_style_${theme}`} text="START YOUR PROJECT" />
+                <p>TM</p>
+              </div>
+              <div className="startProj__text">
+                <Star className='star' />
+                <h3>SaaS Solutions Expert</h3>
+                <TextSplitterComponent tagType='p' wordsPerLineArray={[5, 5, 5, 4, 4, 2]} >
+                  As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
+                </TextSplitterComponent>
+              </div>
             </div>
-            <div className='startProj__button'>
-                  <Button className={`button_style_${theme}`} text="START YOUR PROJECT" />
-                  <p>TM</p>
-                </div>
-            <div className="startProj__text">
-              <Star className='star'/>
-              <h3>SaaS Solutions Expert</h3>
-              <TextSplitterComponent tagType='p' wordsPerLineArray={[5, 5, 5, 4, 4, 2]} >
-                As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
-              </TextSplitterComponent>
+            <div className='startProj__subMenu'>
+              <SubMenu sectionNumber={0} isActive={0} />
+              <SubMenu dir='rtl' sectionNumber={1} isActive={1} />
+              <SubMenu sectionNumber={2} isActive={2} />
             </div>
+            <div className="startProj__text_sub">
+              <p>We work with you at every stage of the step to bring your idea into reality. Starting off with an initial consultation call to understand your requirements and identify minimum viable product to get your product out in the market quickly.</p>
+              <Button text="START YOUR PROJECT" />
           </div>
-          <div className='startProj__subMenu'>
-                <SubMenu sectionNumber={0} isActive={0} />
-                <SubMenu dir='rtl' sectionNumber={1} isActive={1} />
-                <SubMenu sectionNumber={2} isActive={2} />
-            </div>
           </div>
         ) : isTabletScreen ? (
           <>

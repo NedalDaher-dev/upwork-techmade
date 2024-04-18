@@ -11,6 +11,7 @@ const OurProcess = () => {
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
   const isPhoneScreen = screenWidth <= 767;
   const isTabletScreen = screenWidth > 767 && screenWidth <= tabletScreenWidth;
+  console.log(isPhoneScreen);
   return (
     <div className="ourProcess__container">
       <div className="ourProcess__cards">
@@ -32,7 +33,6 @@ const OurProcess = () => {
                   ) : null
                 ): isPhoneScreen ? (
                   null
-
                 ):(
                   index === 0 || index === 1 || index === 3 || index === 4 ? (
                     <div className="border" />

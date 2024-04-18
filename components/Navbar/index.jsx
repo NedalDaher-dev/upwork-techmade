@@ -65,7 +65,7 @@ const Navbar = ({ type }) => {
 
 
   
-  const menuButtonText = isMenuOpen ? 'Close' : 'Menu';
+  const menuButtonText = isMenuOpen ? 'Close' : 'MENU';
 
   return (
     <motion.div

@@ -67,10 +67,12 @@
     }
   }
 
-  @media screen and (min-width: 480px) and (max-width: 767px) { // للهواتف
+  @media screen and (min-width: 360px) and (max-width: 767px) { // للهواتف
     .ourProcess__cards{
       grid-template-columns: repeat(1, 1fr); // عمود واحد للهواتف
-
+      .card__parent{
+        margin-top: 50px;
+      }
     }
   }
 }

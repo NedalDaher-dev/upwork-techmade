@@ -55,10 +55,7 @@
     }
 }
 
-.startProj__right,
-.startProj__left {
-    /* يمكنك إضافة أي تنسيقات خاصة بـ startProj__right و startProj__left هنا */
-}
+
 
 /* تعديلات إضافية حسب الحاجة لتحديد كيفية توزيع العناصر داخل الشبكة */
 
@@ -132,6 +129,7 @@
                 margin-top: 130px;
                 display: flex;
                 gap: 140px;
+
                 @media screen and (min-width:1024px) and (max-width:1080px) {
                     gap: 260px;
 
@@ -206,7 +204,7 @@
                         }
                     }
 
-                    .SubMenu-text{
+                    .SubMenu-text {
                         font-weight: 400;
 
                         .Sub-text {
@@ -217,13 +215,15 @@
                             font-size: 14px;
                             font-style: normal;
                             font-weight: 300;
-                            line-height: normal;    
+                            line-height: normal;
+
                             .Main-text {
                                 font-size: 30px;
                             }
-    
+
 
                         }
+
                         .underline {
                             height: 2px;
                             width: 70%;
@@ -248,7 +248,8 @@
             gap: 10px;
             display: flex;
             flex-direction: column;
-            .star{
+
+            .star {
                 stroke: #BBE903;
             }
 
@@ -274,46 +275,57 @@
 }
 
 @media screen and (max-width: 767px) {
-    .startProj__container{
+    .startProj__container {
         height: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin: 0 auto;
+
         .startProj__subMenu {
-            min-width: 290px;
-            max-width: 290px;
+            // min-width: 390px;
+            // max-width: 390px;
+            grid-row: 1;
+            grid-column: 1;
 
-            .SubMenu-icon-container {
+            .SubMenu-container {
+                align-items: normal;
+
+                .SubMenu-icon-container {
 
 
- 
-                .SubMenu-text{
-                    font-weight: 400;
+                    .SubMenu-text {
+                        font-weight: 400;
 
-                    .Sub-text {
-                        max-width: 209px;
-                        min-width: 209px;
-                        color: black;
-                        font-family: Poppins;
-                        font-size: 14px;
-                        font-style: normal;
-                        font-weight: 300;
-                        line-height: normal;    
-                        .Main-text {
-                            font-size: 30px;
+                        .Sub-text {
+                            max-width: 209px;
+                            min-width: 209px;
+                            color: black;
+                            font-family: Poppins;
+                            font-size: 14px;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: normal;
+
+                            .Main-text {
+                                font-size: 30px;
+                            }
+
+
                         }
 
-
-                    }
-                    .underline {
-                        height: 2px;
-                        width: 70%;
-                        background-color: black;
-                        margin-bottom: 2px;
+                        .underline {
+                            height: 2px;
+                            width: 70%;
+                            background-color: black;
+                            margin-bottom: 2px;
+                        }
                     }
                 }
             }
+
         }
+
         .startProj__box__phone {
             display: grid;
             grid-template-columns: 100% 1fr;
@@ -324,36 +336,38 @@
             background-color: #060607;
             border-radius: 50px;
             padding: 50px;
-    
+
             grid-row: 1;
             grid-column: 1 / span 2;
-    
+
             h1 {
                 color: #BBE903;
                 font-family: Poppins;
                 font-size: 28px;
                 font-style: normal;
                 font-weight: 600;
-                line-height: 29.194px; /* 97.313% */
+                line-height: 29.194px;
+                /* 97.313% */
                 text-transform: uppercase;
                 min-width: 353px;
-                max-width:353px ;
+                max-width: 353px;
                 overflow: hidden;
             }
-    
+
             .startProj__main__text {
                 grid-row: 1;
                 grid-column: 1 / span 2;
             }
-    
+
             .startProj__button {
-                margin-top: 130px;
                 display: flex;
                 align-items: end;
                 gap: 25px;
-                @media screen and (min-width:375px ) and (max-width: 375px){
+
+                @media screen and (min-width:375px) and (max-width: 375px) {
                     gap: 0;
                 }
+
                 button {
                     display: flex;
                     align-items: flex-start;
@@ -366,26 +380,27 @@
                     padding: 15.471px 40.941px;
                     text-transform: uppercase;
                     border-radius: 68.676px;
-                    
+
                 }
-    
+
                 p {
                     color: #FFF;
-                    font-family: 'Danube' , sans-serif;
+                    font-family: 'Danube', sans-serif;
                     font-size: 21px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: normal;
                 }
             }
-    
+
             .startProj__text {
                 grid-column: 1 / span 2;
                 grid-row: 1;
-    
-                .star{
+
+                .star {
                     stroke: #BBE903;
                 }
+
                 h3 {
                     color: #BBE903;
                     font-size: 16px;
@@ -393,7 +408,7 @@
                     font-weight: 500;
                     line-height: normal;
                 }
-    
+
                 p {
                     color: #FFF;
                     font-family: Poppins;
@@ -403,32 +418,33 @@
                     line-height: normal;
                 }
             }
-    
-    
-    
-    
 
-    
+
+
+
+
+
             .startProj__text {
                 grid-row: 5;
                 grid-column: 1;
                 align-self: center;
-    
+
                 h1 {
                     color: #BBE903;
                     font-size: 20px;
                 }
-    
+
                 p {
                     color: white;
                     font-size: 16px;
                 }
             }
-    
+
             .button__container {
-    
+
                 gap: 5px;
                 cursor: pointer;
+
                 button {
                     display: flex;
                     align-items: flex-start;
@@ -442,19 +458,50 @@
                     padding: 3.875px 23.751px;
                     max-width: 200px;
                     min-width: 200px;
-    
+
                     @media screen and (min-width: 768px) and (max-width: 820px) {
                         font-size: 20px;
                     }
                 }
-    
+
                 .arrow-icon-button {
                     width: 29.194px;
                     height: 29.194px;
                 }
             }
-    
-    
+
+
+        }
+
+        .startProj__text_sub {
+            max-width: 334px;
+            min-width: 334px;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            gap: 32px;
+
+            p {
+                font-family: Poppins;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 14px;
+                overflow: hidden;
+
+            }
+
+            .button__container {
+                .arrow-icon-button {
+                    width: 32px;
+                    height: 32px;
+                    gap: 3.73px;
+                    opacity: 0px;
+
+                }
+            }
+
+
+
         }
     }
 
