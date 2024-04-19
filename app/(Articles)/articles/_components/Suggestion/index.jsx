@@ -35,13 +35,14 @@ const Suggestion = ({ data }) => {
     return (
         <div className='suggestion-wrapper'>
             <div className='suggestion-header'>
-                <p className='suggestion-text'>
-                    More posts you might like
-                </p>
+
                 <div className='suggestion-text-sub'>
                     <p>View all</p>
                     <ArrowYellow/>
                 </div>
+                <p className='suggestion-text'>
+                    More posts you might like
+                </p>
             </div>
             <div className='posts-container'>
                 {filteredData.map((item, index) => (

@@ -1,38 +1,48 @@
 .suggestion-wrapper {
     display: flex;
     flex-direction: column;
+    gap: 50px;
     padding-top: 150px;
-    width: 70vw;
-    max-width: 80vw;
+    min-width: 1200px;
+    max-width: 1200px;
+    color: white;
 
-    .suggestion-header{
+    .suggestion-header {
         display: flex;
+        flex-direction: row-reverse;
         justify-content: space-between;
         align-items: center;
-        .suggestion-text {
-            font-weight: 400;
-            font-size: 40px;
-            margin-bottom: 50px;
-            line-height: 40px;
-            overflow: hidden;
-            max-width: 300px;
-            min-width: 300px;
 
+        .suggestion-text {
+            color: #FFF;
+            font-family: Poppins;
+            font-size: 82px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 78px; /* 95.122% */
+            letter-spacing: -3.28px;
+            overflow: hidden;
+            max-width: 550px;
+            min-width: 550px;
+            min-height: 200px;
+            max-height: 200px;
         }
-        .suggestion-text-sub{
+
+        .suggestion-text-sub {
             display: flex;
             align-items: center;
             width: max-content;
             height: max-content;
             padding: 10px;
             gap: 10px;
-            p{
+
+            p {
                 font-weight: 600;
                 font-size: 20px;
             }
         }
     }
-    
+
     .posts-container {
         display: flex;
         justify-content: space-between;
@@ -42,14 +52,15 @@
 
     .post-card {
         text-decoration: none;
+
         .post-link {
             text-decoration: none;
             color: white;
 
             .image-article {
                 border-radius: 50px;
-                width: 300px;
-                height: 400px;
+                width: 380px;
+                height: 453px;
             }
 
             .title-article {
@@ -77,29 +88,50 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
     .suggestion-wrapper {
+        min-width: 90vw;
         max-width: 90vw;
         width: 90vw;
 
-        .suggestion-header{
-            flex-direction: row;
+        .suggestion-header {
+            display: flex;
+            flex-direction: row-reverse;
+            margin-bottom: 50px;
+
             .suggestion-text {
+                color: #FFF;
+                font-family: Poppins;
+                font-size: 67px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 64px;
+                /* 95.522% */
+                letter-spacing: -2.71px;
+                height: 200px;
+                max-height: 200px;
+                max-width: 437px;
+                min-width:437px;
+
                 
             }
 
         }
+
         .posts-container {
             .post-card {
                 .image-article {
                     width: 420px;
                     height: 512px;
+
                     @media screen and (min-width: 768px) and (max-width: 820px) {
                         width: 340px;
                     }
                 }
-                .post-link{
-                    .title-article{
-                        h2{
+
+                .post-link {
+                    .title-article {
+                        h2 {
                             font-size: 18px;
+
                             @media screen and (min-width: 768px) and (max-width: 820px) {
                                 font-size: 13px;
                             }
@@ -113,33 +145,52 @@
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
     .suggestion-wrapper {
-        .suggestion-header{
+        min-width: 90vw;
+        max-width: 90vw;
+        .suggestion-header {
             flex-direction: column-reverse;
+            align-items: normal;
+            padding-left: 10px;
+            padding-left: 10px;
             gap: 30px;
+
             .suggestion-text {
-                
+                font-size: 40px;
+                line-height: 45px;
+                max-width: 300px;
+                min-width: 100px;
+                max-height: 100px;
             }
-            .suggestion-text-sub{
+
+            .suggestion-text-sub {
                 justify-self: end;
                 align-self: flex-end;
             }
+            .suggestion-title {
+                font-size: 20px;
+                display: none;
+            }
         }
-        .suggestion-title {
-            font-size: 30px;
-        }
+
+
+
         .posts-container {
             display: flex;
             justify-content: center;
             align-items: center;
+
             .post-card {
                 .image-article {
-                    width: 300px;
-                    height: 400px;
+                    min-width: 90vw;
+                    max-width: 90vw;
+                    height: 453px;
                 }
-                .post-link{
-                    .title-article{
-                        h2{
+
+                .post-link {
+                    .title-article {
+                        h2 {
                             font-size: 16px;
+
                             @media screen and (min-width: 768px) and (max-width: 820px) {
                                 font-size: 13px;
                             }
