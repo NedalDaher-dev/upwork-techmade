@@ -1,9 +1,8 @@
 .excellenceTwo__container {
     width: 100%;
-    height: fit-content;
     margin: 100px auto;
     display: grid;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: 40% 2fr;
     /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
     grid-template-rows: auto auto auto auto;
     /* يحدد أربعة صفوف بارتفاع تلقائي */
@@ -18,7 +17,6 @@
         grid-row: 1;
         /* يوضع في الصف الأول */
         max-width: 100%;
-        margin-top: 150px;
 
         h1 {
             font-size: 45px;
@@ -61,19 +59,3 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
-    .excellenceTwo__container {
-
-        /* يمكنك تعديل الخصائص هنا لتناسب الشاشات الكبيرة جدًا */
-        .element-left {
-            grid-row: 1;
-            /* يوضع في الصف الأول */
-            height: 500px;
-
-            h1 {
-                font-size: 50px;
-            }
-
-        }
-    }
-}

@@ -1,0 +1,74 @@
+@media screen and (min-width: 1441px) {
+    .startProj__container {
+        height: 50rem;
+
+        .startProj__left {
+            grid-row: 3;
+            height: 500px;
+
+            h1 {
+                font-size: 40px;
+            }
+
+        }
+    }
+}
+// section hero
+@media (min-width: 1440px) {
+    .hero__container {
+
+        padding-top: 5%;
+        .hero_main {
+            h1 {
+                font-size: 7rem;
+                
+            }
+        }
+    }
+}
+// section excellance 
+@media screen and (min-width: 1440px) {
+    .excellence__container {
+        /* يمكنك تعديل الخصائص هنا لتناسب الشاشات الكبيرة جدًا */
+        .element-left {
+            h1 {
+                font-size: 50px; /* زيادة حجم الخط للشاشات الكبيرة */
+                /* إضافة أية خصائص أخرى تريدها */
+            }
+            img{
+                width: 40%;
+                height: 60%;
+            }
+        }
+    }
+}
+// section excellence Two
+@media screen and (min-width: 1440px) {
+    .excellenceTwo__container {
+        gap: 0px;
+
+        /* يمكنك تعديل الخصائص هنا لتناسب الشاشات الكبيرة جدًا */
+        .element-left {
+            grid-row: 1;
+            /* يوضع في الصف الأول */
+            height: 500px;
+
+            h1 {
+                font-size: 50px;
+            }
+
+        }
+    }
+}
+// Section Card 
+@media screen and (min-width: 1440px) {
+    .element-left {
+        .card-info {
+            p {
+                font-size: 15px;
+            }
+        }
+    }
+
+
+} 

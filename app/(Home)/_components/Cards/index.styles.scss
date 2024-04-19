@@ -1,6 +1,7 @@
+@import '../../../../styles/variables.scss';
+
 .cards__container {
     overflow: hidden;
-
     width: 100%;
     height: fit-content;
     margin: 100px auto;
@@ -51,10 +52,9 @@
         }
 
         p {
-            color: var(--color-1, #16161D);
+            color: var(--color-1, $secondary-color);
 
             /* TEXT2 */
-            font-family: Poppins;
             font-size: 16px;
             font-style: normal;
             font-weight: 300;
@@ -75,7 +75,7 @@
 
     /* This will allow the inner content to overflow outside the .element-plus */
     .box-container{
-        background-color: #0E0E0E;
+        background-color: $tertiary-color;
         border-radius: 51px;
         width: fit-content;
         padding: 20px;
@@ -106,7 +106,7 @@
         transform: translateX(-50%);
         z-index: 100;
         border-radius: 21.132px;
-        background: #BBE903;
+        background: $primary-color;
         backdrop-filter: blur(2.641500234603882px);
         border-radius: 21px;
         padding: 8px;
@@ -116,7 +116,7 @@
         height: 70px;
 
         p {
-            color: #0E0E0E;
+            color: $tertiary-color;
             font-size: 20.774px;
             font-style: normal;
             font-weight: 400;
@@ -137,14 +137,3 @@
 }
 
 
-@media screen and (min-width: 1440px) {
-    .element-left {
-        .card-info {
-            p {
-                font-size: 15px;
-            }
-        }
-    }
-
-
-}

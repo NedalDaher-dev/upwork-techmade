@@ -3,6 +3,7 @@ import  { Suspense, lazy, useEffect, useState, useContext } from 'react';
 import { useRouter, usePathname } from 'next/navigation'; // Removed space before ','
 import { Inter } from 'next/font/google';
 import Head from 'next/head';
+import '@/styles/variables.scss'
 import './globals.css';
 import { ThemeProvider, ThemeContext } from '@/contexts/ThemeContext';
 

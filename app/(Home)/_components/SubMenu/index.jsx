@@ -10,10 +10,8 @@ const SubMenu = ({ isActive, dir = 'ltr', sectionNumber }) => {
     }, [isActive]);
 
     const handleMouseEnter = (index) => {
-        if (!isTablet) {
             setActive(index);
             console.log('handleMouseEnter');
-        }
     };
 
     const handleMouseLeave = () => {

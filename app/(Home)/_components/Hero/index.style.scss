@@ -1,68 +1,23 @@
 .hero__container {
     width: 100vw;
     overflow: hidden;
-
     .hero_main {
         display: flex;
         flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-        position: relative;
+        justify-content: end;
         height: 500px; // قيمة افتراضية للارتفاع
-        width: 100%; // استخدام العرض الكامل بدل من تحديد عرض محدد
-        margin: 0 auto;
+        max-width: 1400px;
         h1 {
             color: #16161D;
             font-family: 'Poppins', sans-serif; // توحيد الخط ليناسب جميع الأحجام
             font-size: calc(30px + (90 - 30) * ((100vw - 768px) / (1440 - 768))); // تغيير حجم الخط بشكل سلس مع تغير حجم الشاشة
             font-weight: 400;
-            line-height: 1.2; // نسبة ثابتة لتحسين القراءة
-            max-width: 750px;
-            margin: 0 auto;
+            line-height: 1; // نسبة ثابتة لتحسين القراءة
+            max-width: 850px;
+            max-height: 600px;
             overflow: hidden;
             text-transform: uppercase; // استخدام التحويل إلى أحرف كبيرة
         }
     }
 }
 
-// الإعدادات الاستجابية
-@media (max-width: 767px) {
-    .hero__container {
-        height: 400px;
-
-        .hero_main {
-            flex-direction: column; // تغيير توجيه المحتوى للعمودي
-
-            h1 {
-                font-size: 30px;
-                line-height: 35px;
-                max-width: 100%; // استخدام العرض الكامل
-            }
-        }
-    }
-}
-
-@media (min-width: 768px) and (max-width: 1024px) {
-    .hero__container {
-        padding-top: 5%; // مسافة علوية للتنفس
-
-        .hero_main {
-            h1 {
-                font-size: 50px;
-                line-height: 60px;
-                max-width: 602px;
-            }
-        }
-    }
-}
-
-@media (min-width: 1440px) {
-    .hero__container {
-        padding-top: 5%;
-        .hero_main {
-            h1 {
-                font-size: 90px;
-            }
-        }
-    }
-}

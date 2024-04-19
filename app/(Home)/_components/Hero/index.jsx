@@ -1,9 +1,10 @@
 import './index.style.scss'
 import useAos from '@/hooks/useAos'
-import Button from '../Button/index'
-import Textfill from '@/hooks/text/TextFill';
-import Image from 'next/image'
-import MainImage from '@/assets/images/WorkPage/MainImage.svg'
+// import Button from '../Button/index'
+// import Textfill from '@/hooks/text/TextFill';
+// import Image from 'next/image'
+// import MainImage from '@/assets/images/WorkPage/MainImage.svg'
+import SubMenu from '../SubMenu'
 
 const Hero = () => {
     const specialWords = ["WE", "LANGUAGE"];
@@ -15,7 +16,6 @@ const Hero = () => {
                     We speak the language of internet and people alike.
 
                 </h1>
-
             </div>
         </div>
     )

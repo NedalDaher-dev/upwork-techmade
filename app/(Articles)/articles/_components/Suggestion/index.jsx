@@ -5,9 +5,16 @@ import Link from 'next/link'; // استيراد المكون Link
 import ArrowYellow from '@/assets/Icons/ArrowYellow'; // تأكد من صحة المسار
 import Image from 'next/image';
 import Textfill from '@/hooks/text/TextFill';
+import { useRouter } from 'next/navigation';
 
 const Suggestion = ({ data }) => {
     const [filteredData, setFilteredData] = useState(data);
+    const router = useRouter();
+
+    const pushLink = (e,link) => {
+        e.preventDefault();
+        router.push(link);
+    }
 
     useEffect(() => {
         const resizeHandler = () => {
@@ -36,11 +43,11 @@ const Suggestion = ({ data }) => {
         <div className='suggestion-wrapper'>
             <div className='suggestion-header'>
 
-                <div className='suggestion-text-sub'>
+                <div onClick={(e) => pushLink(e,`/articles`)} className='suggestion-text-sub'>
                     <p>View all</p>
                     <ArrowYellow/>
                 </div>
-                <p className='suggestion-text'>
+                <p   className='suggestion-text'>
                     More posts you might like
                 </p>
             </div>
