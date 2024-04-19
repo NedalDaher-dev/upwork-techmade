@@ -1,5 +1,6 @@
 .hero__container {
     width: 100vw;
+    overflow: hidden;
 
     .hero_main {
         display: flex;
@@ -7,104 +8,61 @@
         align-items: center;
         justify-content: space-between;
         position: relative;
-        height: 500px;
-        min-width: 895px;
-        max-width: 895px;
+        height: 500px; // قيمة افتراضية للارتفاع
+        width: 100%; // استخدام العرض الكامل بدل من تحديد عرض محدد
         margin: 0 auto;
-
-        img {
-            position: absolute;
-            min-width: 100vw;
-            min-height: 500px;
-            right: 0;
-        }
-
         h1 {
             color: #16161D;
-            font-family: ItalianPlateNo1Expanded, Helvetica, Arial, sans-serif;
-            font-style: normal;
-            font-size: 120px;
+            font-family: 'Poppins', sans-serif; // توحيد الخط ليناسب جميع الأحجام
+            font-size: calc(30px + (90 - 30) * ((100vw - 768px) / (1440 - 768))); // تغيير حجم الخط بشكل سلس مع تغير حجم الشاشة
             font-weight: 400;
-            line-height: 100px;
+            line-height: 1.2; // نسبة ثابتة لتحسين القراءة
             max-width: 750px;
             margin: 0 auto;
-
-            /* 112.5% */
-
             overflow: hidden;
+            text-transform: uppercase; // استخدام التحويل إلى أحرف كبيرة
         }
     }
 }
 
-
-
-/* للشاشات التي يقل عرضها عن 767px */
-@media screen and (max-width: 767px) {
+// الإعدادات الاستجابية
+@media (max-width: 767px) {
     .hero__container {
         height: 400px;
-        overflow: hidden;
 
         .hero_main {
+            flex-direction: column; // تغيير توجيه المحتوى للعمودي
+
             h1 {
-                color: var(--color-1, #16161D);
-                font-family: Poppins;
                 font-size: 30px;
-                font-style: normal;
-                font-weight: 600;
                 line-height: 35px;
-                /* 116.667% */
-                text-transform: uppercase;
-                max-width: 351px;
-                min-width: 351px;
-                overflow: hidden;
+                max-width: 100%; // استخدام العرض الكامل
             }
         }
     }
 }
 
-/* للشاشات بين 768px و 1024px */
-@media screen and (min-width: 768px) and (max-width: 1024px) {
+@media (min-width: 768px) and (max-width: 1024px) {
     .hero__container {
-
-        padding-top: 5%;
+        padding-top: 5%; // مسافة علوية للتنفس
 
         .hero_main {
             h1 {
-                font-family: Poppins;
                 font-size: 50px;
-                font-style: normal;
-                font-weight: 600;
                 line-height: 60px;
-                /* 120% */
-                text-transform: uppercase;
                 max-width: 602px;
-                min-width: 602px;
-
             }
-
         }
     }
 }
 
-/* للشاشات التي تزيد عن 1440px */
-@media screen and (min-width: 1440px) {
+@media (min-width: 1440px) {
     .hero__container {
-        overflow: hidden;
         padding-top: 5%;
-
         .hero_main {
             h1 {
-
                 font-size: 90px;
-
-            }
-
-            img {
-                height: 500px;
             }
         }
     }
 }
-
-
-/* خصائص CSS للشاشات الكبيرة جدًا (أكبر من 1440px) */
