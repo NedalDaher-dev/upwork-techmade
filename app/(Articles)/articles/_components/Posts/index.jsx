@@ -47,7 +47,7 @@ const Posts = ({ data }) => {
                 {currentData().map((item, index) => (
                     <Link className={`${index < 6 ? `post-link-${index + 1}` : 'post-link'}  ` } key={index} href={`/articles/${item.id}`} passHref>
                         <div className='post-link'>
-                            <Image className='image-article' src={`/${item.image}`} width={index === 4 ? 600 : index === 5 ? 600 : 377}  height={index === 4 ? 400 : index === 5 ? 400 : 502} alt={item.title} />
+                            <Image className='image-article' src={`/${item.image}`} width={index === 4 ? 689 : index === 5 ? 600 : 377}  height={index === 4 ? 485 : index === 5 ? 400 : 502} alt={item.title} />
                             <div className='title-article'>
                                 <h2>{item.title}</h2>
                                 <ArrowYellow className='arrow-icon' />
