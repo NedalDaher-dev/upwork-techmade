@@ -5,7 +5,7 @@
         display: flex;
         flex-direction: row;
         justify-content: end;
-        height: 500px; // قيمة افتراضية للارتفاع
+        height: max-content; // قيمة افتراضية للارتفاع
         max-width: 1400px;
         h1 {
             color: #16161D;

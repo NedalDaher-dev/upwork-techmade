@@ -11,7 +11,6 @@ const OurProcess = () => {
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
   const isPhoneScreen = screenWidth <= 767;
   const isTabletScreen = screenWidth > 767 && screenWidth <= tabletScreenWidth;
-  console.log(isPhoneScreen);
   return (
     <div className="ourProcess__container">
       <div className="ourProcess__cards">

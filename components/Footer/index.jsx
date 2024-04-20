@@ -16,7 +16,6 @@ const Footer = () => {
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
   const isPhoneScreen = screenWidth <= 767;
   const isTabletScreen = screenWidth > 767 && screenWidth <= tabletScreenWidth;
-  console.log(isTabletScreen);
   const handleScheduleClick = useCalendlyPopup('https://calendly.com/umer-techmade/chat-with-umer-techmade');
   const { ref, inView } = useInView({
     triggerOnce: true,

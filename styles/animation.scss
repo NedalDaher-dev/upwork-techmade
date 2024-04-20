@@ -5,9 +5,11 @@
     50% {
       transform: translate(0, 10px); // Adjust the translation to fit the arrow's movement within the circle
     }
+
+    
   }
   
   .arrow-animation {
-    animation: arrowMove 2s ease-in-out infinite;
+    animation: arrowMove 1s ease-in-out infinite;
   }
   
