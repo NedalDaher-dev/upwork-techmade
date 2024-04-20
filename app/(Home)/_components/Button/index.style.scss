@@ -1,12 +1,72 @@
 @import '../../../../styles/variables.scss';
+
+@keyframes arrow-rotate {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+  100% {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: transparent;
+  }
+}
+
+@keyframes button-fade-in {
+  0% {
+    width: 200px; 
+  }
+  100% {
+    width: 300px;
+  }
+}
+@keyframes arrow-rotate-reverse {
+  0% {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: transparent;
+  }
+  100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+}
+
+@keyframes button-fade-out {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 200px;
+  }
+}
+
+
 .button__container {
-  display: flex;
-  align-items: center;
-  gap: 5px;
+  position: relative;
+  display: inline-flex;
+  justify-content: start;
+  align-items: start;
   cursor: pointer;
+  padding: 5px;
+  max-width: 260px;
+  overflow: hidden;
+
+  &:hover button .arrow-icon-button {
+    animation: arrow-rotate 0.5s forwards;
+  }
+
+  &:not(:hover) button .arrow-icon-button {
+    animation: arrow-rotate-reverse 1s forwards;
+  }
+
+  &:hover button {
+    animation: button-fade-in 2.0s forwards;
+  }
+
+  &:not(:hover) button {
+    animation: button-fade-out 0.5s forwards;
+  }
+
 
   button {
-    padding: 3px 10px;
+    padding: 5px 10px;
     border-radius: 30px;
     border: 3px solid #000;
     outline: none;
@@ -20,23 +80,36 @@
     text-transform: uppercase;
     background: linear-gradient(to top, $primary-color, $primary-color) no-repeat;
     background-size: 100% 0;
-    transition: background-size 0.5s, border-color 0.5s;
+    transition: background-size 0.1s, border-color 0.1s;
+    width: 200px;
+    max-width: 400px;
     cursor: pointer;
 
     &:hover {
       background-size: 100% 100%;
-      border-color: $primary-color;
     }
 
-    &:not(:hover) {
-      transition: background-size 0.5s ease-out, border-color 0.5s ease-out;
+    .arrow-icon-button {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
+      // Remove infinite animation here
     }
   }
-
 }
 
 .button_style_light {
-  
+  width: 370px;
+  max-width: 500px;
+
   button {
     padding-left: 35px;
     padding-right: 35px;
@@ -46,11 +119,13 @@
     align-items: flex-start;
     gap: 10px;
     transition: background-size 0.5s, border-color 0.5s;
+    width: 300px;
+    max-width: 400px;
+    cursor: pointer;
 
     &:hover {
       background-size: 100% 100%;
       color: black;
     }
   }
-
 }
