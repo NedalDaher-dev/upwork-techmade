@@ -9,6 +9,7 @@ import Instagram from '@/assets/Icons/Social Media/Instagram';
 import useCalendlyPopup from '@/hooks/useCalendlyPopup';
 import ArrowYellow from '@/assets/Icons/ArrowYellow';
 import TextSplitterComponent from '@/hooks/text/TextFill';
+import Button from '@/components/Button/index';
 import { useTheme } from '@/contexts/ThemeContext';
 import './index.styles.scss';
 
@@ -85,15 +86,8 @@ const Footer = () => {
             <div className='footer-container'>
               <TextSplitterComponent tagType='h2' wordsPerLineArray={[4, 3, 3]} >
                 Embark on an exhilarating journey beyond your limits with us!
-
               </TextSplitterComponent>
-
-              <div className='buttonWrapper'>
-                <button type="button" className='button' onClick={handleScheduleClick}>
-                  Schedule a call
-                </button>
-                <ArrowYellow />
-              </div>
+              <Button className='button_purple'  text='SCHEDULE A CALL' />
             </div>
           </section>
         )

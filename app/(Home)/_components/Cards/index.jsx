@@ -1,7 +1,7 @@
 import { CardsData } from '@/data/DataCardsHomePage'
 import './index.styles.scss'
 import Star from '@/assets/Icons/Star'
-import Button from '../Button/index'
+import Button from '@/components/Button/index';
 import TextSplitterComponent from '@/hooks/text/TextFill'
 import useAos from '@/hooks/useAos'
 import BackgroundBox from '@/assets/images/WorkPage/BackgroundBox'

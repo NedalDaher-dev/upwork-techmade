@@ -2,7 +2,7 @@ import useAos from '@/hooks/useAos'
 import SubMenu from '../SubMenu'
 import TextSplitterComponent from '@/hooks/text/TextFill'
 import { useTheme } from '@/contexts/ThemeContext';
-import Button from '../Button/index';
+import Button from '@/components/Button/index';
 
 import './index.styles.scss'
 const Excellence = () => {

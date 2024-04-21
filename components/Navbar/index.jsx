@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import Logo from '@/assets/Icons/Logo'; // تأكد من صحة المسار
-import ArrowYellow from '@/assets/Icons/ArrowYellow'; // تأكد من صحة المسار
+import Arrow from '@/assets/Icons/Arrow';
 import NavLinks from '@/components/Navbar/NavLinks'; // تأكد من صحة المسار
 import Link from 'next/link';
 import { useTheme } from '@/contexts/ThemeContext';
@@ -50,21 +50,21 @@ const Navbar = ({ type }) => {
     const hasHash = url.includes('#');
 
     if (hasHash) {
-        // لاستخدام معالجة العنوان المرساة (hash) للقفز إلى القسم المحدد
-        if (isAboutUsPage) {
-            window.location.hash = url.split('#')[1];
-        } else {
-            // إذا كان العنوان المرساة يخص صفحة 'about-us' ولكننا لسنا عليها حاليًا
-            router.push(`/about-us${url}`);
-        }
+      // لاستخدام معالجة العنوان المرساة (hash) للقفز إلى القسم المحدد
+      if (isAboutUsPage) {
+        window.location.hash = url.split('#')[1];
+      } else {
+        // إذا كان العنوان المرساة يخص صفحة 'about-us' ولكننا لسنا عليها حاليًا
+        router.push(`/about-us${url}`);
+      }
     } else {
-        // التوجيه إلى الـ URL المقدم مباشرةً
-        router.push(url);
+      // التوجيه إلى الـ URL المقدم مباشرةً
+      router.push(url);
     }
-};
+  };
 
 
-  
+
   const menuButtonText = isMenuOpen ? 'Close' : 'MENU';
 
   return (
@@ -93,7 +93,10 @@ const Navbar = ({ type }) => {
               CONTACT
             </Link>
           )}
-          <ArrowYellow />
+          <span className='arrow-icon-warpper'>
+            <Arrow className='arrow-icon arrow-icon-main' />
+            <Arrow className='arrow-icon special-icon' />
+          </span>
         </div>
       </nav>
       <AnimatePresence>
@@ -105,7 +108,7 @@ const Navbar = ({ type }) => {
             animate="open"
             exit="closed"
           >
-            <NavLinks type={type} onClick={handleNavClick}  />
+            <NavLinks type={type} onClick={handleNavClick} />
           </motion.div>
         )}
       </AnimatePresence>

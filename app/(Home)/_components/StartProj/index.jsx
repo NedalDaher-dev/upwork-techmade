@@ -2,7 +2,7 @@ import React from 'react';
 import { Parallax } from 'react-scroll-parallax';
 import './index.styles.scss';
 import '@/styles/index.scss';
-import Button from '../Button/index';
+import Button from '@/components/Button/index';
 import TextSplitterComponent from '@/hooks/text/TextFill';
 import { useTheme } from '@/contexts/ThemeContext';
 import SubMenu from '../SubMenu';
@@ -85,7 +85,7 @@ const StartProj = () => {
                 <TextSplitterComponent tagType='p' wordsPerLineArray={[7, 5, 5, 5, 5, 8]} >
                   We offer a full spectrum of web services tailored to elevate your brand. From innovative web design and development to strategic digital marketing solutions, we bring your vision to life in the digital realm.
                 </TextSplitterComponent>
-                <Button text='START YOUR PROJECT' />
+                <Button  text='START YOUR PROJECT' />
               </div>
             </div>
           </>

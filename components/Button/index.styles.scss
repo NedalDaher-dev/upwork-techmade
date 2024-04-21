@@ -1,97 +1,156 @@
-// index.styles.scss
+@import '../../styles/variables.scss';
 
-  .button-wrapper {
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    justify-content: center;
-    // width and height removed to allow content to determine size
-    padding: 1em; // You can adjust the padding as needed
-    gap: 10px;
-
-    .button {
-      background-color: transparent;
-      color: black;
-      border: 2px solid black;
-      border-radius: 50px;
-      padding: 10px 20px;
-      cursor: pointer;
-      outline: none;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition: all 0.2s ease-in-out;
-
-      // Hover styles can still be included
-      &:hover {
-        background-color: #725AD0;
-        color: white;
-      }
-
-    }
+@keyframes arrow-rotate {
+  0% {
+    transform: translateY(-50%) rotate(0deg);
   }
+  100% {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: transparent;
+  }
+}
+
+@keyframes button-fade-in {
+  0% {
+    width: 200px; 
+  }
+  100% {
+    width: 300px;
+  }
+}
+@keyframes arrow-rotate-reverse {
+  0% {
+    transform: translateY(-50%) rotate(45deg);
+    background-color: transparent;
+  }
+  100% {
+    transform: translateY(-50%) rotate(0deg);
+  }
+}
+
+@keyframes button-fade-out {
+  0% {
+    width: 300px;
+  }
+  100% {
+    width: 200px;
+  }
+}
 
 
-.arrow-circle {
-  background-color: #725AD0; // Purple background for the circle
-  border-radius: 50%; // Makes it round
-  width: 40px; // Size of the circle
-  height: 40px; // Size of the circle
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Add shadow to match your design
+.button__container {
+  position: relative;
+  display: inline-flex;
+  justify-content: start;
+  align-items: start;
   cursor: pointer;
-}
-
-.arrow {
-  rotate: -50deg;
-}
-
-
-.text {
-  background-color: #E6E2E2;
-  padding: 10px;
-  width: 100%;
-  height: 45px;
-  border-radius: 20px;
-  text-align: center;
+  padding: 5px;
+  width: 260px;
+  max-width: 260px;
   overflow: hidden;
-  p {
-    font-size: 14px;
+
+  &:hover button .arrow-icon-button {
+    animation: arrow-rotate 0.2s forwards;
   }
 
+  &:not(:hover) button .arrow-icon-button {
+    animation: arrow-rotate-reverse 1s forwards;
+  }
 
-}
+  &:hover button {
+    animation: button-fade-in 1.0s forwards;
+  }
 
+  &:not(:hover) button {
+    animation: button-fade-out 0.5s forwards;
+  }
 
-// Tablet devices (between 768px and 1024px)
-@media (min-width: 768px) and (max-width: 1024px) {
+  button {
+    padding: 5px 10px;
+    border-radius: 30px;
+    border: 3px solid #000;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #262626;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 18px;
+    text-transform: uppercase;
+    background: linear-gradient(to top, $primary-color, $primary-color) no-repeat;
+    background-size: 100% 0;
+    transition: background-size 0.1s, border-color 0.1s;
+    width: 200px;
+    max-width: 400px;
+    cursor: pointer;
 
+    &:hover {
+      background-size: 100% 100%;
+    }
 
-  .button-wrapper {
-    padding: 1.15em; // Adjust padding relative to new font size
-    gap: 11.5px; // Adjust gap size
-    
-    .button {
-      padding: 11.5px 23px; // Adjust button padding
-      border-radius: 57.5px; // Adjust border-radius
-      font-size: 13px;
-      // ... other styles ...
+    .arrow-icon-button {
+      position: absolute;
+      right: 5%;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $primary-color;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 50%;
+      padding: 5px;
+      cursor: pointer;
     }
   }
+}
 
-  .arrow-circle {
-    width: 60px; // Adjust circle size
-    height:60px; // Adjust circle size
-  }
+.button_style_light {
+  width: 370px;
+  max-width: 500px;
 
-  .text {
-    padding: 11.5px;
-    height: 51.75px; 
-    border-radius: 23px; 
-    p{
-      font-size: 18px;
+  button {
+    padding-left: 35px;
+    padding-right: 35px;
+    border: 4px solid $primary-color;
+    color: $primary-color;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    transition: background-size 0.5s, border-color 0.5s;
+    width: 300px;
+    max-width: 400px;
+    cursor: pointer;
+
+    &:hover {
+      background-size: 100% 100%;
+      color: black;
+    }
+
+    // Prevent animations on hover or any other state changes
+    &:hover, &:not(:hover) {
+      animation: none;
+    }
+    .arrow-icon-button {
+      &:hover, &:not(:hover) {
+        animation: none;
+      }
     }
   }
 }
+.button_purple{
+  button{
+    background: linear-gradient(to top, $background-color-purple, $background-color-purple) no-repeat;
+    background-size: 100% 0;
+
+    &:hover {
+      background-size: 100% 100%;
+      color: white;
+    }
+    .arrow-icon-button{
+      background-color: $background-color-purple;
+      stroke: white;
+    }
+  }
+}
+

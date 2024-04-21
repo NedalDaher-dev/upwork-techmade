@@ -1,7 +1,7 @@
 import useAos from '@/hooks/useAos'
 import SubMenu from '../SubMenu'
 import './index.styles.scss'
-import Button from '../Button/index'
+import Button from '@/components/Button/index';
 import TextSplitterComponent from '@/hooks/text/TextFill'
 const Excellence = () => {
     useAos()

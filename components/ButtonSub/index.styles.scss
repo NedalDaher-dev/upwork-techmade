@@ -1,0 +1,97 @@
+// index.styles.scss
+
+  .button-wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    // width and height removed to allow content to determine size
+    padding: 1em; // You can adjust the padding as needed
+    gap: 10px;
+
+    .button {
+      background-color: transparent;
+      color: black;
+      border: 2px solid black;
+      border-radius: 50px;
+      padding: 10px 20px;
+      cursor: pointer;
+      outline: none;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s ease-in-out;
+
+      // Hover styles can still be included
+      &:hover {
+        background-color: #725AD0;
+        color: white;
+      }
+
+    }
+  }
+
+
+.arrow-circle {
+  background-color: #725AD0; // Purple background for the circle
+  border-radius: 50%; // Makes it round
+  width: 40px; // Size of the circle
+  height: 40px; // Size of the circle
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); // Add shadow to match your design
+  cursor: pointer;
+}
+
+.arrow {
+  rotate: -50deg;
+}
+
+
+.text {
+  background-color: #E6E2E2;
+  padding: 10px;
+  width: 100%;
+  height: 45px;
+  border-radius: 20px;
+  text-align: center;
+  overflow: hidden;
+  p {
+    font-size: 14px;
+  }
+
+
+}
+
+
+// Tablet devices (between 768px and 1024px)
+@media (min-width: 768px) and (max-width: 1024px) {
+
+
+  .button-wrapper {
+    padding: 1.15em; // Adjust padding relative to new font size
+    gap: 11.5px; // Adjust gap size
+    
+    .button {
+      padding: 11.5px 23px; // Adjust button padding
+      border-radius: 57.5px; // Adjust border-radius
+      font-size: 13px;
+      // ... other styles ...
+    }
+  }
+
+  .arrow-circle {
+    width: 60px; // Adjust circle size
+    height:60px; // Adjust circle size
+  }
+
+  .text {
+    padding: 11.5px;
+    height: 51.75px; 
+    border-radius: 23px; 
+    p{
+      font-size: 18px;
+    }
+  }
+}

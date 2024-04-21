@@ -1,22 +1,21 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import ArrowStraight from '@/assets/Icons/ArrowStraight';
+import useCalendlyPopup from '@/hooks/useCalendlyPopup';
+import Arrow from '@/assets/Icons/Arrow';
 import './index.styles.scss';
+// Add a className prop to the Button component
+const Button = ({ text, className, onClick }) => {
+  const handleCalendlyPopup = useCalendlyPopup('https://calendly.com/umer-techmade/chat-with-umer-techmade');
 
-const Buttun = ({ children, description ,onClick }) => (
-  <div className="button-container">
-    <div onClick={onClick} className='button-wrapper'>
-      <button type="button" className="button"> {/* Added type attribute and removed braces */}
-        {children}
+  return (
+    <div onClick={handleCalendlyPopup} className={` ${className} button__container`}> {/* Use the className prop */}
+      <button type="button">
+        {text}
+        <span className="arrow-icon-button">
+          <Arrow />
+        </span>
       </button>
-      <div className="arrow-circle">
-        <ArrowStraight className="arrow" color="white" /> {/* Removed unnecessary curly braces and replaced double quotes with single */}
-      </div>
     </div>
-    <div className="text">
-      <p>{description}</p>
-    </div>
-  </div>
-);
+  )
+}
 
-export default Buttun;
+export default Button;

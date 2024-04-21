@@ -38,6 +38,30 @@
             justify-content: space-between;
             max-width: 60%;
             width: 100%;
+            .button_container {
+                width: 100%;
+                width: 260px;
+                max-width: 260ox;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+                .sub_text {
+                    width: 289px;
+                    height: 47px;
+                    background-color: #E6E2E2;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 25px ;
+    
+    
+                }
+
+            }
+
+
         }
     }
 }

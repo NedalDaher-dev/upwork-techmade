@@ -1,10 +1,49 @@
+@import './variables.scss';
+
+@keyframes arrow_main {
+  from {
+    transform: translateY(0) scale(0.9);
+  }
+  to {
+    transform: translateY(-100%) translateX(100%) scale(1);
+  }
+}
+
+@keyframes return-arrow {
+  0% {
+    transform: translateY(100%) translateX(-50%) scale(1); // يبدأ من المكان الذي لا يظهر فيه
+  }
+  100% {
+    transform: translateY(0) translateX(0) scale(0.9); // يعود إلى المكان الأصلي
+  }
+}
+
+@keyframes arrow_main-reverse {
+  from {
+    transform: translateY(-50%) translateX(50%) scale(1);
+  }
+  to {
+    transform: translateY(0) translateX(0) scale(0.9);
+  }
+}
+
+@keyframes return-arrow-reverse {
+  0% {
+    transform: translateY(0) translateX(0) scale(0.9); // يعود إلى المكان الأصلي
+  }
+  100% {
+    transform: translateY(100%) translateX(-50%)  scale(1); // يبدأ من المكان الذي لا يظهر فيه
+  }
+}
+
+
+
 .buttonWrapper {
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 10px;
   
-
   .button {
     background-color: transparent;
     color: white;
@@ -43,8 +82,45 @@
       transform: translateY(0);
     }
   }
+  .arrow-icon-warpper{
+    border-radius: 30px;
+    width: 32px;
+    height: 32px;
+    background-color: $primary-color; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
 
+    .arrow-icon-main {
+      // يمكنك تعديل المدة والتوقيت للحركة حسب ما تريد
+    }
+
+
+    .special-icon {
+      position: absolute;
+      // يمكنك تعديل المدة والتوقيت للحركة حسب ما تريد
+    }
+    
+  }
+  &:hover .arrow-icon-main {
+    animation: arrow_main 0.2s ease-out forwards;
+  }
+
+  &:hover .special-icon {
+    animation: return-arrow 0.2s ease-out forwards;
+  }
+
+  &:not(:hover) .arrow-icon-main {
+    animation: arrow_main-reverse 0.2s ease-out forwards;
+  }
+
+  &:not(:hover) .special-icon {
+    animation: return-arrow-reverse 0.2s ease-out forwards;
+  }
 }
+
 
 
 

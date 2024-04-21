@@ -5,7 +5,7 @@ import './index.style.scss';
 
 import cycle from '@/assets/images/LandingPage/cycle.png';
 import Image from 'next/image';
-import Button from '../Button';
+import Button from '@/components/Button/index';
 
 const UpcomingEvents = () => (
   <div className="upcoming__container">
