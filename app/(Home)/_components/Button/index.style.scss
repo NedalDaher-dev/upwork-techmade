@@ -64,7 +64,6 @@
     animation: button-fade-out 0.5s forwards;
   }
 
-
   button {
     padding: 5px 10px;
     border-radius: 30px;
@@ -101,7 +100,6 @@
       border-radius: 50%;
       padding: 5px;
       cursor: pointer;
-      // Remove infinite animation here
     }
   }
 }
@@ -127,5 +125,16 @@
       background-size: 100% 100%;
       color: black;
     }
+
+    // Prevent animations on hover or any other state changes
+    &:hover, &:not(:hover) {
+      animation: none;
+    }
+    .arrow-icon-button {
+      &:hover, &:not(:hover) {
+        animation: none;
+      }
+    }
   }
 }
+

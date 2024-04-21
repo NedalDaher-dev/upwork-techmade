@@ -6,7 +6,6 @@ import NavLinks from '@/components/Navbar/NavLinks'; // تأكد من صحة ا�
 import Link from 'next/link';
 import { useTheme } from '@/contexts/ThemeContext';
 import { usePathname, useRouter } from 'next/navigation';
-import { useInView } from 'react-intersection-observer';
 import './index.styles.scss'; // تأكد من صحة المسار
 import '@/styles/index.scss';
 import '@/styles/responsive.scss';

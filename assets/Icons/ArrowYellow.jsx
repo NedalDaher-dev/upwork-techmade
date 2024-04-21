@@ -7,9 +7,10 @@ const ArrowYellow = ({ className }) => (
     viewBox="0 0 38 38"
     fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    className={className}
-  >
-    <circle cx="19" cy="19" r="19" fill="#BBE903" />
+    className='arrow-warber'
+    
+    >
+    <circle  cx="19" cy="19" r="19" fill="#BBE903" />
     <path
       fillRule="evenodd"
       clipRule="evenodd"
