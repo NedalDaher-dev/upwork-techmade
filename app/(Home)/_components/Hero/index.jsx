@@ -1,4 +1,3 @@
-'use client';
 import React, { useEffect, useRef, useState } from 'react';
 import './index.style.scss';
 import useAos from '@/hooks/useAos';
@@ -10,21 +9,23 @@ const Hero = () => {
     const controls = useAnimation();
     const [position, setPosition] = useState(0);
     const ref = useRef(null);
-    const [screenWidth, setScreenWidth] = useState(window.innerWidth);  // حفظ عرض الشاشة الحالي في الحالة
+    const [screenWidth, setScreenWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);  // Initialize safely
     const isPhoneScreen = screenWidth <= 767;
 
-    // استخدام useEffect لتحديث حجم الشاشة بشكل ديناميكي عند تغير حجم النافذة
     useEffect(() => {
-        const handleResize = () => {
-            setScreenWidth(window.innerWidth);
-        };
+        // Ensure this runs only on the client side
+        if (typeof window !== 'undefined') {
+            const handleResize = () => {
+                setScreenWidth(window.innerWidth);
+            };
 
-        window.addEventListener('resize', handleResize);
+            window.addEventListener('resize', handleResize);
 
-        // تنظيف الاستماع للحدث عند إزالة المكون
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
+            // Cleanup listener when component unmounts
+            return () => {
+                window.removeEventListener('resize', handleResize);
+            };
+        }
     }, []);
 
     useEffect(() => {

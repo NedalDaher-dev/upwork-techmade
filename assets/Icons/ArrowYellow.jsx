@@ -1,5 +1,4 @@
 import React from 'react';
-import '@/styles/animation.scss'
 const ArrowYellow = ({ className }) => (
   <svg
     width="34"
