@@ -11,26 +11,33 @@
         height: 100%;
         width: 100%;
         max-width: 100%;
-        margin-left: 25%;
         padding-left: 100px;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: flex-start;
         color: white;
-        max-width: 850px;
+        width: 875px;
+        max-width: 875px;
         position: relative;
+        overflow: hidden;
+        margin-left: 20%;
+        
 
         h2 {
             color: #FFF;
             font-family: Poppins;
-            font-size: 55px;
+            font-size: 58px;
             font-style: normal;
             font-weight: 600;
-            line-height: 70px;
-            /* 106.452% */
+            line-height: 66px; /* 106.452% */
             letter-spacing: -2.48px;
             overflow: hidden;
+            .button-in-footer{
+                position: relative;
+                z-index: 1;
+                top: -10px;               
+            }
 
 
         }
@@ -180,7 +187,8 @@
         padding: 40px 20px;
 
         .footer-container {
-            max-width: 700px;
+            max-width: 500px;
+            max-height: 300px;
             margin-left: 30%;
             padding-left: 20px;
             position: relative;
@@ -194,14 +202,16 @@
                 line-height: 33px;
                 /* 97.059% */
                 letter-spacing: -1.436px;
+                .button-in-footer{
+                    position: relative;
+                    z-index: 1;
+                    top: -5px;               
+                }
 
             }
 
             .buttonWrapper {
-                position: absolute;
-                transform: translateX(-50%);
-                left: 50%;
-                top: 55%;
+
 
                 .button {
                     color: #EEEAEA;

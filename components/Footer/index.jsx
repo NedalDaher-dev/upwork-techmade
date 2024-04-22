@@ -84,10 +84,13 @@ const Footer = () => {
         ) : (
           <section className="footer-wrapper">
             <div className='footer-container'>
-              <TextSplitterComponent tagType='h2' wordsPerLineArray={[4, 3, 3]} >
+              <h2>
                 Embark on an exhilarating journey beyond your limits with us!
-              </TextSplitterComponent>
-              <Button className='button_purple'  text='SCHEDULE A CALL' />
+                <span className='button-in-footer'>
+                  <Button className='button_purple button_purple_footer' text='SCHEDULE A CALL' />
+                </span>
+              </h2>
+
             </div>
           </section>
         )
@@ -127,7 +130,7 @@ const Footer = () => {
         )
       }
 
-</motion.div>
+    </motion.div>
   );
 };
 

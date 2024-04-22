@@ -13,8 +13,11 @@ export default async function Page  ()  {
 
     return(
       <div className='articles-wrapper'>
+        <div className='articles-container'> 
         <Hero/>
         <Articles data={posts} itemsPerPage={3} />
+        </div>
+
 
       </div>
     )

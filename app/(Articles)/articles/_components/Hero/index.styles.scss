@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: end;
     align-items: end;
-    max-width: 100vw;
+    max-width: 1444px;
 
     h1 {
         color: #FFF;
@@ -31,7 +31,7 @@
 
 @media screen and (min-width: 1441px) {
     .hero-wrapper {
-        max-width: 80vw;
+        max-width: 1444px;
 
         h1 {
             font-size: 80px;

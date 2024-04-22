@@ -101,6 +101,7 @@
       border-radius: 50%;
       padding: 5px;
       cursor: pointer;
+      overflow: hidden;
     }
   }
 }
@@ -153,4 +154,13 @@
     }
   }
 }
-
+.button_purple_footer{
+  button{
+    color: white;
+    border: 3px solid white;
+    &:hover {
+      border: 3px solid black;
+      color: white;
+    }
+  }
+}

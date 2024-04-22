@@ -73,8 +73,7 @@
             }
 
             .button__container {
-
-
+                width: 400px;
                 button {
                     display: flex;
                     align-items: flex-start;
@@ -87,6 +86,7 @@
                     padding: 15.471px 40.941px;
                     text-transform: uppercase;
                     border-radius: 68.676px;
+                    width: 310px;
 
                     @media screen and (min-width: 768px) and (max-width: 820px) {
                         font-size: 20px;
@@ -94,9 +94,14 @@
                 }
 
                 .arrow-icon-button {
-                    width: 67.532px;
-                    height: 67.532px;
+                    width: 48.532px;
+                    height: 48.532px;
+                    svg {
+                        width: 48.532px;
+                        height: 48.532px;
+                    }
                 }
+
             }
 
             p {

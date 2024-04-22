@@ -8,27 +8,41 @@ import { motion, useAnimation } from 'framer-motion';
 const Hero = () => {
     useAos();
     const controls = useAnimation();
-    const [position, setPosition] = useState(0);  // حفظ موقع الرسوم المتحركة
-    const ref = useRef(null);  // ref للوصول إلى DOM العنصر
+    const [position, setPosition] = useState(0);
+    const ref = useRef(null);
+    const [screenWidth, setScreenWidth] = useState(window.innerWidth);  // حفظ عرض الشاشة الحالي في الحالة
+    const isPhoneScreen = screenWidth <= 767;
+
+    // استخدام useEffect لتحديث حجم الشاشة بشكل ديناميكي عند تغير حجم النافذة
+    useEffect(() => {
+        const handleResize = () => {
+            setScreenWidth(window.innerWidth);
+        };
+
+        window.addEventListener('resize', handleResize);
+
+        // تنظيف الاستماع للحدث عند إزالة المكون
+        return () => {
+            window.removeEventListener('resize', handleResize);
+        };
+    }, []);
 
     useEffect(() => {
         controls.start('animate');
     }, [controls]);
 
-
     const marqueeVariants = {
         animate: {
-            x: [1500, -1500],
+            x: isPhoneScreen ? [0, 0] : [1500, -1500],
             transition: {
                 repeat: Infinity,
                 repeatType: "loop",
-                duration: 5,  // تم تغيير المدة إلى 10 ثواني لتخفيف السرعة
+                duration: 5,
                 ease: "linear",
                 rest: 0.5
             }
         }
     };
-    
 
     return (
         <div className='hero__container'>
@@ -37,7 +51,6 @@ const Hero = () => {
                     variants={marqueeVariants}
                     initial="animate"
                     animate={controls}
-
                 >
                     We speak the language of internet and people alike.
                 </motion.h1>

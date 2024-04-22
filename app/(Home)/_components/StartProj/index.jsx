@@ -10,7 +10,6 @@ import useAos from '@/hooks/useAos';
 import Star from '@/assets/Icons/Star';
 const StartProj = () => {
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
-
   const isPhoneScreen = screenWidth <= 767;
   const isTabletScreen = screenWidth > 767 && screenWidth <= tabletScreenWidth;
   useAos()

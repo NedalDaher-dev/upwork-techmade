@@ -1,9 +1,17 @@
 .articles-wrapper{
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: #16161d;
-    width: 100%;
     height: max-content;
     padding: 5%;
     padding-top: 15%;
+
+    .articles-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        max-width: 1440px;
+    }
 }
