@@ -7,6 +7,7 @@ import useAos from '@/hooks/useAos'
 import BackgroundBox from '@/assets/images/WorkPage/BackgroundBox'
 
 const Cards = () => {
+    
     useAos()
     return (
         <div className="cards__container">
@@ -14,13 +15,8 @@ const Cards = () => {
                 {CardsData.map((card, index) => (
                     <div data-aos="fade-up" key={index} className='card-info'>
                         <card.icon />
-                        <TextSplitterComponent tagType='h1' wordsPerLineArray={card.splitTitle} >
-                            {card.title}
-                        </TextSplitterComponent>
-                        <TextSplitterComponent tagType='p' wordsPerLineArray={card.splitText} >
-                            {card.description}
-                        </TextSplitterComponent>
-
+                        <h1> {card.title}</h1>
+                        <p>{card.description}</p>
                     </div>
                 ))}
             </div>

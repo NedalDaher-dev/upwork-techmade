@@ -12,21 +12,23 @@ import '@/styles/responsive.scss';
 
 const Navbar = ({ type }) => {
   const [scrollY, setScrollY] = useState(0);
+  const [addClass, setAddClass] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
   const router = useRouter();
   const path = usePathname();
+  console.log(scrollY);
 
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);
+      setAddClass(scrollY > 50); 
     };
-
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
-  }, []);
+  }, [scrollY]);
 
   const menuVariants = {
     open: {
@@ -69,7 +71,7 @@ const Navbar = ({ type }) => {
 
   return (
     <motion.div
-      className={`${theme === 'light' ? 'bgLight' : 'bgDark'} navWrapper`}
+      className={`${theme === 'light' ? 'bgLight' : 'bgDark'} navWrapper ${addClass ? 'scrolled' : ''}`}
       initial="initial"
       animate="scrolled"
       style={{ position: 'fixed', width: '100%', top: 0, left: 0, zIndex: 100 }}
