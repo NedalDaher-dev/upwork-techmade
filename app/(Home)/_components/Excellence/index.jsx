@@ -1,3 +1,4 @@
+'use client';
 import useAos from '@/hooks/useAos'
 import SubMenu from '../SubMenu'
 import TextSplitterComponent from '@/hooks/text/TextFill'

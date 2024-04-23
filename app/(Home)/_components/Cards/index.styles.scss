@@ -10,7 +10,7 @@
     /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
     grid-template-rows: auto auto auto auto;
     /* يحدد أربعة صفوف بارتفاع تلقائي */
-    gap: 20px;
+    gap: 5px;
     /* المسافة بين الأعمدة والصفوف */
 }
 
@@ -43,7 +43,7 @@
         max-width: 456px;
         padding: 20px;
         background-color: transparent;
-        margin: 80px auto;
+        margin: 20px auto;
 
         h1 {
             max-width: 100%;
