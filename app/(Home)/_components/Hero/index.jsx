@@ -48,13 +48,7 @@ const Hero = () => {
     return (
         <div className='hero__container'>
             <div className='hero_main'>
-                <motion.h1 
-                    variants={marqueeVariants}
-                    initial="animate"
-                    animate={controls}
-                >
-                    We speak the language of internet and people alike.
-                </motion.h1>
+                <h1>We speak the language of internet and people alike.</h1>
             </div>
         </div>
     );

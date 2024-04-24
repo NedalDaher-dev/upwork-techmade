@@ -19,8 +19,8 @@ const SubMenu = ({ isActive, dir = 'ltr', sectionNumber }) => {
     };
 
     const renderItems = IconsSubMenu.map((item, index) => {
-        // الآن يتم التحقق لمعرفة إذا كان الفهرس يطابق sectionNumber وكذلك الشروط السابقة
-        const shouldShowIcon = (index === sectionNumber) && ( index === active);
+        // تحقق إذا كان الفهرس يطابق sectionNumber أو إذا لم يتم تحديد sectionNumber على الإطلاق
+        const shouldShowIcon = (sectionNumber === undefined) || (index === sectionNumber && index === active);
         return shouldShowIcon ? (
             <div 
                 dir={dir} 

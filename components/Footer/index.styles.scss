@@ -1,10 +1,10 @@
 .footer-wrapper {
     height: 80vh;
-    background-color: #16161D;
     background-image: url('../../assets/images/footer/background-footer.svg');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #16161D;
 
 
     .footer-container {
@@ -22,7 +22,9 @@
         position: relative;
         overflow: hidden;
         margin-left: 20%;
+        margin: 0 auto;
         
+
 
         h2 {
             color: #FFF;

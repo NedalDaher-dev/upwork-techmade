@@ -2,9 +2,9 @@
     width: 100%;
     margin: 100px auto;
     display: grid;
-    grid-template-columns: 40% 2fr;
+    grid-template-columns: repeat(2, 1fr);
     /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
-    grid-template-rows: auto auto auto auto;
+    grid-template-rows: repeat(4, 1fr);
     /* يحدد أربعة صفوف بارتفاع تلقائي */
     gap: 20px;
 
@@ -33,8 +33,9 @@
 
     .element-right {
         grid-column: 1;
-        /* يضع startProj__right في العمود الأول */
-        grid-row: 1;
+        grid-row: 2 /span 2;
+        min-height: 290px;
+        // background-color: red;
     }
 
     .element-plus-two {
@@ -58,4 +59,3 @@
         }
     }
 }
-

@@ -50,10 +50,8 @@ const Footer = () => {
             <div className='footer-container'>
               <TextSplitterComponent tagType='h2' wordsPerLineArray={[4, 4, 2]} >
                 Embark on an exhilarating journey beyond your limits with us!
-
               </TextSplitterComponent>
-
-              <div className='buttonWrapper'>
+                            <div className='buttonWrapper'>
                 <button type="button" className='button' onClick={handleScheduleClick}>
                   Start your project
                 </button>
@@ -80,17 +78,13 @@ const Footer = () => {
             </p> */}
             </div>
           </section>
-
         ) : (
           <section className="footer-wrapper">
             <div className='footer-container'>
               <h2>
                 Embark on an exhilarating journey beyond your limits with us!
-                <span className='button-in-footer'>
-                  <Button className='button_purple button_purple_footer' text='SCHEDULE A CALL' />
-                </span>
               </h2>
-
+              <Button className='button_purple button_purple_footer' text='SCHEDULE A CALL' />
             </div>
           </section>
         )

@@ -42,7 +42,7 @@ const Excellence = () => {
                 ) : (
                     <>
                         <div data-aos="fade-right" data-aos-duration="200" className='element-right'>
-                        <SubMenu isActive={1} sectionNumber={1} />
+                        <SubMenu isActive={1}  />
                         </div>
 
                         <div data-aos="fade-left" data-aos-duration="200" className='element-left'>
