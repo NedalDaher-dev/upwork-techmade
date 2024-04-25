@@ -224,7 +224,15 @@
 @media screen and (min-width: 768px ) and (max-width: 1024px) { // للتابلت
     .ourProcess__container{
         .ourProcess__cards{
+            max-width: 661px;
             grid-template-columns: repeat(2, 1fr); // عمودين للتابلت
+            .card__parent{
+                max-width: 350px;
+                .card__image{
+                max-width: 310px;
+
+                }
+            }
           }
     }
 }

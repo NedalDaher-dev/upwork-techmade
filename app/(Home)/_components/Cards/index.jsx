@@ -1,3 +1,4 @@
+
 import { CardsData } from '@/data/DataCardsHomePage'
 import './index.styles.scss'
 import Star from '@/assets/Icons/Star'
@@ -26,16 +27,16 @@ const Cards = () => {
                 </TextSplitterComponent>
                 <Button text="START YOUR PROJECT" />
             </div>
-            <div className='element-plus'>
-                <BackgroundBox className={'background-image-box'} />
+            <div  data-aos="fade-up" className='element-plus'>
                 <div className='box-container'>
                     <div className='box'>
                         <p>SaaS Solutions Expert</p>
                     </div>
                     <Star />
-                    <TextSplitterComponent tagType='p' wordsPerLineArray={[3, 2, 4, 5, 2, 4, 2, 3]} >
-                        As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
-                    </TextSplitterComponent>
+                    <p>
+                    As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
+
+                    </p>
                 </div>
             </div>
         </div>
