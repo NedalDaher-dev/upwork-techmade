@@ -8,18 +8,30 @@ import useAos from '@/hooks/useAos'
 import BackgroundBox from '@/assets/images/WorkPage/BackgroundBox'
 
 const Cards = () => {
-    
+
     useAos()
     return (
         <div className="cards__container">
             <div className='element-left'>
-                {CardsData.map((card, index) => (
-                    <div data-aos="fade-up" key={index} className='card-info'>
-                        <card.icon />
-                        <h1> {card.title}</h1>
-                        <p>{card.description}</p>
+                <div className='box-container'>
+                    <div className='box'>
+                        <p>SaaS Solutions Expert</p>
                     </div>
-                ))}
+                    <Star />
+                    <p>
+                        As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
+
+                    </p>
+                </div>
+                <div className='card-item'>
+                    {CardsData.map((card, index) => (
+                        <div data-aos="fade-up" key={index} className='card-info'>
+                            <card.icon />
+                            <h1> {card.title}</h1>
+                            <p>{card.description}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
             <div data-aos="fade-up" className='element-right'>
                 <TextSplitterComponent tagType='p' wordsPerLineArray={[7, 7, 5, 2]} >
@@ -27,18 +39,7 @@ const Cards = () => {
                 </TextSplitterComponent>
                 <Button text="START YOUR PROJECT" />
             </div>
-            <div  data-aos="fade-up" className='element-plus'>
-                <div className='box-container'>
-                    <div className='box'>
-                        <p>SaaS Solutions Expert</p>
-                    </div>
-                    <Star />
-                    <p>
-                    As SaaS solution specialists, we collaborate with you to turn your vision into a thriving product, harnessing the power of cutting-edge technology for guaranteed success.
 
-                    </p>
-                </div>
-            </div>
         </div>
     )
 }

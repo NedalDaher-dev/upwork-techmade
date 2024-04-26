@@ -6,7 +6,7 @@
     height: fit-content;
     margin: 100px auto;
     display: grid;
-    grid-template-columns: 50% 1fr;
+    grid-template-columns: 25% 1fr;
     /* يحدد عمودين، الأول بعرض 40% والثاني يأخذ المساحة المتبقية */
     grid-template-rows: auto auto auto auto;
     /* يحدد أربعة صفوف بارتفاع تلقائي */
@@ -20,65 +20,53 @@
     flex-direction: column;
     gap: 30px;
     grid-column: 1;
-    /* يضع startProj__right في العمود الأول */
-    grid-row: 4;
-    margin-top: 80px;
+    grid-row: 5;
     max-height: 200px;
     max-width: 350px;
-    /* يمتد على طول الأربعة صفوف */
 
 
 }
 
 .element-left {
     grid-column: 2;
-    /* يضع startProj__left في العمود الثاني */
     grid-row: 5;
-    /* يوضع في الصف الأول */
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    gap: 80px;
     overflow: hidden;
 
-    .card-info {
-        border: 1px solid black;
-        border-radius: 60px;
-        width: 380px;
-        max-width: 350px;
-        min-width: 350px;
-        height: 230px;
-        padding: 20px;
-        background-color: transparent;
-        margin: 20px auto;
+    .card-item {
+    overflow: hidden;
 
-        h1 {
-            max-width: 100%;
-            height: 50px;
-            overflow: hidden;
-        }
+        .card-info {
+            border: 1px solid black;
+            border-radius: 60px;
+            width: 380px;
+            max-width: 350px;
+            min-width: 350px;
+            height: 230px;
+            padding: 20px;
+            background-color: transparent;
+            margin: 20px auto;
 
-        p {
-            color: var(--color-1, $secondary-color);
-            font-size: 15px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: normal;
-            overflow: hidden;
+            h1 {
+                max-width: 100%;
+                height: 50px;
+                overflow: hidden;
+            }
+
+            p {
+                color: var(--color-1, $secondary-color);
+                font-size: 15px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: normal;
+                overflow: hidden;
+            }
         }
     }
-}
 
-.element-plus {
-    grid-column: 1 / span 2;
-    grid-row: 5 / span 1;
-    margin-top: -20px;
-    max-width: 1200px;
-    align-self: self-start;
-    justify-self: auto;
-    padding-bottom: 100px;
-    padding-top: 100px;
-    padding-left: 30px;
-    position: relative;
-    overflow: visible;
-
-    /* This will allow the inner content to overflow outside the .element-plus */
     .box-container {
         background-color: $tertiary-color;
         border-radius: 51px;
@@ -86,58 +74,58 @@
         padding: 20px;
         overflow: visible;
         position: relative;
-        width: 480px;
+        width: 410px;
         height: 628px;
-        max-width: 480px;
+        max-width: 410px;
         max-height: 628px;
         margin-left: 60px;
 
-
-    }
-
-    p {
-        color: white;
-        font-size: 32px;
-    }
-
-    .box {
-        display: inline-flex;
-        padding: 21.132px 31.698px;
-        align-items: center;
-        justify-content: center;
-        gap: 10.566px;
-        position: absolute;
-        left: 80%;
-        /* تموضع العنصر في منتصف الجانب الأيسر لـ .element-plus */
-        transform: translateX(-50%);
-        z-index: 100;
-        border-radius: 21.132px;
-        background: $primary-color;
-        backdrop-filter: blur(2.641500234603882px);
-        border-radius: 21px;
-        padding: 8px;
-        z-index: 10;
-        width: 321px;
-        max-width: 300px;
-        height: 70px;
-
         p {
-            color: $tertiary-color;
-            font-size: 20.774px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: normal;
+            color: white;
+            font-size: 30px;
+        }
+    
+        .box {
+            display: inline-flex;
+            padding: 21.132px 31.698px;
+            align-items: center;
+            justify-content: center;
+            gap: 10.566px;
+            position: absolute;
+            left: 80%;
+            /* تموضع العنصر في منتصف الجانب الأيسر لـ .element-plus */
+            transform: translateX(-50%);
+            z-index: 100;
+            border-radius: 21.132px;
+            background: $primary-color;
+            backdrop-filter: blur(2.641500234603882px);
+            border-radius: 21px;
+            padding: 8px;
+            z-index: 10;
+            width: 321px;
+            max-width: 300px;
+            height: 70px;
+    
+            p {
+                color: $tertiary-color;
+                font-size: 20.774px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
+        }
+    
+        .background-image-box {
+            position: absolute;
+            left: 25%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 700px;
+            height: 790px;
         }
     }
 
-    .background-image-box {
-        position: absolute;
-        left: 25%;
-        top: 50%;
-        transform: translate(-50%, -50%);
-        width: 700px;
-        height: 790px;
-    }
+   
 
 
 
