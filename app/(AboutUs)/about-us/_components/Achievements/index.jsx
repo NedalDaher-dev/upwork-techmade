@@ -4,6 +4,8 @@ import Design from '@/assets/Icons/Design';
 import CodeSmall from '@/assets/Icons/Code-small';
 import { featuresRight, numbers } from './_constants';
 import './index.styles.scss';
+import CountUp from 'react-countup';
+import VisibilitySensor from 'react-visibility-sensor';
 
 const Achievements = () => {
   const { theme, phoneScreenWidth, screenWidth, toggleTheme } = useTheme();
@@ -15,8 +17,15 @@ const Achievements = () => {
           <h1>Bespoke solutions, from UI/UX finesse to mobile brilliance.</h1>
           <div className="stats-container">
             {numbers.map((item, idx) => (
-              <div key={idx}>
-                <h2 className="stats-number">{item.number}+</h2>
+              <div key={idx} className="stats-block">
+                <VisibilitySensor partialVisibility offset={{ bottom: 100 }}>
+                  {({ isVisible }) => (
+                    <h2 className="stats-number">
+                      {isVisible ? <CountUp start={0} end={item.number} duration={4} /> : null}
+                      {item.symbol}
+                    </h2>
+                  )}
+                </VisibilitySensor>
                 <p>{item.title}</p>
               </div>
             ))}
@@ -49,7 +58,7 @@ const Achievements = () => {
                     <h2>The Psychology of User-Centric Design</h2>
                   </div>
                 </div>
-                <div dir='rtl' className='We-desing-container'>
+                <div dir='rtl' className='We-design-container'>
                   <Design />
                   <div>
                     <h2>We Design</h2>
@@ -76,4 +85,5 @@ const Achievements = () => {
     </div>
   );
 };
+
 export default Achievements;

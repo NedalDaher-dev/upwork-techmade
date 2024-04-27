@@ -2,6 +2,7 @@ import React from 'react';
 import useCalendlyPopup from '@/hooks/useCalendlyPopup'; // استيراد الهوك من ملفه
 import './index.styles.scss';
 import ArrowPurple from '@/assets/Icons/ArrowPurple';
+import Button from '@/components/Button';
 import '@/styles/index.scss'
 
 const Tagline = () => {
@@ -13,12 +14,8 @@ const Tagline = () => {
         Elevating Your Presence with Unforgettable Online Experiences whether
         you&apos;re a <span>startup</span> or an <span>industry leader.</span>
       </p>
-      <div className="buttonWrapper">
-        <button type="button" onClick={handleScheduleClick} className="button">
-          WORK WITH US
-        </button>
-        <ArrowPurple />
-      </div>
+      <Button className='button_purple' text="WORK WITH US" />
+
     </div>
   )
 };
