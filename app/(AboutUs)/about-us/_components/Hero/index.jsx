@@ -9,6 +9,7 @@ import { useTheme } from '@/contexts/ThemeContext';
 
 const Hero = () => {
   const { theme, phoneScreenWidth, screenWidth, toggleTheme } = useTheme();
+  
 
   return (
     <div className="about-us-hero-wrapper">

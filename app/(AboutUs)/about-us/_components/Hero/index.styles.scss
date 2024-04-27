@@ -97,8 +97,13 @@
       margin-right: 0px;
 
       .heading {
-        font-size: 35px;
-        line-height: 40px;
+        color: #FFF;
+        font-family: Poppins;
+        font-size: 25px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 23px; /* 92% */
+        text-transform: uppercase;
       }
 
       .description {
