@@ -85,7 +85,7 @@ $textColor: #725AD0;
     }
   }
 }
-@media (max-width: 768px) {
+@media (max-width: 767px) {
     .navWrapper {
       position: relative; // This creates the context for absolute positioning
       overflow: visible; // Ensure it's not hidden or scroll

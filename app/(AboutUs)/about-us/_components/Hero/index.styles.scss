@@ -87,9 +87,8 @@
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (min-width: 370px) and (max-width: 767px) {
   .about-us-hero-wrapper {
-
     border-radius: 0;
 
     .about-us-hero-container {
@@ -104,12 +103,15 @@
         font-weight: 500;
         line-height: 23px; /* 92% */
         text-transform: uppercase;
+
       }
 
       .description {
         margin-left: 0;
-        min-width: 380px ;
-        max-width: 380px ;
+        min-width: 330px ;
+        max-width: 330px ;
+        @media screen and (min-width: 370px) and (max-width: 400px) {
+        }
       }
 
       .rocket-icon-container {

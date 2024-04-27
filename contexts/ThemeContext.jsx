@@ -1,7 +1,7 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
 // تعريف القيم الافتراضية لأحجام الشاشات
-const phoneScreenWidth = 768;
+const phoneScreenWidth = 767;
 const tabletScreenWidth = 1024;
 const desktopScreenWidth = 1440;
 

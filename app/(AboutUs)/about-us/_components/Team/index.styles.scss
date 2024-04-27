@@ -167,7 +167,7 @@
       z-index: 999999;
     }
   }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 767px) {
     .container{
       .team-wrapper {
         grid-template-columns: repeat(2, 1fr);

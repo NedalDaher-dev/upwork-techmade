@@ -83,7 +83,7 @@ const Navbar = ({ type }) => {
             <Logo theme={theme} />
           )}
         </div>
-        {phoneScreenWidth < screenWidth && <NavLinks type={type} onClick={handleNavClick} />}
+        {phoneScreenWidth <= screenWidth && <NavLinks type={type} onClick={handleNavClick} />}
         <div className="buttonWrapper">
           {phoneScreenWidth >= screenWidth ? (
             <button type="button" className={`${theme === 'light' ? 'button-light ' : 'button-dark '}`} onClick={toggleMenu}>
