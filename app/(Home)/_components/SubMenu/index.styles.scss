@@ -62,7 +62,7 @@
             opacity: 0;
             visibility: hidden;
             overflow: hidden;
-            max-height: 200px;
+            max-height: 209px;
 
             .Main-text {
                 color: #16161D;
@@ -70,13 +70,18 @@
                 font-style: normal;
                 font-weight: 500;
                 line-height: normal;
+                            max-height: 209px;
+
             }
 
             .underline {
                 height: 2px;
-                width: 60%;
+                width: 90%;
                 background-color: black;
                 margin-bottom: 2px;
+                max-height: 209px;
+
+
             }
 
             .Sub-text {
@@ -85,7 +90,8 @@
                 font-style: normal;
                 font-weight: 400;
                 line-height: normal;
-                
+                max-width: 209px;
+                min-width: 209px;
             }
         }
     }

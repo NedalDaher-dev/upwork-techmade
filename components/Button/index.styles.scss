@@ -105,7 +105,6 @@
     }
   }
 }
-
 .button_style_light {
   width: 370px;
   max-width: 500px;
@@ -162,5 +161,11 @@
       border: 3px solid black;
       color: white;
     }
+  }
+}
+.button_purple_contact{
+  button{
+    border: 3px solid #c2c2c4;
+    color: #c2c2c4;
   }
 }

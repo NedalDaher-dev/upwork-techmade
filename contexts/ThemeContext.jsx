@@ -21,7 +21,6 @@ export const ThemeProvider = ({ children ,theme }) => {
  
   useEffect(() => {
     const handleResize = () => {
-      console.log(window.innerWidth); // يطبع قيمة window.innerWidth بعد تحميل المكون أو تغيير حجم النافذة
       setScreenWidth(window.innerWidth);
     };
   

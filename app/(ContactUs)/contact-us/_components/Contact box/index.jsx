@@ -5,6 +5,7 @@ import './index.styles.scss';
 import { InputContact } from '@/data/InputData';
 import { SelectOption } from '@/data/SelectOptionData';
 import ArrowStraight from '@/assets/Icons/ArrowStraight';
+import Button from '@/components/Button';
 import '@/styles/index.scss';
 import useAos from '@/hooks/useAos';
 
@@ -38,14 +39,7 @@ const ContactUs = () => {
                     <textarea id="message" rows="10" name="message" placeholder="Type your message here..." />
                 </div>
                 <div className='contact-box-button' >
-                    <div className='buttonWrapper'>
-                        <button type="button" className="button">
-                            SEND US A MESSAGE
-                        </button>
-                        <div className="arrow-circle">
-                            <ArrowStraight className='arrow' color="white" />
-                        </div>
-                    </div>
+                        <Button className={'button_purple button_purple_contact'} text="Send Message" />
                 </div>
             </div>
         </div>
