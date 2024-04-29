@@ -285,7 +285,8 @@
 @media (min-width: 768px) and (max-width: 1024px) {
     .hero__container {
         padding-top: 5%; // مسافة علوية للتنفس
-
+        display: flex;
+        justify-content: center;
         .hero_main {
             h1 {
                 font-size: 50px;
