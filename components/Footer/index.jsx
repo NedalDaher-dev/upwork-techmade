@@ -1,11 +1,8 @@
 import React, { useEffect } from 'react';
-import { motion, useAnimation } from 'framer-motion';
-import { useInView } from 'react-intersection-observer';
 import Logo from '@/assets/Icons/Logo';
 import Link from 'next/link';
 import { navLinks } from '@/data/NavlinksData';
 import { footerLinksIcon } from '@/data/IconFooter';
-import Instagram from '@/assets/Icons/Social Media/Instagram';
 import useCalendlyPopup from '@/hooks/useCalendlyPopup';
 import ArrowYellow from '@/assets/Icons/ArrowYellow';
 import TextSplitterComponent from '@/hooks/text/TextFill';
@@ -18,32 +15,11 @@ const Footer = () => {
   const isPhoneScreen = screenWidth <= 767;
   const isTabletScreen = screenWidth > 767 && screenWidth <= tabletScreenWidth;
   const handleScheduleClick = useCalendlyPopup('https://calendly.com/umer-techmade/chat-with-umer-techmade');
-  const { ref, inView } = useInView({
-    triggerOnce: true,
-    threshold: 0.5  // مستوى التمرير الذي يجب أن يصل إليه الفوتر لبدء الأنيميشن
-  });
-  const controls = useAnimation();
 
-  React.useEffect(() => {
-    if (inView) {
-      controls.start('visible');
-    }
-  }, [controls, inView]);
 
-  const footerVariants = {
-    hidden: { opacity: 0, y: 50 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: {
-        duration: 0.5,
-        ease: 'easeInOut'
-      }
-    }
-  };
 
   return (
-    <motion.div ref={ref} initial="hidden" animate={controls} variants={footerVariants}>
+    <div>
       {
         isPhoneScreen ? (
           <section className="footer-wrapper">
@@ -124,7 +100,7 @@ const Footer = () => {
         )
       }
 
-    </motion.div>
+    </div>
   );
 };
 
