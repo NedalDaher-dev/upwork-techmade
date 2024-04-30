@@ -1,6 +1,7 @@
-@import '../../styles/desktop/index';
-@import '../../styles/mobile/index';
-@import '../../styles/tablet/index';
+@import '../../styles/desktop/home/index';
+@import '../../styles/mobile/home/index';
+@import '../../styles/tablet/home/index';
+
 .home__wrapper {
   background-color: #eeeaea;
   padding-top: 200px;
@@ -8,18 +9,13 @@
     margin: 0 auto;
     max-width: 1440px;
   }
-
-  
 }
 
 .Footnotes {
   padding-left: 5%;
   padding-right: 5%;
 
-  @media screen and (min-width: 768px) and (max-width: 1024px) {
-    padding-left: 5%;
-    padding-right: 5%;
-  }
+
 }
 
 

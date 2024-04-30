@@ -2,7 +2,8 @@ import BrotliPlugin from 'brotli-webpack-plugin';
 
 export default {
   webpack(config, { isServer }) {
-    if (!isServer) {
+    if (!isServer && process.env.NODE_ENV === 'production') {
+      // إضافة الـ plugin فقط إذا كانت البيئة هي الإنتاج
       config.plugins.push(
         new BrotliPlugin({
           asset: '[path].br[query]',

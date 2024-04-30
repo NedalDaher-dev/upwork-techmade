@@ -17,7 +17,7 @@ const Navbar = ({ type }) => {
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
   const router = useRouter();
   const path = usePathname();
-
+  console.log(process.env.NODE_ENV )
   useEffect(() => {
     const handleScroll = () => {
       setScrollY(window.scrollY);

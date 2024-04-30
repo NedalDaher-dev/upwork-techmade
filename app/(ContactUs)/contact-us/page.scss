@@ -1,17 +1,23 @@
-.contact-us-wrapper{
+@import '../../../styles/desktop/contact-us/index';
+@import '../../../styles/mobile/contact-us/index';
+@import '../../../styles/tablet/contact-us/index';
+
+.contact-us-wrapper {
     background-color: #f9f9f9;
-    .contact-us-container{
+
+    .contact-us-container {
         max-width: 1440px;
         margin: auto;
     }
 
 }
-.Footnotes{
-    padding: 5px;
-  }
 
+.Footnotes {
+    padding: 5%;
+}
 
-@media screen and (max-width: 768px) {
-    .contact-us-wrapper{
+@media screen and (max-width: 767px) {
+    .Footnotes {
+        margin-top: 100px;
     }
 }

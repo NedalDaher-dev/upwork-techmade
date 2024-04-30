@@ -1,0 +1,23 @@
+@media (max-width: 767px) {
+    .hero-wrapper {
+
+        .hero-container {
+            height: 100vh;
+
+            .hero-text {
+                h1 {
+                    font-size: 35px;
+                    max-width: 100%;
+
+                }
+            }
+
+            .button-Wrapper {
+                max-width: 100%;
+                width: 100%;
+                flex-direction: column;
+                gap: 40px;
+            }
+        }
+    }
+}
