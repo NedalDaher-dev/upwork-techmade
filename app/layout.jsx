@@ -6,7 +6,6 @@ import Head from 'next/head';
 import '@/styles/variables.scss'
 import './globals.css';
 import { ThemeProvider, ThemeContext } from '@/contexts/ThemeContext';
-
 const LazyNavbar = lazy(() => import('@/components/Navbar'));
 const LazyFooter = lazy(() => import('@/components/Footer'));
 const inter = Inter({ subsets: ['latin'] });

@@ -1,8 +1,10 @@
 import React from 'react';
+import dynamic from 'next/dynamic';
 import './index.styles.scss';
 import { parseMarkdownFiles } from '@/utils/markdownParser';
 import Hero from './_components/Hero';
-import Articles from './_components/Posts';
+const Articles = dynamic(() => import('./_components/Posts'), { ssr: false });
+
 async function getData() {
   const data = await parseMarkdownFiles();
   return data;

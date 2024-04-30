@@ -1,7 +1,7 @@
 'use client';
-
+import dynamic from 'next/dynamic';
 import Hero from './_components/Hero/Hero';
-import ContactUs from './_components/Contact box';
+const ContactUs = dynamic(() => import('./_components/Contact box'), { ssr: false });
 import './page.scss';
 
 const Page = () => (
