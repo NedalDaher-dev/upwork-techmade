@@ -1,6 +1,8 @@
 'use client';
 import dynamic from 'next/dynamic';
 import { ParallaxProvider } from 'react-scroll-parallax';
+import { useTheme } from '@/contexts/ThemeContext';
+import './home.scss'; 
 const OurProcess = dynamic(() => import('./_components/OurProcess'), { ssr: false });
 const UpcomingEvents = dynamic(() => import('./_components/UpcomingEvents'), { ssr: false });
 const StartProj = dynamic(() => import('./_components/StartProj'), { ssr: false });
@@ -9,8 +11,6 @@ const ExcellenceTwo = dynamic(() => import('./_components/ExcellenceTwo'), { ssr
 const Excellence = dynamic(() => import('./_components/Excellence'), { ssr: false });
 const Hero = dynamic(() => import('./_components/Hero'), { ssr: false });
 
-import { useTheme } from '@/contexts/ThemeContext';
-import './home.scss';
 
 const Home = () => {
   const { theme, phoneScreenWidth, tabletScreenWidth, screenWidth, toggleTheme } = useTheme();
